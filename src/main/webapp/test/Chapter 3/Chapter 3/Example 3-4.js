@@ -10,8 +10,8 @@ $(document).on(
             {
                 return;
             }
-            //click.finder 前面是事件，点后面是自定义的名字
-            //click.finder 整个是一个事件处理器
+            //click.finder 前面是事件，点后面是命名空间/事件处理器，用于处理click事件，不需要时可直接将其
+            //去除而不影响其他事件处理器
             //on把事件处理器挂在对应div
             $('div#finderFiles').on(
                 'click.finder',
