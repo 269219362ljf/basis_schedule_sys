@@ -1,0 +1,97 @@
+html,
+body {
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+}
+body {
+    font: 12px 'Lucida Grande', Helvetica, Arial, sans-serif;
+    background: #fff;
+    color: rgb(50, 50, 50);
+    line-height: 1.5em;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+div#applicationContainer {
+    width: 400px;
+    padding: 20px;
+}
+div.contextMenu {
+    display: none;
+    position: absolute;
+    z-index: 10;
+    top: 0;
+    left: 0;
+    width: 200px;
+    font-size: 14px;
+    background: #fff;
+    background: rgba(255, 255, 255, 0.95);
+    border: 1px solid rgb(150, 150, 150);
+    border: 1px solid rgba(150, 150, 150, 0.95);
+    padding: 4px 0;
+    box-shadow: 0 5px 25px rgba(100, 100, 100, 0.9);
+    border-radius: 5px;
+    border-radius: 5px;
+    color: #000;
+}
+div.contextMenu ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+div.contextMenu ul li {
+    padding: 2px 0 2px 21px;
+    margin: 0;
+    height: 15px;
+    overflow: hidden;
+}
+div.contextMenu ul li span {
+    position: relative;
+    top: -2px;
+}
+div.contextMenu ul li.contextMenuSeparator {
+    padding: 5px 0 8px 0;
+    font-size: 0;
+    line-height: 0;
+    height: auto;
+}
+li.contextMenuSeparator div {
+    font-size: 0;
+    line-height: 0;
+    padding-top: 1px;
+    background: rgb(200, 200, 200);
+    margin: 0 1px;
+}
+body div.contextMenu ul li.contextMenuHover {
+    /* Old browsers */
+    background: rgb(82, 117, 243);
+    /* FF3.6+ */
+    background: -moz-linear-gradient(top,  rgb(82, 117, 243) 0%, rgb(3, 57, 242) 100%);
+     /* Chrome,Safari4+ */
+    background: -webkit-gradient(
+        linear, left top, left bottom,
+        color-stop(0%, rgb(82, 117, 243)),
+        color-stop(100%, rgb(3, 57, 242))
+    );
+    /* Chrome10+,Safari5.1+ */
+    background: -webkit-linear-gradient(top, rgb(82,117,243) 0%, rgb(3, 57, 242) 100%);
+    background: -o-linear-gradient(top, rgb(82, 117, 243) 0%, rgb(3, 57, 242) 100%);
+    /* IE10+ */
+    background: -ms-linear-gradient(top,  rgb(82, 117, 243) 0%, rgb(3, 57, 242) 100%);
+    /* W3C */
+    background: linear-gradient(to bottom, rgb(82, 117, 243) 0%, rgb(3, 57, 242) 100%);
+    color: white;
+}
+li.contextMenuDisabled {
+    opacity: 0.5;
+}
+p.applicationContextMenuToggles {
+    color: green;
+}
+p.applicationContextMenuToggles span:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}

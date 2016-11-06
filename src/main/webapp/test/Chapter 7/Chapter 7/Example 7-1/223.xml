@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<country>
+    <name>United States</name>
+    <iso2>US</iso2>
+    <iso3>USA</iso3>
+    <label>State</label>
+    <state id='0'></state>
+    <state id="7">Armed Forces Americas</state>
+    <state id="8">Armed Forces Canada</state>
+    <state id="9">Armed Forces Europe</state>
+    <state id="6">Armed Forces Africa</state>
+    <state id="2">Alaska</state>
+    <state id="1">Alabama</state>
+    <state id="10">Armed Forces Middle East</state>
+    <state id="11">Armed Forces Pacific</state>
+    <state id="5">Arkansas</state>
+    <state id="3">American Samoa</state>
+    <state id="4">Arizona</state>
+    <state id="12">California</state>
+    <state id="13">Colorado</state>
+    <state id="14">Connecticut</state>
+    <state id="16">District of Columbia</state>
+    <state id="15">Delaware</state>
+    <state id="18">Florida</state>
+    <state id="17">Federated States Of Micronesia</state>
+    <state id="19">Georgia</state>
+    <state id="20">Guam</state>
+    <state id="21">Hawaii</state>
+    <state id="25">Iowa</state>
+    <state id="22">Idaho</state>
+    <state id="23">Illinois</state>
+    <state id="24">Indiana</state>
+    <state id="26">Kansas</state>
+    <state id="27">Kentucky</state>
+    <state id="28">Louisiana</state>
+    <state id="32">Massachusetts</state>
+    <state id="31">Maryland</state>
+    <state id="29">Maine</state>
+    <state id="30">Marshall Islands</state>
+    <state id="33">Michigan</state>
+    <state id="34">Minnesota</state>
+    <state id="36">Missouri</state>
+    <state id="46">Northern Mariana Islands</state>
+    <state id="35">Mississippi</state>
+    <state id="37">Montana</state>
+    <state id="44">North Carolina</state>
+    <state id="45">North Dakota</state>
+    <state id="38">Nebraska</state>
+    <state id="40">New Hampshire</state>
+    <state id="41">New Jersey</state>
+    <state id="42">New Mexico</state>
+    <state id="39">Nevada</state>
+    <state id="43">New York</state>
+    <state id="47">Ohio</state>
+    <state id="48">Oklahoma</state>
+    <state id="49">Oregon</state>
+    <state id="51">Pennsylvania</state>
+    <state id="52">Puerto Rico</state>
+    <state id="50">Palau</state>
+    <state id="53">Rhode Island</state>
+    <state id="54">South Carolina</state>
+    <state id="55">South Dakota</state>
+    <state id="56">Tennessee</state>
+    <state id="57">Texas</state>
+    <state id="58">Utah</state>
+    <state id="61">Virginia</state>
+    <state id="60">Virgin Islands</state>
+    <state id="59">Vermont</state>
+    <state id="62">Washington</state>
+    <state id="64">Wisconsin</state>
+    <state id="63">West Virginia</state>
+    <state id="65">Wyoming</state>
+</country>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DataSourceManagerImpl" format="xml" hash="2151685537">
+    <data-source source="LOCAL" name="PostgreSQL - schedule_sys@localhost" uuid="2f51af38-50e3-423e-b939-f6c281cee11e">
+      <driver-ref>postgresql</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql://localhost:5432/schedule_sys</jdbc-url>
+    </data-source>
+  </component>
+</project>

@@ -1,0 +1,35 @@
+<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta http-equiv="content-type" content="application/xhtml+xml; charset=utf-8" />
+        <meta http-equiv="content-language" content="en-us" />
+        <title>Context Menu Plugin</title>
+        <script type='text/javascript' src='../jQuery.js'></script>
+        <script type='text/javascript' src='Example 9-4.js'></script>
+        <link type='text/css' href='Example 9-4.css' rel='stylesheet' />
+    </head>
+    <body class='contextMenuContainer'>
+        <div id='applicationContainer'>
+            <p>
+                jQuery plugins give you the ability to extend jQuery’s functionality,
+                quickly and seamlessly.  In this example you see how to make a context
+                menu plugin.  It demonstrates some of what you might need to make a
+                context menu widget as a self-contained jQuery plugin.
+            </p>
+            <p class='applicationContextMenuToggles'>
+                <span id='applicationContextMenuDisable'>Disable Context Menu</span> |
+                <span id='applicationContextMenuEnable'>Enable Context Menu</span>
+            </p>
+            <div id='applicationContextMenu'>
+                <ul>
+                    <li><span>Open</span></li>
+                    <li class='contextMenuSeparator'><div></div></li>
+                    <li><span>Save</span></li>
+                    <li><span>Save As...</span></li>
+                    <li class='contextMenuSeparator'><div></div></li>
+                    <li class='contextMenuDisabled'><span>Edit</span></li>
+                </ul>
+            </div>
+        </div>
+    </body>
+</html>

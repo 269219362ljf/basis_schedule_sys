@@ -1,0 +1,27 @@
+body {
+    font: 12px "Lucida Grande", Arial, sans-serif;
+    color: rgb(50, 50, 50);
+    margin: 0;
+    padding: 15px;
+}
+table.seventiesAlbums {
+    table-layout: fixed;
+    width: 500px;
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+table.seventiesAlbums th,
+table.seventiesAlbums td {
+    padding: 3px;
+    border: 1px solid black;
+}
+table.seventiesAlbums th {
+    text-align: left;
+    background: lightgreen;
+}
+table.seventiesAlbums tbody tr:hover {
+    background: lightblue;
+}
+table#seventiesAlbumsTemplate {
+    display: none;
+}

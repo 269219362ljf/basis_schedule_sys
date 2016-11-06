@@ -1,0 +1,87 @@
+<!DOCTYPE HTML>
+<html lang='en'>
+    <head>
+        <meta http-equiv='X-UA-Compatible' content='IE=Edge' />
+        <meta charset='utf-8' />
+        <title>Folder Tree</title>
+        <script src='../jQuery.js'></script>
+        <script src='../jQueryUI.js'></script>
+        <script src='Example 7-6.js'></script>
+        <link href='Example 7-6.css' rel='stylesheet' />
+    </head>
+    <body>
+        <div id='folderTree'>
+            <ul class='folderTree'>
+                <li>
+                    <div class='folderTreeDirectory folderTreeRoot' 
+                         data-id='1' 
+                         title='/'>
+                        <span>Macintosh HD</span>
+                    </div>
+                    <ul class='folderTreeDirectoryBranchOn' data-id='1'>
+                        <li class='folderTreeDirectoryBranch'>
+                            <div class='folderTreeDirectory' 
+                                 data-id='5175' 
+                                 title='/Applications'>
+                                <div class='folderTreeIcon'></div>
+                                <span>Applications</span>
+                            </div>
+                            <img src='tree/right.png' 
+                                 class='folderTreeHasChildren' 
+                                 data-id='5175' 
+                                 alt='+' 
+                                 title='Click to expand.' />
+                            <div class='folderTreeBranchWrapper'>
+                            </div>
+                        </li>
+                        <li class='folderTreeDirectoryBranch folderTreeServer'>
+                            <div class='folderTreeDirectory' 
+                                 data-id='5198' 
+                                 title='/Library'>
+                                <div class='folderTreeIcon'></div>
+                                <span>Library</span>
+                            </div>
+                            <img src='tree/right.png' 
+                                 class='folderTreeHasChildren' 
+                                 data-id='5198' 
+                                 alt='+' 
+                                 title='Click to expand.' />
+                            <div class='folderTreeBranchWrapper'></div>
+                        </li>
+                        <li class='folderTreeDirectoryBranch'>
+                            <div class='folderTreeDirectory' 
+                                 data-id='3667' 
+                                 title='/System'>
+                                <div class='folderTreeIcon'></div>
+                                <span>System</span>
+                            </div>
+                            <img src='tree/right.png' 
+                                 class='folderTreeHasChildren' 
+                                 data-id='5198' 
+                                 alt='+' 
+                                 title='Click to expand.' />
+                            <div class='folderTreeBranchWrapper'></div>
+                        </li>
+                        <li class='folderTreeDirectoryBranch'>
+                            <div class='folderTreeDirectory' 
+                                 data-id='5185' 
+                                 title='/Users'>
+                                <div class='folderTreeIcon'></div>
+                                <span>Users</span>
+                            </div>
+                            <img src='tree/right.png' 
+                                 class='folderTreeHasChildren' 
+                                 data-id='5185' 
+                                 alt='+' 
+                                 title='Click to expand.' />
+                            <div class='folderTreeBranchWrapper'></div>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <div id='folderActivity'>
+            <img src='tree/activity.gif' alt='Activity Indicator' />
+        </div>
+    </body>
+</html>

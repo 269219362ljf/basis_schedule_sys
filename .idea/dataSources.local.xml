@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="dataSourceStorageLocal">
+    <data-source name="PostgreSQL - schedule_sys@localhost" uuid="2f51af38-50e3-423e-b939-f6c281cee11e">
+      <secret-storage>master_key</secret-storage>
+      <user-name>lu</user-name>
+    </data-source>
+  </component>
+</project>

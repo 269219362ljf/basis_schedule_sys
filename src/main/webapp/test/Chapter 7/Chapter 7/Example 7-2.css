@@ -1,0 +1,33 @@
+body {
+    font: 12px "Lucida Grande", Arial, sans-serif;
+    color: rgb(50, 50, 50);
+    margin: 0;
+    padding: 0 10px;
+}
+fieldset {
+    background: lightblue;
+    border: 1px solid rgb(200, 200, 200);
+}
+legend {
+    position: relative;
+    top: 13px;
+    font-size: 16px;
+}
+fieldset div {
+    padding: 5px;
+    margin: 3px;
+    clear: left;
+}
+fieldset label {
+    float: left;
+    width: 200px;
+    text-align: right;
+    padding: 2px 5px 0 0;
+}
+div#addressCountryWrapper img {
+    position: relative;
+    top: -4px;
+}
+div#addressButtonWrapper {
+    text-align: right;
+}
