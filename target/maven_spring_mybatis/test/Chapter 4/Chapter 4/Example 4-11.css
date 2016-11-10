@@ -1,0 +1,12 @@
+body {
+    font: 12px "Lucida Grande", Arial, sans-serif;
+    color: rgb(50, 50, 50);
+    margin: 0;
+    padding: 15px;
+}
+span {
+    background: yellow;
+}
+p {
+    margin: 5px;
+}

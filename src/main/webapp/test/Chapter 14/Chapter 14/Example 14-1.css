@@ -56,6 +56,8 @@ div.finderDirectoryDrop div.finderDirectoryName span {
     color: white;
     padding: 1px 7px;
 }
+
+/*这是jQuery UI内部选择框所用CSS样式类*/
 div.ui-selectable-helper {
     position: absolute;
     background: rgb(128, 128, 128);

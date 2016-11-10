@@ -33,7 +33,7 @@ public class ReflectTest {
             //获取类型里面rtest_int方法
             Method method1=classType.getMethod("rtest_int",int.class);
             //调用测试类中的rtest_int方法
-            int result=(Integer)method1.invoke(testClass,1);
+            int result=(int)method1.invoke(testClass,1);
             System.out.println("result :" + result);
         } catch (NoSuchMethodException e) {
             e.printStackTrace();

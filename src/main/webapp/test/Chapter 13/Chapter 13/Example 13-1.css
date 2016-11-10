@@ -27,7 +27,7 @@ ul#finderCategoryFiles {
     padding: 0;
 }
 li.finderCategoryFile {
-    clear: both;
+    clear: both;/*取消浮动显示，确保是竖立排序*/
     padding: 5px 5px 10px 5px;
     min-height: 48px;
     width: 290px;

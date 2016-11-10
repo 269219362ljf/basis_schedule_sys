@@ -1,0 +1,27 @@
+body {
+    font: 12px "Lucida Grande", Arial, sans-serif;
+    color: rgb(50, 50, 50);
+    margin: 0;
+    padding: 15px;
+}
+table.johnLennonAlbums {
+    table-layout: fixed;
+    width: 500px;
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+table.johnLennonAlbums th,
+table.johnLennonAlbums td {
+    padding: 3px;
+    border: 1px solid black;
+}
+table.johnLennonAlbums th {
+    text-align: left;
+    background: lightgreen;
+}
+table.johnLennonAlbums tbody tr:hover {
+    background: lightblue;
+}
+tr#johnLennonAlbumTemplate {
+    display: none;
+}

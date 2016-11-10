@@ -7,7 +7,7 @@ $(document).ready(
             autoOpen : false,
             resizable : true,
             draggable : true,
-            show : 'explode'
+            show : 'explode'//设置动画
         });
         
         $('input#exampleDialogOpen').click(

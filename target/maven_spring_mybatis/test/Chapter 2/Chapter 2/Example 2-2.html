@@ -1,0 +1,48 @@
+<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta http-equiv="content-type" content="application/xhtml+xml; charset=utf-8" />
+        <meta http-equiv="content-language" content="en-us" />
+        <title>Contact Form</title>
+        <script type='text/javascript' src='../jQuery.js'></script>
+        <script type='text/javascript' src='Example 2-2.js'></script>
+        <link type='text/css' href='Example 2-2.css' rel='stylesheet' />
+    </head> 
+    <body>
+        <form id='contactNewsletterForm' method='get' action='Example 2-2 Submitted.html'>
+            <div>
+                <label for='contactFirstName'>First Name:</label>
+                <input type='text'
+                       id='contactFirstName'
+                       name='contactFirstName'
+                       size='25'
+                       maxlength='50'
+                       required='required' />
+            </div>
+            <div>
+                <label for='contactLastName'>Last Name:</label>
+                <input type='text'
+                       id='contactLastName'
+                       name='contactLastName'
+                       size='25'
+                       maxlength='50'
+                       required='required' />                
+            </div>
+            <div>
+                <input type='checkbox'
+                       id='contactNewsletter'
+                       name='contactNewsletter'
+                       value='1' />
+                <label for='contactNewsletter'>
+                    Subscribe to newsletter?
+                </label>
+            </div>
+            <div>
+                <input type='submit'
+                       id='contactNewsletterFormSubmit'
+                       name='contactNewsletterFormSubmit'
+                       value='Go' />
+            </div>
+        </form>
+    </body>
+</html>

@@ -3,6 +3,16 @@
   <component name="ChangeListManager">
     <list default="true" id="6ad4375c-ee73-4909-8766-556bf0697e7d" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/test/Chapter 11/Chapter 11/Example 11-1.js" afterPath="$PROJECT_DIR$/src/main/webapp/test/Chapter 11/Chapter 11/Example 11-1.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/test/Chapter 11/Chapter 11/Example 11-2.js" afterPath="$PROJECT_DIR$/src/main/webapp/test/Chapter 11/Chapter 11/Example 11-2.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/test/Chapter 12/Chapter 12/Example 12-2.js" afterPath="$PROJECT_DIR$/src/main/webapp/test/Chapter 12/Chapter 12/Example 12-2.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/test/Chapter 13/Chapter 13/Example 13-1.css" afterPath="$PROJECT_DIR$/src/main/webapp/test/Chapter 13/Chapter 13/Example 13-1.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/test/Chapter 13/Chapter 13/Example 13-2.js" afterPath="$PROJECT_DIR$/src/main/webapp/test/Chapter 13/Chapter 13/Example 13-2.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/test/Chapter 14/Chapter 14/Example 14-1.css" afterPath="$PROJECT_DIR$/src/main/webapp/test/Chapter 14/Chapter 14/Example 14-1.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/test/Chapter 14/Chapter 14/Example 14-1.js" afterPath="$PROJECT_DIR$/src/main/webapp/test/Chapter 14/Chapter 14/Example 14-1.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/test/Chapter 17/Chapter 17/Example 17-7.js" afterPath="$PROJECT_DIR$/src/main/webapp/test/Chapter 17/Chapter 17/Example 17-7.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/test/Chapter 3/Chapter 3/Example 3-4.js" afterPath="$PROJECT_DIR$/src/main/webapp/test/Chapter 3/Chapter 3/Example 3-4.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/test/reflect/ReflectTest.java" afterPath="$PROJECT_DIR$/src/test/test/reflect/ReflectTest.java" />
     </list>
     <ignored path="basis_schedule_sys.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -38,78 +48,7 @@
     <favorites_list name="basis_schedule_sys" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Example 15-2.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/test/Chapter 15/Chapter 15/Example 15-2.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Example 15-2.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/test/Chapter 15/Chapter 15/Example 15-2.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Example 11-1.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/test/Chapter 11/Chapter 11/Example 11-1.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-2130">
-              <caret line="67" column="64" selection-start-line="67" selection-start-column="64" selection-end-line="67" selection-end-column="64" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Example 14-1.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/test/Chapter 14/Chapter 14/Example 14-1.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-2832">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Example 15-3.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/test/Chapter 15/Chapter 15/Example 15-3.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Example 15-4.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/test/Chapter 15/Chapter 15/Example 15-4.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Example 15-1.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/test/Chapter 15/Chapter 15/Example 15-1.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -135,7 +74,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/java/utils/ReflectUtil.java" />
         <option value="$PROJECT_DIR$/src/main/java/interceptors/DialectStatementHandlerInterceptor.java" />
         <option value="$PROJECT_DIR$/src/main/java/interceptors/DialectResultSetHandlerInterceptor.java" />
@@ -186,6 +124,7 @@
         <option value="$PROJECT_DIR$/basis_schedule_sys.iml" />
         <option value="$PROJECT_DIR$/src/main/webapp/test/Chapter 3/Chapter 3/Example 3-4.js" />
         <option value="$PROJECT_DIR$/src/main/webapp/test/Chapter 11/Chapter 11/Example 11-1.js" />
+        <option value="$PROJECT_DIR$/src/main/webapp/test/Chapter 14/Chapter 14/Example 14-1.js" />
       </list>
     </option>
   </component>
@@ -261,7 +200,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -708,8 +646,9 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scratches" />
       <pane id="PackagesPane" />
+      <pane id="Scratches" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -1391,15 +1330,17 @@
       <workItem from="1478449072419" duration="3944000" />
       <workItem from="1478705059710" duration="1195000" />
       <workItem from="1478789409083" duration="224000" />
+      <workItem from="1478790709574" duration="404000" />
+      <workItem from="1478791214775" duration="16000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="118580000" />
+    <option name="totallyTimeSpent" value="119000000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1696" height="1026" extended-state="7" />
-    <editor active="true" />
+    <frame x="-8" y="-8" width="1696" height="1026" extended-state="6" />
+    <editor active="false" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -1783,14 +1724,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/test/Chapter 15/Chapter 15/Example 15-2.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/test/Chapter 15/Chapter 15/Example 15-3.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1825,15 +1758,33 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/test/Chapter 11/Chapter 11/Example 11-1.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2130">
-          <caret line="67" column="64" selection-start-line="67" selection-start-column="64" selection-end-line="67" selection-end-column="64" />
-          <folding />
+        <state relative-caret-position="1680">
+          <caret line="56" column="10" selection-start-line="56" selection-start-column="10" selection-end-line="56" selection-end-column="10" />
+          <folding>
+            <marker date="1424235460000" expanded="true" signature="12:55" ph="{...}" />
+            <marker date="1424235460000" expanded="true" signature="45:55" ph="{...}" />
+            <marker date="1424235460000" expanded="true" signature="4888:4906" ph="{...}" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/test/Chapter 14/Chapter 14/Example 14-1.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2832">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1478683800000" expanded="true" signature="12:921" ph="{...}" />
+            <marker date="1478683800000" expanded="true" signature="47:359" ph="{...}" />
+            <marker date="1478683800000" expanded="true" signature="145:320" ph="{...}" />
+            <marker date="1478683800000" expanded="true" signature="231:306" ph="{...}" />
+            <marker date="1478683800000" expanded="true" signature="938:3176" ph="{&quot;selectingFiles&quot;: false...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/test/Chapter 15/Chapter 15/Example 15-2.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
