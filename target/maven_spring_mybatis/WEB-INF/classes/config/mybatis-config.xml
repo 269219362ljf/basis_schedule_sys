@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration PUBLIC "-//ibatis.apache.org//DTD Config 3.0//EN"
+        "http://mybatis.apache.org/dtd/mybatis-3-config.dtd">
+<configuration>
+
+
+
+
+    <!-- 命名空间 -->
+    <typeAliases>
+        <typeAlias alias="Test" type="model.Test"/>
+        <typeAlias alias="Task" type="model.Task"/>
+        <typeAlias alias="Task_List" type="model.Task_List"/>
+    </typeAliases>
+
+    <!-- mybatis下的分页-->
+    <plugins>
+        <plugin interceptor="interceptors.DialectStatementHandlerInterceptor"/>
+        <plugin interceptor="interceptors.DialectResultSetHandlerInterceptor"/>
+    </plugins>
+
+
+</configuration>

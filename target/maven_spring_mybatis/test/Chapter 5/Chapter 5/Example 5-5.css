@@ -1,0 +1,22 @@
+body {
+    font: 12px "Lucida Grande", Arial, sans-serif;
+    color: rgb(50, 50, 50);
+    margin: 0;
+    padding: 0 10px;
+}
+ul {
+    list-style: none;
+    margin: 0 0 10px 0;
+    padding: 10px;
+    background: yellow;
+    width: 250px;
+}
+ul li {
+    padding: 3px;
+}
+h4 {
+    margin: 10px 0;
+}
+li.rubberSoulJohnAndPaul {
+    background: lightblue;
+}

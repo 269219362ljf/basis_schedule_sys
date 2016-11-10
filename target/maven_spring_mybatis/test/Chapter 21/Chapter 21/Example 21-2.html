@@ -1,0 +1,28 @@
+<!DOCTYPE HTML>
+<html lang='en'>
+    <head>
+        <meta http-equiv='content-type' content='application/xhtml+xml; charset=utf-8' />
+        <meta http-equiv='content-language' content='en-us' />
+        <meta charset='utf-8' />
+        <title>MediaElement Plugin</title>
+        <script src='../jQuery.js'></script>
+        <script src='../MediaElement/mediaelement-and-player.min.js'></script>
+        <script src='Example 21-2.js'></script>
+        <link href='../MediaElement/mediaelementplayer.min.css' rel='stylesheet' />
+        <link href='Example 21-2.css' rel='stylesheet' />
+    </head>
+    <body>
+        <div id='container'>
+	     <video width='320' height='240'>
+               <source type='video/mp4' src='testvideo1.mp4'></source>
+               <source type='video/wmv' src='testvideo1.wmv'></source>
+               <object width='320' height='240' type='application/x-shockwave-flash' 
+					    data='flashmediaelement.swf'>
+                   <param name='movie' value='flashmediaelement.swf' />
+                   <param name='flashvars' value='controls=true&file=testvideo1.mp4' />
+               </object>
+	     </video>
+
+        </div>
+    </body>
+</html>

@@ -1,0 +1,88 @@
+<!DOCTYPE HTML>
+<html lang='en'>
+    <head>
+        <meta charset='utf-8' />
+        <title>Animation and Effects</title>
+        <script src='../jQuery.js'></script>
+        <script src='../jQueryUI.js'></script>
+        <script src='Example 8-4.js'></script>
+        <link href='Example 8-4.css' rel='stylesheet' />
+    </head>
+    <body>
+        <div id='exampleDialogCanvas'>
+            <div id='exampleDialog'>
+                <h4>Integer Feugiat Fringilla</h4>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit. 
+                    Ut vestibulum ornare augue. Fusce non purus vel libero 
+                    mattis aliquet. Vivamus interdum consequat risus. Integer 
+                    feugiat fringilla est. Vivamus libero. Vestibulum 
+                    imperdiet arcu vitae nunc. Nunc est velit, varius sed, 
+                    faucibus quis.
+                </p>
+            </div>
+        </div>
+        <form method='get' action='#'>
+            <fieldset>
+                <legend>Animation Options</legend>
+                <div>
+                    <label for='exampleAnimationEasing'>
+                        Easing:
+                    </label>
+                    <select name='exampleAnimationEasing' id='exampleAnimationEasing'>
+                        <option value='linear'>linear</option>
+                        <option value='swing'>swing</option>
+                        <option value='easeInQuad'>easeInQuad</option>
+                        <option value='easeOutQuad'>easeOutQuad</option>
+                        <option value='easeInOutQuad'>easeInOutQuad</option>
+                        <option value='easeInCubic'>easeInCubic</option>
+                        <option value='easeOutCubic'>easeOutCubic</option>
+                        <option value='easeInOutCubic'>easeInOutCubic</option>
+                        <option value='easeInQuart'>easeInQuart</option>
+                        <option value='easeOutQuart'>easeOutQuart</option>
+                        <option value='easeInOutQuart'>easeInOutQuart</option>
+                        <option value='easeInQuint'>easeInQuint</option>
+                        <option value='easeOutQuint'>easeOutQuint</option>
+                        <option value='easeInOutQuint'>easeInOutQuint</option>
+                        <option value='easeInExpo'>easeInExpo</option>
+                        <option value='easeOutExpo'>easeOutExpo</option>
+                        <option value='easeInOutExpo'>easeInOutExpo</option>
+                        <option value='easeInSine'>easeInSine</option>
+                        <option value='easeOutSine'>easeOutSine</option>
+                        <option value='easeInOutSine'>easeInOutSine</option>
+                        <option value='easeInCirc'>easeInCirc</option>
+                        <option value='easeOutCirc'>easeOutCirc</option>
+                        <option value='easeInOutCirc'>easeInOutCirc</option>
+                        <option value='easeInElastic'>easeInElastic</option>
+                        <option value='easeOutElastic'>easeOutElastic</option>
+                        <option value='easeInOutElastic'>easeInOutElastic</option>
+                        <option value='easeInBack'>easeInBack</option>
+                        <option value='easeOutBack'>easeOutBack</option>
+                        <option value='easeInOutBack'>easeInOutBack</option>
+                        <option value='easeInBounce'>easeInBounce</option>
+                        <option value='easeOutBounce'>easeOutBounce</option>
+                        <option value='easeInOutBounce'>easeInOutBounce</option>                        
+                    </select>
+                    <label for='exampleAnimationDuration'>
+                        Duration:
+                    </label>
+                    <input type='range' 
+                           value='5000' 
+                           min='100' 
+                           max='10000' 
+                           step='100'
+                           name='exampleAnimationDuration'
+                           id='exampleAnimationDuration' />
+                    <input type='submit' 
+                           name='exampleAnimationGrow' 
+                           id='exampleAnimationGrow' 
+                           value='Grow' />
+                    <input type='submit' 
+                           name='exampleAnimationShrink' 
+                           id='exampleAnimationShrink' 
+                           value='Shrink' />
+                </div>
+            </fieldset>
+        </form>
+    </body>
+</html>

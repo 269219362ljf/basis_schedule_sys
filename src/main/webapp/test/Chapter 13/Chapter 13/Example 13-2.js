@@ -17,8 +17,8 @@ $(document).ready(
         );
 
         $('ul#finderCategoryFiles').sortable({
-            connectWith : 'ul#finderOtherCategoryFiles',
-            placeholder : 'finderCategoryFilePlaceholder',
+            connectWith : 'ul#finderOtherCategoryFiles',//关联列（单向）
+            placeholder : 'finderCategoryFilePlaceholder',//预设位置样式
             opacity : 0.8,
             cursor : 'move'
         });

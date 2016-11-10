@@ -1,0 +1,34 @@
+<!DOCTYPE HTML>
+<html xmlns='http://www.w3.org/1999/xhtml'>
+    <head>
+        <meta http-equiv='content-type' content='application/xhtml+xml; charset=utf-8' />
+        <meta http-equiv='content-language' content='en-us' />
+        <meta charset='utf-8' />
+        <title>WYSIWYG Editor 2</title>
+        <link href='Example 22-2.css' rel='stylesheet' />
+        <script type='text/javascript' src='../jQuery.js'></script>
+        <script type='text/javascript' src='Example 22-2.js'></script>
+    </head>
+    <body>
+        <div id='toolbar'>
+            <button class='toolbar-btn bold' data-format='bold'>B</button>
+            <button class='toolbar-btn italic' data-format='italic'>I</button>
+            <button class='toolbar-btn underline' data-format='underline'>U</button>
+            <select class='toolbar-ddl fontname' data-format='fontname'>
+                <option value=''></option>
+                <option value='Arial'>Arial</option>
+                <option value='Courier New'>Courier New</option>
+                <option value='Times New Roman'>Times New Roman</option>
+            </select>
+            <select class='toolbar-ddl fontsize' data-format='fontsize'>
+                <option value=''></option>
+                <option value='2'>Small</option>
+                <option value='3'>Normal</option>
+                <option value='4'>Big</option>
+                <option value='5'>Bigger</option>
+            </select>
+        </div>
+        <div id='container' contenteditable='true'>
+        </div>
+    </body>
+</html>

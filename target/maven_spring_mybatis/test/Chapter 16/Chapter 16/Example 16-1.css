@@ -1,0 +1,14 @@
+body {
+    font: 12px 'Lucida Grande', Arial, sans-serif;
+    background: #fff;
+    color: rgb(50, 50, 50);
+}
+fieldset {
+    border: none;
+}
+input {
+    background: lightblue;        
+}
+div.exampleDate img {
+    vertical-align: -5px;
+}

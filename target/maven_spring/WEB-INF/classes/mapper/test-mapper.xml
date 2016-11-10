@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!-- 定义命名空间 -->
+<mapper namespace="mapperNS.Test">
+    <!-- 查询全部 -->
+    <select id="queryTest" parameterType="Test"  resultType="Test">
+        select test_id,test_name from test
+    </select>
+
+    <!-- 插入数据 -->
+    <insert id="insertTest" parameterType="Test" keyProperty="test_id" >
+        insert into test values (
+        #{test_name}
+        )
+    </insert>
+
+    <!-- 更新数据 -->
+    <update id="updateTest" parameterType="Test">
+        update test set test_name=#{test_name} where test_id=#{test_id}
+    </update>
+
+    <!-- 删除数据 -->
+    <delete id="deleteUser" parameterType="int">
+        delete from test where test_id=#{test_id}
+    </delete>
+
+</mapper>

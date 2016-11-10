@@ -1,0 +1,36 @@
+body {
+    font: 12px 'Lucida Grande', Arial, sans-serif;
+    background: #fff;
+    color: rgb(50, 50, 50);
+}
+div#exampleDialogCanvas {
+    height: 400px;
+    position: relative;
+    overflow: hidden;
+}
+div#exampleDialog {
+    box-shadow: 0 7px 100px rgba(0, 0, 0, 0.7);
+    border-radius: 4px; 
+    width: 300px;
+    height: 200px;
+    position: absolute;
+    padding: 10px;
+    top: 50%;
+    left: 50%;
+    z-index: 1;
+    margin: -110px 0 0 -160px;
+    background: #fff;
+}
+div#exampleDialog h4 {
+    border: 1px solid rgb(50, 50, 50);
+    background: pink;
+    border-radius: 4px;
+    padding: 5px;
+    margin: 0 0 10px 0;   
+}
+div#exampleDialog p {
+    margin: 10px 0;
+}
+input#exampleAnimationDuration {
+    vertical-align: middle;
+}

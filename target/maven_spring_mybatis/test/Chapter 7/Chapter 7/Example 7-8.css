@@ -1,0 +1,43 @@
+body {
+    font: 13px "Lucida Grande", Arial, sans-serif;
+    color: rgb(50, 50, 50);
+    background: rgb(214, 221, 229);
+    margin: 0;
+    padding: 10px;
+}
+div#folderTree ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+div.folderTreeRoot {
+    height: 28px;
+    background: url('tree/internal.png') no-repeat left 1px;
+    padding: 4px 0 0 28px;
+}
+li.folderTreeDirectoryBranch {
+    position: relative;
+    padding: 0 0 0 20px;
+    zoom: 1;
+}
+img.folderTreeHasChildren {
+    position: absolute;
+    top: 3px;
+    left: 0;
+}
+div.folderTreeIcon {
+    background: url('tree/folder.png') no-repeat left;
+    width: 16px;
+    height: 16px;
+    margin: 0 5px 0 0;
+    float: left;
+}
+div.folderTreeBranchWrapper {
+    display: none;
+}
+div#folderActivity {
+    position: absolute;
+    bottom: 5px;
+    right: 5px; 
+    display: none;
+}

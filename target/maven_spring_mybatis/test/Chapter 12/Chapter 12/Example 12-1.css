@@ -1,0 +1,48 @@
+html,
+body {
+    width: 100%;
+    height: 100%;    
+}
+body {
+    font: 12px "Lucida Grande", Arial, sans-serif;
+    background: rgb(189, 189, 189) url('images/Bottom.png') repeat-x bottom;
+    color: rgb(50, 50, 50);
+    margin: 0;
+    padding: 0;
+}
+div#finderFiles {
+    border-bottom: 1px solid rgb(64, 64, 64);
+    background: #fff;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 23px;
+    left: 0;
+    overflow: auto;
+}
+div.finderDirectory {
+    float: left;
+    width: 150px;
+    height: 100px;
+    overflow: hidden;
+}
+div.finderIcon {
+    background: url('images/Folder 48x48.png') no-repeat center;
+    background-size: 48px 48px;
+    height: 56px;
+    width: 54px;
+    margin: 10px auto 3px auto;
+}
+div.finderIconSelected {
+    background-color: rgb(196, 196, 196);
+    border-radius: 5px;
+}
+div.finderDirectoryName {
+    text-align: center;
+}
+span.finderDirectoryNameSelected {
+    background: rgb(56, 117, 215);
+    border-radius: 8px;
+    color: white;
+    padding: 1px 7px;
+}
