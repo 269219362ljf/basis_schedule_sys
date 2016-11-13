@@ -7,10 +7,10 @@ import java.io.Serializable;
  */
 public class Test implements Serializable {
 
-    private int test_id;
+    private Integer test_id;
     private String test_name;
 
-    public int getTest_id() {
+    public Integer getTest_id() {
         return test_id;
     }
 

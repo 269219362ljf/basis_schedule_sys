@@ -36,6 +36,20 @@ public class TestController {
         }
     }
 
+    @RequestMapping(value="/test3.do")
+    public void test3(HttpServletRequest request,HttpServletResponse response){
+        try{
+//            List<Test> tests=testService.selectTest(1,10,null);
+//            for(int i=0;i<tests.size();i++){
+//                logger.info(tests.get(i).getTest_id()+tests.get(i).getTest_name());
+//            }
+            request.setAttribute("test3status","success");
+        }
+        catch (Exception e){
+            e.printStackTrace();
+        }
+    }
+
 
 
 }

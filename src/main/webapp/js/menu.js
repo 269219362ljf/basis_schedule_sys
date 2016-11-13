@@ -3,6 +3,8 @@ $(document).ready(function() {
     var dropdown = document.querySelectorAll('.dropdown');
     var dropdownArray = Array.prototype.slice.call(dropdown, 0);
     var tabs = $('#tabs');
+
+
 //this.className会列出this的类列表，然后用正则表达式检查是否存在参数指定类
 //用prototype是原型，这样定义可以应用于所有的继承类，同时确定this范围
     Element.prototype.hasClass = function (className) {
@@ -72,14 +74,14 @@ $(document).ready(function() {
                 }
             });
 
-            //新增tab
-            var tab=document.createElement("li");
-            var tab_a=document.createElement("a");
-            tab_a.setAttribute('href','#');
-            tab_a.innerHTML = "bbbb";
-            tab_a.onclick=tabclick;
-            tab.appendChild(tab_a);
-            tabs.append(tab);
+            // //新增tab
+            // var tab=document.createElement("li");
+            // var tab_a=document.createElement("a");
+            // tab_a.setAttribute('href','#');
+            // tab_a.innerHTML = "bbbb";
+            // tab_a.onclick=tabclick;
+            // tab.appendChild(tab_a);
+            // tabs.append(tab);
         };
     });
     //初始化tabs，仅为前期测试用
@@ -90,26 +92,33 @@ $(document).ready(function() {
         tabclick
     );
 
+    //设置菜单栏点击事件
+    $('a#test1').click(function (event) {
+        event.preventDefault();
+        $("#maincontent").load("../html/testhtml/test1.html");
+    });
+
+    $('a#test2').click(function (event) {
+        event.preventDefault();
+        $("#maincontent").load("../html/testhtml/test2.html");
+    });
+
+    $('a#test3').click(function (event) {
+        event.preventDefault();
+        $("#maincontent").load("../html/testhtml/test3.html");
+    });
+
+
+
+
+
+
+
+
+
+
 });
-//TAB点击方法
-function tabclick(event){
-    event.preventDefault();
-    //单击左键
-    if(event.which=1){
-        if ($(this).closest("li").attr("id") == "current"){ //detection for current tab
-            return;
-        }
-        else{
-            $("#tabs li").attr("id",""); //Reset id's
-            $(this).parent().attr("id","current"); // Activate this
-            $("#maincontent").load("../html/testhtml/test2.html"); // Show content for the current tab
-        }
-    }else
-    if(event.which=3)//单击右键
-    {
-        alert("右键");
-    }
-};
+
 
 
 

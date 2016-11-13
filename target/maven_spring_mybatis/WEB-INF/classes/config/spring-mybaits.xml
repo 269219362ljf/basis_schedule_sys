@@ -30,6 +30,8 @@
         <property name="minIdle" value="3" />
         <property name="removeAbandonedOnBorrow" value="true" />
         <property name="removeAbandonedTimeout" value="180" />
+        <property name="validationQueryTimeout" value="1"/>
+
     </bean>
 
     <!-- mybatis文件配置，扫描所有mapper文件 -->

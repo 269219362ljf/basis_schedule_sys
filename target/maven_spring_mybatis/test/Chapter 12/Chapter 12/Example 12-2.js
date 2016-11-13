@@ -19,6 +19,7 @@ $(document).ready(
                 }
             )
             .draggable({
+                //clone为克隆体，opacity是透明度
                 helper : 'clone',
                 opacity : 0.5
             })
