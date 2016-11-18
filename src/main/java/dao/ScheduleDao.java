@@ -31,22 +31,9 @@ public class ScheduleDao {
 
     @Transactional
     public boolean initTaskList(){
-
-
-
         //初始化任务列表
         sqlSessionSchedule.insert(Constants.MAPPER_TASK+ ".initTaskList");
         //
-
-
-
-
-
-
-
-
-
-
         return true;
     }
 

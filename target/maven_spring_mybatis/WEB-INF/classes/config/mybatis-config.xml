@@ -13,12 +13,12 @@
         <typeAlias alias="Task_List" type="model.Task_List"/>
     </typeAliases>
 
-    <!-- mybatis下的分页
-    <plugins>
-        <plugin interceptor="interceptors.DialectStatementHandlerInterceptor"/>
-        <plugin interceptor="interceptors.DialectResultSetHandlerInterceptor"/>
-    </plugins>
-    -->
+    <!--&lt;!&ndash; mybatis下的分页&ndash;&gt;-->
+    <!--<plugins>-->
+        <!--<plugin interceptor="interceptors.DialectStatementHandlerInterceptor"/>-->
+        <!--<plugin interceptor="interceptors.DialectResultSetHandlerInterceptor"/>-->
+    <!--</plugins>-->
+
 
 
 </configuration>

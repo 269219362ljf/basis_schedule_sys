@@ -66,6 +66,7 @@
 
     <!--springframework配置 -->
 
+
     <!--spring-context定义了Spring注入(Injection)容器 -->
     <dependency>
       <groupId>org.springframework</groupId>
@@ -144,6 +145,8 @@
 
 
   </dependencies>
+
+
   <build>
     <finalName>maven_spring_mybatis</finalName>
   </build>

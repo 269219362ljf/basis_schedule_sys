@@ -54,11 +54,11 @@
   </servlet>
   <servlet-mapping>
     <servlet-name>springDispatcher</servlet-name>
-    <url-pattern>/</url-pattern>
+    <url-pattern>*.do</url-pattern>
   </servlet-mapping>
 
   <welcome-file-list>
-    <welcome-file>/html/index.html</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
   </welcome-file-list>
 
 
