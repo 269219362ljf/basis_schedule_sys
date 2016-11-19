@@ -11,7 +11,7 @@ import utils.Constants;
 import java.util.List;
 
 @Repository
-public class TestDao implements Constants{
+public class TestDao {
 
     @Autowired
     private SqlSessionTemplate sqlSessionFastCard;

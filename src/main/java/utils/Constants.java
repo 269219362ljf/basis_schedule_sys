@@ -1,13 +1,69 @@
 package utils;
 
+import config.XmlConfig;
+import org.json.JSONObject;
+
 /**
  * Created by Administrator on 0004 2016/8/4.
  */
-public interface Constants {
+public class Constants {
 
     /**
      * mybatis映射XML
      */
-    String MAPPER_TEST= "mapperNS.Test";
-    String MAPPER_TASK="mapperNS.Task";
+    public final static String MAPPER_TEST= "mapperNS.Test";
+    public final static String MAPPER_TASK="mapperNS.Task";
+
+    /*
+     *系统默认值
+     */
+    public final static int SUCCESS=0;
+    public final static int ERROR=1;
+
+    public final static int LOG_DEBUG=0;
+    public final static int LOG_INFO=1;
+    public final static int LOG_WARN=2;
+    public final static int LOG_ERROR=3;
+    public final static int LOG_FATAL=4;
+
+    private final static String PropertyFile="system-property.xml";
+
+    /**
+     *sql错误返回值
+     */
+    public final static int DUPLICATEKEYERROR=-1;
+    public final static int DATAVIOLATIONERROR=-2;
+
+    public final static int UNKNOWNERROR=-99;
+
+    /*
+     *系统配置
+     */
+    private static int LOGTYPE=-1;
+
+    //获取当前设置日志等级
+    public static int getLogType(){
+        if(LOGTYPE==-1){
+            initSystemProperties();
+            return LOGTYPE;
+        }else{
+            return LOGTYPE;
+        }
+    }
+
+    //根据xml文件初始化系统参数
+    private static void initSystemProperties(){
+        try{
+            XmlConfig config=XmlConfig.getInstance();
+            JSONObject xml=config.getXMLconfig(PropertyFile);
+            JSONObject properties=xml.getJSONObject("properties");
+            LOGTYPE=properties.get("logtype")==null?LOG_INFO:properties.getInt("logtype");
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+    }
+
+
+
+
 }

@@ -25,7 +25,7 @@
         （仅对 insert 和 update 有用）唯一标记一个属性，MyBatis 会通过 getGeneratedKeys 的返回值或者通过 insert 语句的 selectKey 子元素设置它的键值，默认：unset。如果希望得到多个生成的列，也可以是逗号分隔的属性名称列表。
         6. keyColumn     (可选配置)
         （仅对 insert 和 update 有用）通过生成的键值设置表中的列名，这个设置仅在某些数据库（像 PostgreSQL）是必须的，当主键列不是表中的第一列的时候需要设置。如果希望得到多个生成的列，也可以是逗号分隔的属性名称列表。
-        7. useGeneratedKeys (可选配置， 默认为false)
+        7. useGeneratedKeys (可选配置， 默认为false)配合keyProperty
         （仅对 insert 和 update 有用）这会令 MyBatis 使用 JDBC 的 getGeneratedKeys 方法来取出由数据库内部生成的主键（比如：像 MySQL 和 SQL Server 这样的关系数据库管理系统的自动递增字段），默认值：false。
         8. timeout  (可选配置， 默认为unset, 依赖驱动)
         这个设置是在抛出异常之前，驱动程序等待数据库返回请求结果的秒数。默认值为 unset（依赖驱动）。
@@ -33,8 +33,7 @@
     <insert
             id="insertTask"
             parameterType="Task"
-            keyProperty="task_id"
-            useGeneratedKeys="true">
+        >
         INSERT INTO t_task(
             task_id,name, des, type, st, para, prior, beg_time, end_time, cost, avg_cost)
         VALUES (
