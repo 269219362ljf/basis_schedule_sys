@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!-- 定义命名空间 -->
+<mapper namespace="mapperNS.T_Log">
+
+    <!-- 查询全部任务信息 -->
+    <select id="queryT_Log" resultType="T_Log">
+      SELECT log_time, task_id, log_level, log_type, log_msg
+	  FROM t_log
+    </select>
+
+    <!-- 插入数据 -->
+    <insert id="insertT_Log" parameterType="T_Log">
+      INSERT INTO t_log(
+	log_time, task_id, log_level, log_type, log_msg)
+	VALUES (
+	#{log_time},
+    #{task_id},
+    #{log_level},
+    #{log_type},
+    #{log_msg})
+    </insert>
+
+    <!-- 删除数据 -->
+    <delete id="deleteT_Log" parameterType="int">
+        DELETE FROM public.t_log
+        WHERE task_id=#{task_id}
+    </delete>
+</mapper>

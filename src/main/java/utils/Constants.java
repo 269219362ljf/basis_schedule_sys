@@ -13,12 +13,13 @@ public class Constants {
      */
     public final static String MAPPER_TEST= "mapperNS.Test";
     public final static String MAPPER_TASK="mapperNS.Task";
+    public final static String MAPPER_T_LOG="mapperNS.T_Log";
 
     /*
      *系统默认值
      */
     public final static int SUCCESS=0;
-    public final static int ERROR=1;
+    public final static int FAIL=1;
 
     public final static int LOG_DEBUG=0;
     public final static int LOG_INFO=1;

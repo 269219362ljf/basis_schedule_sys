@@ -17,6 +17,13 @@
     3 修改Constants中initSystemProperties方法，增加初始化
     4 在Constants中添加获取变量方法（含校验）
 
+ 3想要获取自动注入的bean（即注释的类如service,DAO等）可通过
+ WebApplicationContext context = ContextLoader.getCurrentWebApplicationContext();
+ 获取当前上下文，再由上文中调用
+ context.getBeanNamesForType(*.class)获取同类型的所有bean名字
+ 再通过bean名字获取bean的实体
+ (*) context.getBean(String BeanName)
+
 
 
 

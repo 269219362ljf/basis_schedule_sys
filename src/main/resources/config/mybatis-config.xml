@@ -8,6 +8,7 @@
         <typeAlias alias="Test" type="model.Test"/>
         <typeAlias alias="Task" type="model.Task"/>
         <typeAlias alias="Task_List" type="model.Task_List"/>
+        <typeAlias alias="T_Log" type="model.T_Log"/>
     </typeAliases>
 
 </configuration>

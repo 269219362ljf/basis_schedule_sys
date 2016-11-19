@@ -48,7 +48,7 @@
 
 
 
-        <root level="info">
+        <root level="error">
             <appender-ref ref="Console"/>
         </root>
     </loggers>

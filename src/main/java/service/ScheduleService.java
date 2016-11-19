@@ -24,14 +24,14 @@ public class ScheduleService {
      *查询所有任务
      */
     public List<Task> queryTask(int page,int rows){
-        return taskDao.queryTask(page,rows);
+        return taskDao.query(page,rows);
     }
 
     /**
      *插入任务
      */
     public int insertTask(Task task){
-        return taskDao.insertTask(task);
+        return taskDao.insert(task);
     }
 
 
