@@ -35,6 +35,13 @@
             <appender-ref ref="historyfile"/> <!-- 输出到historyfile -->
         </logger>
 
+        <logger name="dao.TaskDao" level="trace" additivity="true">
+            <appender-ref ref="runninglog"/>
+            <appender-ref ref="historyfile"/>
+        </logger>
+
+
+
 
         <root level="error">
             <appender-ref ref="Console"/>

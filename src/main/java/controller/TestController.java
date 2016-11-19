@@ -25,7 +25,7 @@ public class TestController {
     @Autowired
     private ScheduleService scheduleService;
 
-    private Logger logger = LogManager.getLogger(TestController.class.getName());
+    static Logger logger= LogManager.getLogger(TestController.class.getName());
 
     @RequestMapping(value="/test.do")
     public void test(HttpServletRequest request,HttpServletResponse response){
@@ -49,6 +49,20 @@ public class TestController {
                 logger.info("taskid :"+tests.get(i).getTask_id());
                 System.out.println("taskid :"+tests.get(i).getTask_id());
             }
+
+            for(int i=0;i<20;i++){
+                Task insertTask=new Task();
+                insertTask.setTask_id(i);
+                insertTask.setName("task"+i);
+                System.out.println("task"
+                        +i
+                        +" insert result :"
+                        +scheduleService.insertTask(insertTask));
+            }
+
+
+
+
             request.setAttribute("test3status","success");
         }
         catch (Exception e){

@@ -1,12 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <configuration status="OFF">
     <appenders>
+
+
         <Console name="Console" target="SYSTEM_OUT">
             <PatternLayout pattern="%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n"/>
         </Console>
 
 
-
+        <!-- 文件不指定绝对路径会默认为当前项目运行环境（注意是运行环境）
+            ，具体表现为，如采用ide的tomcat插件，就会路径会为jdk目录，
+            采用具体的服务器，则会为服务器的工作路径
+         -->
         <!--文件会打印出所有信息，这个log每次运行程序会自动清空，由append属性决定，这个也挺有用的，适合临时测试用-->
         <File name="runninglog" fileName="log/runninglog.log" append="false">
             <PatternLayout pattern="%d{HH:mm:ss.SSS} %-5level %class{36} %L %M - %msg%xEx%n"/>
@@ -34,6 +39,13 @@
             <appender-ref ref="runninglog"/> <!-- 输出到runninglog -->
             <appender-ref ref="historyfile"/> <!-- 输出到historyfile -->
         </logger>
+
+        <logger name="dao.TaskDao" level="trace" additivity="true">
+            <appender-ref ref="runninglog"/>
+            <appender-ref ref="historyfile"/>
+        </logger>
+
+
 
 
         <root level="error">

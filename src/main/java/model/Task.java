@@ -13,12 +13,13 @@ public class Task  implements Serializable {
     private String des;
     private int type;
     private int st;
-    private String param;
+    private String para;
     private int prior;
     private Date beg_time;
     private Date end_time;
     private double cost;
     private double avg_cost;
+
 
     public int getTask_id() {
         return task_id;
@@ -61,11 +62,11 @@ public class Task  implements Serializable {
     }
 
     public String getParam() {
-        return param;
+        return para;
     }
 
-    public void setParam(String param) {
-        this.param = param;
+    public void setParam(String para) {
+        this.para = para;
     }
 
     public int getPrior() {

@@ -1,6 +1,7 @@
 package service;
 
 import dao.ScheduleDao;
+import dao.TaskDao;
 import model.Task;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -15,14 +16,24 @@ import java.util.List;
 public class ScheduleService {
 
     @Autowired
-    private ScheduleDao scheduleDao;
+    private TaskDao taskDao;
+
+
 
     /**
-    *查询所有任务
-    */
-    public List<Task>  queryTask(int page,int rows){
-        return scheduleDao.queryTask(page,rows);
+     *查询所有任务
+     */
+    public List<Task> queryTask(int page,int rows){
+        return taskDao.queryTask(page,rows);
     }
+
+    /**
+     *插入任务
+     */
+    public int insertTask(Task task){
+        return taskDao.insertTask(task);
+    }
+
 
 
 
