@@ -14,6 +14,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+import service.DaoService;
 import service.ScheduleService;
 import service.TestService;
 
@@ -27,7 +28,7 @@ public class TestController {
     private TestService testService;
 
     @Autowired
-    private ScheduleService scheduleService;
+    private DaoService daoService;
 
     @Autowired
     private T_LogDao t_logDao;
@@ -51,7 +52,7 @@ public class TestController {
     @RequestMapping(value="/test3.do")
     public void test3(HttpServletRequest request,HttpServletResponse response){
         try{
-            List<Task_List> task_lists=scheduleService.queryTask_List();
+            List<Task_List> task_lists=daoService.queryTask_List();
             for(Task_List task_list:task_lists){
                 System.out.println("Task_list : "+task_list.getTask_id());
             }

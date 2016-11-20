@@ -24,17 +24,21 @@ public class ReflectUtil {
                 if (field.getName().equals(fieldName)) {
 
                     String firstLetter = fieldName.substring(0, 1)
-                            .toUpperCase(); // 获得和属性对应的getXXX()方法的名字
+                            .toUpperCase();
                     if ("set".equals(type)) {
+                        // 获得和属性对应的setXXX()方法的名字
                         String setMethodName = "set" + firstLetter
-                                + fieldName.substring(1); // 获得和属性对应的getXXX()方法
+                                + fieldName.substring(1);
+                        // 获得和属性对应的getXXX()方法
                         Method setMethod = classType.getMethod(setMethodName,
-                                new Class[] { field.getType() }); // 调用原对象的getXXX()方法
+                                new Class[] { field.getType() });
+                        // 调用原对象的getXXX()方法
                         ret = setMethod.invoke(obj, new Object[] { fieldVal });
                     }
                     if ("get".equals(type)) {
+                        // 获得和属性对应的getXXX()方法的名字
                         String getMethodName = "get" + firstLetter
-                                + fieldName.substring(1); // 获得和属性对应的setXXX()方法的名字
+                                + fieldName.substring(1);
                         Method getMethod = classType.getMethod(getMethodName,
                                 new Class[] {});
                         ret = getMethod.invoke(obj, new Object[] {});

@@ -23,6 +23,7 @@ public class ReflectTest {
         for(Field f:fields){
             System.out.println(f.toString());
         }
+
         try {
             //获取类型里面test方法
             Method method=classType.getMethod("test");
