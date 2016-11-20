@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!-- 定义命名空间 -->
+<mapper namespace="mapperNS.Task_List">
+
+    <!-- 查询全部任务信息 -->
+    <select id="queryTask_List" resultType="Task_List">
+    SELECT task_id, st, t_date
+	FROM t_task_list
+    </select>
+    <!-- 插入数据 -->
+    <insert id="insertTask_List" parameterType="Task_List">
+        INSERT INTO t_task_list(
+	task_id, st, t_date)
+	VALUES (#{task_id},
+    #{st},
+    #{t_date})
+    </insert>
+
+    <!-- 删除数据按日期 -->
+    <delete id="deleteTask_ListByDate" parameterType="String">
+        DELETE FROM t_task_list
+        WHERE to_date(t_date) &lt;=to_date(#{t_date})
+    </delete>
+
+    <!-- 删除数据按id -->
+    <delete id="deleteTask_ListById" parameterType="int">
+        DELETE FROM t_task_list
+        WHERE task_id=#{task_id}
+    </delete>
+
+
+</mapper>

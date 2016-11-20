@@ -3,8 +3,10 @@ package service;
 import dao.ScheduleDao;
 import dao.T_ParamDao;
 import dao.TaskDao;
+import dao.Task_ListDao;
 import model.T_param;
 import model.Task;
+import model.Task_List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -21,7 +23,8 @@ public class ScheduleService {
     private TaskDao taskDao;
     @Autowired
     private T_ParamDao t_paramDao;
-
+    @Autowired
+    private Task_ListDao task_listDao;
 
     /**
      *查询所有任务
@@ -51,7 +54,19 @@ public class ScheduleService {
         return t_paramDao.insert(t_param);
     }
 
+    /**
+     *查询任务列表
+     */
+    public List<Task_List> queryTask_List(){
+        return task_listDao.query();
+    }
 
+    /**
+     *插入任务列表
+     */
+    public int insertTask_List(Task_List task_list){
+        return task_listDao.insert(task_list);
+    }
 
 
 

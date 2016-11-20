@@ -6,6 +6,7 @@ import javax.servlet.http.HttpServletResponse;
 import dao.T_LogDao;
 import model.T_param;
 import model.Task;
+import model.Task_List;
 import model.Test;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -50,7 +51,10 @@ public class TestController {
     @RequestMapping(value="/test3.do")
     public void test3(HttpServletRequest request,HttpServletResponse response){
         try{
-            t_logDao.delete(new Date());
+            List<Task_List> task_lists=scheduleService.queryTask_List();
+            for(Task_List task_list:task_lists){
+                System.out.println("Task_list : "+task_list.getTask_id());
+            }
             request.setAttribute("test3status","success");
         }
         catch (Exception e){

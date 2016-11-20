@@ -15,6 +15,7 @@ public class Constants {
     public final static String MAPPER_TASK="mapperNS.Task";
     public final static String MAPPER_T_LOG="mapperNS.T_Log";
     public final static String MAPPER_T_PARAM="mapperNS.T_param";
+    public final static String MAPPER_TASK_LIST="mapperNS.Task_List";
 
     /*
      *系统默认值
