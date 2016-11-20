@@ -26,7 +26,6 @@ public class XmlUtil {
             Element element = doc.getDocumentElement();
             // ❺Ⅴ用方法遍历递归打印根元素下面所有的ElementNode(包括TextNode非空的值)
             result.put(element.getTagName(),listAllChildNodes(element));
-            System.out.println(element.getTagName());
             return result;
         } catch (Exception e) {
             e.printStackTrace();

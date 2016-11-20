@@ -10,6 +10,8 @@ import org.springframework.stereotype.Repository;
 import utils.Constants;
 import utils.LogUtil;
 
+import java.util.Date;
+import java.sql.Timestamp;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -48,24 +50,23 @@ public class T_LogDao {
 
     //删除日志
 //删除任务信息
-    public Map<Integer,Integer> delete(List<Integer> task_id) {
-        Map<Integer,Integer> resultMap=new HashMap<Integer, Integer>();
-        for (int i : task_id) {
+    public int  delete(Date deleteTime) {
             try {
-                sqlSessionSchedule.delete(Constants.MAPPER_T_LOG + ".deleteT_Log", i);
-                resultMap.put(i,Constants.SUCCESS);
+                sqlSessionSchedule.delete(Constants.MAPPER_T_LOG + ".deleteT_Log", deleteTime);
                 LogUtil.SuccessLogAdd(logger,
                         Constants.LOG_INFO,
-                        "任务" + i+"的日志", "删除",false);
+                        "时间 " + deleteTime.toString()+" 之前的日志", "删除",false);
+             return Constants.SUCCESS;
             } catch (Exception e) {
-                resultMap.put(i,Constants.FAIL);
+                e.printStackTrace();
                 LogUtil.ErrorLogAdd(logger,
                         Constants.LOG_ERROR,
-                        "任务" + i+"的日志", "删除", "未知原因",false);
+                        "时间 " + deleteTime.toString()+" 之前的日志", "删除", "未知原因",false);
+                return Constants.FAIL;
             }
-        }
-        return resultMap;
     }
 
-
 }
+
+
+

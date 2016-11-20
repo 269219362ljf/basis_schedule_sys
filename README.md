@@ -9,6 +9,14 @@
     空间命名规则为<mapper namespace="mapperNS.Test">，其中Test为自定义
     4 在utils中Constants中添加，MAPPER_*变量，赋值为*-mapper.xml中的命名空间
     5 在Dao包中建立*Dao类，提供与数据库进行交互的接口
+    Dao中，执行sql需要调用之前在Constants中添加的MAPPER_*变量
+ 注意事项：
+    1 mapper.xml里面，大小写需要转义：
+    &lt;    <   小于号
+    &gt;    >   大于号
+    &amp;   &   和
+    &apos;  ’   单引号
+    &quot;  "   双引号
 
 2获取xml配置文件信息，xml配置文件需要放置在resources的config文件夹下
     增加系统变量步骤如下：

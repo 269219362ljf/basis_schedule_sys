@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!-- 定义命名空间 -->
+<mapper namespace="mapperNS.T_param">
+
+    <!-- 查询全部任务信息 -->
+    <select id="queryT_param" resultType="T_param">
+    SELECT name, value
+	FROM t_param
+    </select>
+    <!-- 插入数据 -->
+    <insert id="insertT_param" parameterType="T_param">
+        INSERT INTO t_param(
+            name, value)
+        VALUES (#{name}, #{value})
+    </insert>
+
+    <!-- 删除数据 -->
+    <delete id="deleteT_param" parameterType="String">
+        DELETE FROM t_param where name =#{name}
+    </delete>
+</mapper>
