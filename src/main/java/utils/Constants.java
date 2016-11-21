@@ -16,6 +16,9 @@ public class Constants {
     public final static String MAPPER_T_LOG="mapperNS.T_Log";
     public final static String MAPPER_T_PARAM="mapperNS.T_param";
     public final static String MAPPER_TASK_LIST="mapperNS.Task_List";
+    public final static String MAPPER_Schedule="mapperNS.Schedule";
+
+
 
     /*
      *系统默认值
@@ -28,6 +31,16 @@ public class Constants {
     public final static int LOG_WARN=2;
     public final static int LOG_ERROR=3;
     public final static int LOG_FATAL=4;
+
+    public final static int TASK_READY=0;
+    public final static int TASK_RUNNING=1;
+    public final static int TASK_WAIT=2;
+    public final static int TASK_SUCCESS=3;
+    public final static int TASK_FAIL=4;
+    public final static int TASK_PASS=5;
+
+
+
 
     private final static String PropertyFile="system-property.xml";
 

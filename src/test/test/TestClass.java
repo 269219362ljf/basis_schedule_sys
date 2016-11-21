@@ -1,6 +1,8 @@
 package test;
 
 
+
+import org.json.JSONObject;
 import java.lang.reflect.Field;
 import java.lang.reflect.Method;
 
@@ -11,9 +13,8 @@ public class TestClass {
 
     public static void main(String[] args) {
         try {
-            System.out.println(PrintClass.class.toString());
+            System.out.println(PrintClass.class.getName());
             Class testClass=Class.forName("test.PrintClass");
-
             //使用此方法必须有0参数的构造函数
             Object obj=testClass.newInstance();
             TestInterface testobj=(TestInterface)testClass.newInstance();
@@ -32,6 +33,11 @@ public class TestClass {
             PrintClass a=new PrintClass("test");
             TestInterface testInterface=a;
             testInterface.test();
+
+            String testString="{a:0,c:0}";
+            JSONObject jsObject=new JSONObject(testString) ;
+            System.out.println(jsObject);
+            System.out.println(jsObject.get("a"));
 
 
 

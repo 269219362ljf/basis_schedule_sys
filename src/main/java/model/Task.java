@@ -11,6 +11,7 @@ public class Task  implements Serializable {
     private int task_id;
     private String name;
     private String des;
+    private String taskclassname;
     private int type;
     private int st;
     private String para;
@@ -19,7 +20,6 @@ public class Task  implements Serializable {
     private Date end_time;
     private double cost;
     private double avg_cost;
-
 
     public int getTask_id() {
         return task_id;
@@ -45,6 +45,14 @@ public class Task  implements Serializable {
         this.des = des;
     }
 
+    public String getTaskclassname() {
+        return taskclassname;
+    }
+
+    public void setTaskclassname(String taskclassname) {
+        this.taskclassname = taskclassname;
+    }
+
     public int getType() {
         return type;
     }
@@ -61,11 +69,11 @@ public class Task  implements Serializable {
         this.st = st;
     }
 
-    public String getParam() {
+    public String getPara() {
         return para;
     }
 
-    public void setParam(String para) {
+    public void setPara(String para) {
         this.para = para;
     }
 
@@ -97,7 +105,7 @@ public class Task  implements Serializable {
         return cost;
     }
 
-    public void setCost(int cost) {
+    public void setCost(double cost) {
         this.cost = cost;
     }
 
@@ -105,7 +113,7 @@ public class Task  implements Serializable {
         return avg_cost;
     }
 
-    public void setAvg_cost(int avg_cost) {
+    public void setAvg_cost(double avg_cost) {
         this.avg_cost = avg_cost;
     }
 }

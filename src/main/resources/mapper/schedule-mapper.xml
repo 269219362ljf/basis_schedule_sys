@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!-- 定义命名空间 -->
+<mapper namespace="mapperNS.Schedule">
+
+    <!-- 查询可执行任务信息 -->
+    <select id="queryRunnableList" resultType="RunnableList">
+      select task.task_id,task_list.st,task.para,task.taskclassname   from
+        t_task task
+        inner join t_task_list task_list
+        on (task.task_id=task_list.task_id)
+        inner join (select max(t_date) as m_date from t_task_list) max_date
+        on (task_list.t_date=max_date.m_date)
+    </select>
+
+    <!-- 插入数据
+    <insert id="" parameterType="">
+    </insert>-->
+
+    <!-- 删除数据
+    <delete id="" parameterType="">
+
+    </delete>-->
+</mapper>

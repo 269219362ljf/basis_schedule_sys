@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="SqlDialectMappings">
+    <file url="file://$PROJECT_DIR$/src/main/resources/mapper/schedule-mapper.xml" dialect="PostgreSQL" />
     <file url="file://$PROJECT_DIR$/src/main/resources/mapper/t_log-mapper.xml" dialect="PostgreSQL" />
+    <file url="file://$PROJECT_DIR$/src/main/resources/mapper/t_param-mapper.xml" dialect="PostgreSQL" />
     <file url="file://$PROJECT_DIR$/src/main/resources/mapper/task-mapper.xml" dialect="PostgreSQL" />
     <file url="file://$PROJECT_DIR$/src/main/resources/mapper/task_list-mapper.xml" dialect="PostgreSQL" />
     <file url="file://$PROJECT_DIR$/src/main/resources/mapper/test-mapper.xml" dialect="PostgreSQL" />

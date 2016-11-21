@@ -3,12 +3,52 @@ package jobs;
 import org.json.JSONObject;
 
 /**
- * Created by lu on 2016/11/20.
+ * Created by Administrator on 2016/11/21.
  */
-public interface Job {
+public class Job {
 
-    public int work(JSONObject param);
+    private int task_id;
+    private JSONObject param;
+    private String jobClass;
+    private int task_st;
+
+    public Job(int task_id, JSONObject param,String jobClass,int task_st){
+        this.task_id=task_id;
+        this.param=param;
+        this.jobClass=jobClass;
+        this.task_st=task_st;
+    }
 
 
+    public int getTask_id() {
+        return task_id;
+    }
 
+    public void setTask_id(int task_id) {
+        this.task_id = task_id;
+    }
+
+    public JSONObject getParam() {
+        return param;
+    }
+
+    public void setParam(JSONObject param) {
+        this.param = param;
+    }
+
+    public String getJobClass() {
+        return jobClass;
+    }
+
+    public void setJobClass(String jobClass) {
+        this.jobClass = jobClass;
+    }
+
+    public int getTask_st() {
+        return task_st;
+    }
+
+    public void setTask_st(int task_st) {
+        this.task_st = task_st;
+    }
 }

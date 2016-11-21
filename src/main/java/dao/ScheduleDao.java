@@ -1,8 +1,6 @@
 package dao;
 
-import model.Task;
-import model.Task_List;
-import org.apache.ibatis.session.RowBounds;
+import model.RunnableList;
 import org.mybatis.spring.SqlSessionTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
@@ -20,19 +18,16 @@ public class ScheduleDao {
     @Autowired
     private SqlSessionTemplate sqlSessionSchedule;
 
-    public List<Task> queryTask(int page,int rows){
-        return sqlSessionSchedule.selectList(Constants.MAPPER_TASK+ ".queryTask",new RowBounds((page-1)*rows, rows));
-    }
-
-    public List<Task_List> queryAbleRunningTaskList(){
-        return sqlSessionSchedule.selectList(Constants.MAPPER_TASK+ ".queryAbleRunningTaskList");
-    }
+    //查询可执行任务信息
+   public List<RunnableList> queryRunnableList(){
+       return sqlSessionSchedule.selectList(Constants.MAPPER_Schedule+".queryRunnableList");
+   }
 
 
     @Transactional
     public boolean initTaskList(){
         //初始化任务列表
-        sqlSessionSchedule.insert(Constants.MAPPER_TASK+ ".initTaskList");
+
         //
         return true;
     }
