@@ -24,7 +24,7 @@ public class Constants {
      *系统默认值
      */
     public final static int SUCCESS=0;
-    public final static int FAIL=1;
+    public final static int FAIL=-1;
 
     public final static int LOG_DEBUG=0;
     public final static int LOG_INFO=1;
@@ -38,6 +38,8 @@ public class Constants {
     public final static int TASK_SUCCESS=3;
     public final static int TASK_FAIL=4;
     public final static int TASK_PASS=5;
+
+    public final static int BEFOREERRORXIST=1;
 
 
 

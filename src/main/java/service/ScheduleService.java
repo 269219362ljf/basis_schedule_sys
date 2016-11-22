@@ -5,7 +5,6 @@ import dao.Task_ListDao;
 import jobs.Job;
 import jobs.JobInterface;
 import model.RunnableList;
-import model.Task_List;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.json.JSONException;
@@ -105,15 +104,48 @@ public class ScheduleService {
         return false;
     }
 
-    //初始化执行任务列表
-    public int initJobs(){
+    //初始化执行执行任务列表
+    private int initJobs(){
+        int able2run=-1;
+        //检查之前任务是否存在错误
+        able2run=scheduleDao.queryBeforeErrorCount();
+        if(able2run>0 || able2run<0){
+            return Constants.BEFOREERRORXIST;
+        }
+        //初始化任务列表
+        int result=scheduleDao.initTaskList();
+        if(result==Constants.FAIL){
+            return Constants.FAIL;
+        }
+        result=scheduleDao.updateAllTaskList();
+        if(result==Constants.FAIL){
+            return Constants.FAIL;
+        }
+
+        //初始化系统执行任务列表
         List<RunnableList> runnableLists=scheduleDao.queryRunnableList();
+        runnableLists.clear();
         for(RunnableList runnableList:runnableLists){
             addJob2Jobs(runnableList.getTask_id(),runnableList.getPara(),runnableList.getTaskclassname());
         }
-
-        return 0;
+        return Constants.SUCCESS;
     }
+
+    //初始化由于
+    public int init(){
+        //初始化任务列表，中途加入的任务也会初始化进去
+        int result=initJobs();
+        if(result==Constants.FAIL){
+            return Constants.FAIL;
+        }
+        //进入调度主入口，若调度已启动，忽略
+        Monitor_Thread thread=Monitor_Thread.getInstance();
+        if(!thread.isAlive()){
+            thread.start();
+        }
+        return Constants.SUCCESS;
+    }
+
 
 
 
