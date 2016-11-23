@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="6ad4375c-ee73-4909-8766-556bf0697e7d" name="Default" comment="添加监控任务的线程，支持中途添加任务，任务调度中，增加对数据库任务列表的修改，但代价等还没做">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/service/Schedule_Thread.java" />
+    <list default="true" id="6ad4375c-ee73-4909-8766-556bf0697e7d" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/dao/ScheduleDao.class" afterPath="$PROJECT_DIR$/target/classes/dao/ScheduleDao.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/model/Task_List.class" afterPath="$PROJECT_DIR$/target/classes/model/Task_List.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/service/ScheduleService.class" afterPath="$PROJECT_DIR$/target/classes/service/ScheduleService.class" />
@@ -12,15 +11,6 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/maven_spring_mybatis/WEB-INF/classes/service/ScheduleService.class" afterPath="$PROJECT_DIR$/target/maven_spring_mybatis/WEB-INF/classes/service/ScheduleService.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/maven_spring_mybatis/WEB-INF/classes/utils/Constants.class" afterPath="$PROJECT_DIR$/target/maven_spring_mybatis/WEB-INF/classes/utils/Constants.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/dao/ScheduleDao.java" afterPath="$PROJECT_DIR$/src/main/java/dao/ScheduleDao.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/model/Task_List.java" afterPath="$PROJECT_DIR$/src/main/java/model/Task_List.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/schedule/JobThread.java" afterPath="$PROJECT_DIR$/src/main/java/schedule/JobThread.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/schedule/ScheduleTask.java" afterPath="$PROJECT_DIR$/src/main/java/schedule/ScheduleTask.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/service/Monitor_Thread.java" afterPath="$PROJECT_DIR$/src/main/java/service/Monitor_Thread.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/service/ScheduleService.java" afterPath="$PROJECT_DIR$/src/main/java/service/ScheduleService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/utils/Constants.java" afterPath="$PROJECT_DIR$/src/main/java/utils/Constants.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/mapper/schedule-mapper.xml" afterPath="$PROJECT_DIR$/src/main/resources/mapper/schedule-mapper.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/想法.txt" afterPath="$PROJECT_DIR$/想法.txt" />
     </list>
     <ignored path="basis_schedule_sys.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -1402,7 +1392,7 @@
       <workItem from="1479709854667" duration="10426000" />
       <workItem from="1479777214646" duration="2991000" />
       <workItem from="1479801334199" duration="6025000" />
-      <workItem from="1479865230668" duration="16426000" />
+      <workItem from="1479865230668" duration="16444000" />
     </task>
     <task id="LOCAL-00001" summary="增加线程调度主入口">
       <created>1478793276167</created>
@@ -1488,11 +1478,18 @@
       <option name="project" value="LOCAL" />
       <updated>1479871805407</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="添加监控任务的线程，支持中途添加任务，任务调度中，增加对数据库任务列表的修改，但代价等还没做">
+      <created>1479889769305</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1479889769305</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="219988000" />
+    <option name="totallyTimeSpent" value="220006000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="0" />
