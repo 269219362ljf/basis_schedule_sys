@@ -2,11 +2,24 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6ad4375c-ee73-4909-8766-556bf0697e7d" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/schedule/JobThread.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/schedule/ScheduleTask.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/controller/ScheduleController.class" afterPath="$PROJECT_DIR$/target/classes/controller/ScheduleController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/dao/ScheduleDao.class" afterPath="$PROJECT_DIR$/target/classes/dao/ScheduleDao.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/service/ScheduleService.class" afterPath="$PROJECT_DIR$/target/classes/service/ScheduleService.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/utils/Constants.class" afterPath="$PROJECT_DIR$/target/classes/utils/Constants.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/maven_spring_mybatis/WEB-INF/classes/controller/ScheduleController.class" afterPath="$PROJECT_DIR$/target/maven_spring_mybatis/WEB-INF/classes/controller/ScheduleController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/maven_spring_mybatis/WEB-INF/classes/dao/ScheduleDao.class" afterPath="$PROJECT_DIR$/target/maven_spring_mybatis/WEB-INF/classes/dao/ScheduleDao.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/maven_spring_mybatis/WEB-INF/classes/service/ScheduleService.class" afterPath="$PROJECT_DIR$/target/maven_spring_mybatis/WEB-INF/classes/service/ScheduleService.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/maven_spring_mybatis/WEB-INF/classes/utils/Constants.class" afterPath="$PROJECT_DIR$/target/maven_spring_mybatis/WEB-INF/classes/utils/Constants.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/dao/ScheduleDao.java" afterPath="$PROJECT_DIR$/src/main/java/dao/ScheduleDao.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/controller/ScheduleController.java" afterPath="$PROJECT_DIR$/src/main/java/controller/ScheduleController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/jobs/TestJob.java" afterPath="$PROJECT_DIR$/src/main/java/jobs/TestJob.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/service/Monitor_Thread.java" afterPath="$PROJECT_DIR$/src/main/java/service/Monitor_Thread.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/service/ScheduleService.java" afterPath="$PROJECT_DIR$/src/main/java/service/ScheduleService.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/utils/Constants.java" afterPath="$PROJECT_DIR$/src/main/java/utils/Constants.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/mapper/schedule-mapper.xml" afterPath="$PROJECT_DIR$/src/main/resources/mapper/schedule-mapper.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/想法.txt" afterPath="$PROJECT_DIR$/想法.txt" />
     </list>
     <ignored path="basis_schedule_sys.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -46,10 +59,25 @@
       <file leaf-file-name="ScheduleService.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/service/ScheduleService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-3780">
-              <caret line="6" column="26" selection-start-line="6" selection-start-column="26" selection-end-line="6" selection-end-column="26" />
+            <state relative-caret-position="420">
+              <caret line="73" column="0" selection-start-line="73" selection-start-column="0" selection-end-line="73" selection-end-column="0" />
               <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#830#831#0" expanded="true" />
+                <element signature="e#857#858#0" expanded="true" />
                 <element signature="method#isInterfaceExist#0;class#ScheduleService#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TestJob.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/jobs/TestJob.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="210">
+              <caret line="16" column="21" selection-start-line="16" selection-start-column="21" selection-end-line="16" selection-end-column="21" />
+              <folding>
+                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -58,11 +86,20 @@
       <file leaf-file-name="Monitor_Thread.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/service/Monitor_Thread.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="11" column="33" selection-start-line="11" selection-start-column="19" selection-end-line="11" selection-end-column="33" />
+            <state relative-caret-position="240">
+              <caret line="35" column="22" selection-start-line="35" selection-start-column="22" selection-end-line="35" selection-end-column="22" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="JobThread.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/schedule/JobThread.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-420">
+              <caret line="19" column="13" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
               <folding>
-                <element signature="e#341#342#0" expanded="true" />
-                <element signature="e#370#371#0" expanded="true" />
+                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -71,58 +108,43 @@
       <file leaf-file-name="ScheduleDao.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/dao/ScheduleDao.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="451">
-              <caret line="92" column="41" selection-start-line="92" selection-start-column="41" selection-end-line="92" selection-end-column="41" />
+            <state relative-caret-position="120">
+              <caret line="25" column="29" selection-start-line="25" selection-start-column="29" selection-end-line="25" selection-end-column="29" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Constants.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/utils/Constants.java">
+      <file leaf-file-name="RunnableList.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/model/RunnableList.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="465">
-              <caret line="41" column="43" selection-start-line="41" selection-start-column="43" selection-end-line="41" selection-end-column="43" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="T_ParamDao.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/dao/T_ParamDao.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="130">
-              <caret line="22" column="84" selection-start-line="22" selection-start-column="4" selection-end-line="22" selection-end-column="84" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="schedule-mapper.xml" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/schedule-mapper.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1260">
-              <caret line="42" column="26" selection-start-line="42" selection-start-column="26" selection-end-line="42" selection-end-column="26" />
+            <state relative-caret-position="240">
+              <caret line="11" column="32" selection-start-line="11" selection-start-column="19" selection-end-line="11" selection-end-column="32" />
               <folding>
-                <marker date="1479812075857" expanded="true" signature="303:788" ph="select task.... t_task" />
-                <marker date="1479812075857" expanded="true" signature="865:1022" ph="insert into t_task_list... " />
-                <marker date="1479812075857" expanded="true" signature="897:975" ph="select task_... t_task" />
-                <marker date="1479812075857" expanded="true" signature="1128:1179" ph="select count... t_task_list" />
-                <marker date="1479812075857" expanded="true" signature="1128:1190" ph="select count... t_task_list" />
-                <marker date="1479812075857" expanded="true" signature="1128:1221" ph="select count... t_task_list" />
-                <marker date="1479812075857" expanded="true" signature="1319:1400" ph="select count... t_task_list" />
-                <marker date="1479812075857" expanded="true" signature="1490:1598" ph="UPDATE t_tas... " />
+                <element signature="e#283#284#0" expanded="true" />
+                <element signature="e#313#314#0" expanded="true" />
+                <element signature="e#537#538#0" expanded="true" />
+                <element signature="e#564#565#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="README.md" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/README.md">
+      <file leaf-file-name="schedule-mapper.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/schedule-mapper.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="14" column="8" selection-start-line="14" selection-start-column="4" selection-end-line="14" selection-end-column="8" />
-              <folding />
+            <state relative-caret-position="498">
+              <caret line="18" column="32" selection-start-line="18" selection-start-column="32" selection-end-line="18" selection-end-column="32" />
+              <folding>
+                <marker date="1479871078621" expanded="true" signature="303:870" ph="select task.... t_task" />
+                <marker date="1479871078621" expanded="true" signature="947:1104" ph="insert into t_task_list... " />
+                <marker date="1479871078621" expanded="true" signature="979:1057" ph="select task_... t_task" />
+                <marker date="1479871078621" expanded="true" signature="1210:1261" ph="select count... t_task_list" />
+                <marker date="1479871078621" expanded="true" signature="1210:1272" ph="select count... t_task_list" />
+                <marker date="1479871078621" expanded="true" signature="1210:1303" ph="select count... t_task_list" />
+                <marker date="1479871078621" expanded="true" signature="1401:1482" ph="select count... t_task_list" />
+                <marker date="1479871078621" expanded="true" signature="1572:1680" ph="UPDATE t_tas... " />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -140,8 +162,8 @@
         <option value="HTML File" />
         <option value="JavaScript File" />
         <option value="Interface" />
-        <option value="Class" />
         <option value="mapperXml File" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -156,10 +178,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/webapp/js/test3.js" />
-        <option value="$PROJECT_DIR$/src/main/resources/mapper/test-mapper.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/model/Test.java" />
-        <option value="$PROJECT_DIR$/.idea/compiler.xml" />
         <option value="$PROJECT_DIR$/src/main/java/model/T_param.java" />
         <option value="$PROJECT_DIR$/src/main/resources/config/applicationContext.xml" />
         <option value="$PROJECT_DIR$/pom.xml" />
@@ -191,8 +209,6 @@
         <option value="$PROJECT_DIR$/src/main/java/service/DaoService.java" />
         <option value="$PROJECT_DIR$/src/test/test/TestInterface.java" />
         <option value="$PROJECT_DIR$/src/test/test/PrintClass.java" />
-        <option value="$PROJECT_DIR$/想法.txt" />
-        <option value="$PROJECT_DIR$/src/main/java/jobs/TestJob.java" />
         <option value="$PROJECT_DIR$/basis_schedule_sys.iml" />
         <option value="$PROJECT_DIR$/src/main/java/jobs/Job.java" />
         <option value="$PROJECT_DIR$/src/main/resources/config/mybatis-config.xml" />
@@ -203,10 +219,16 @@
         <option value="$PROJECT_DIR$/src/main/java/model/RunnableList.java" />
         <option value="$PROJECT_DIR$/src/test/test/TestClass.java" />
         <option value="$PROJECT_DIR$/src/main/java/controller/TestController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/utils/Constants.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/mapper/schedule-mapper.xml" />
         <option value="$PROJECT_DIR$/src/main/java/dao/ScheduleDao.java" />
+        <option value="$PROJECT_DIR$/想法.txt" />
+        <option value="$PROJECT_DIR$/src/main/java/schedule/JobThread.java" />
+        <option value="$PROJECT_DIR$/src/main/java/utils/Constants.java" />
+        <option value="$PROJECT_DIR$/src/main/java/schedule/ScheduleTask.java" />
+        <option value="$PROJECT_DIR$/src/main/java/controller/ScheduleController.java" />
         <option value="$PROJECT_DIR$/src/main/java/service/ScheduleService.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/mapper/schedule-mapper.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/service/Monitor_Thread.java" />
+        <option value="$PROJECT_DIR$/src/main/java/jobs/TestJob.java" />
       </list>
     </option>
   </component>
@@ -561,6 +583,32 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="schedule" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="basis_schedule_sys" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="basis_schedule_sys" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="model" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -671,9 +719,9 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scratches" />
-      <pane id="PackagesPane" />
       <pane id="Scope" />
+      <pane id="PackagesPane" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -1446,7 +1494,8 @@
       <workItem from="1479651435018" duration="4828000" />
       <workItem from="1479709854667" duration="10426000" />
       <workItem from="1479777214646" duration="2991000" />
-      <workItem from="1479801334199" duration="5360000" />
+      <workItem from="1479801334199" duration="6025000" />
+      <workItem from="1479865230668" duration="5868000" />
     </task>
     <task id="LOCAL-00001" summary="增加线程调度主入口">
       <created>1478793276167</created>
@@ -1511,11 +1560,18 @@
       <option name="project" value="LOCAL" />
       <updated>1479719727957</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="任务列表初始化（考虑到中途加入，重跑），调度系统入口（实际调度未实现）">
+      <created>1479812833246</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1479812833246</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="202897000" />
+    <option name="totallyTimeSpent" value="209430000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="0" />
@@ -1523,13 +1579,15 @@
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.37322834" sideWeight="0.46486092" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.080314964" sideWeight="0.22181553" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2629921" sideWeight="0.23499268" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32913387" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39476553" sideWeight="0.4952381" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2629921" sideWeight="0.7650073" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -1541,14 +1599,12 @@
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.38582677" sideWeight="0.7349927" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.19055118" sideWeight="0.74377745" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.37322834" sideWeight="0.46778917" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.27716535" sideWeight="0.7781845" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.4089422" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.05984252" sideWeight="0.49121523" order="1" side_tool="false" content_ui="tabs" />
     </layout>
@@ -1576,11 +1632,26 @@
     <MESSAGE value="添加系统配置xml和日志级别分层" />
     <MESSAGE value="添加参数表数据库接口，日志删除逻辑" />
     <MESSAGE value="增加信号量，执行任务列表，执行任务相关。但初始化未做" />
-    <option name="LAST_COMMIT_MESSAGE" value="增加信号量，执行任务列表，执行任务相关。但初始化未做" />
+    <MESSAGE value="任务列表初始化（考虑到中途加入，重跑），调度系统入口（实际调度未实现）" />
+    <option name="LAST_COMMIT_MESSAGE" value="任务列表初始化（考虑到中途加入，重跑），调度系统入口（实际调度未实现）" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="12" />
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/schedule/JobThread.java</url>
+          <line>33</line>
+          <properties />
+          <option name="timeStamp" value="14" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/service/Monitor_Thread.java</url>
+          <line>27</line>
+          <properties />
+          <option name="timeStamp" value="15" />
+        </line-breakpoint>
+      </breakpoints>
+      <option name="time" value="22" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -1589,9 +1660,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/test/test/TestJob.java" />
-    <entry file="file://$PROJECT_DIR$/src/test/test/Jobex.java" />
-    <entry file="file://$PROJECT_DIR$/src/test/test/ReflectTest.java" />
     <entry file="file://$PROJECT_DIR$/src/test/test/XmlTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="270">
@@ -1627,24 +1695,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/想法.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="4" column="31" selection-start-line="4" selection-start-column="31" selection-end-line="4" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/test/Test_log.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="156">
           <caret line="9" column="82" selection-start-line="9" selection-start-column="4" selection-end-line="9" selection-end-column="82" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/basis_schedule_sys.iml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="30" column="64" selection-start-line="30" selection-start-column="64" selection-end-line="30" selection-end-column="64" />
         </state>
       </provider>
     </entry>
@@ -1666,27 +1720,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/controller/ScheduleController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="358">
-          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/dao/Task_ListDao.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="537">
           <caret line="27" column="11" selection-start-line="27" selection-start-column="11" selection-end-line="27" selection-end-column="11" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/dao/TaskDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-210">
-          <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="false" />
           </folding>
@@ -1700,21 +1737,6 @@
           <folding>
             <element signature="imports" expanded="false" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/jobs/Job.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="540">
-          <caret line="18" column="29" selection-start-line="18" selection-start-column="29" selection-end-line="18" selection-end-column="29" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/jobs/JobInterface.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="7" column="17" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
         </state>
       </provider>
     </entry>
@@ -1813,13 +1835,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/jobs/TestJob.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="7" column="20" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/service/DaoService.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-44">
@@ -1869,20 +1884,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/model/RunnableList.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="11" column="32" selection-start-line="11" selection-start-column="19" selection-end-line="11" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/controller/TestController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="59" column="61" selection-start-line="59" selection-start-column="61" selection-end-line="59" selection-end-column="61" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/test/TestClass.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="319">
@@ -1894,20 +1895,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="330">
           <caret line="11" column="24" selection-start-line="11" selection-start-column="24" selection-end-line="11" selection-end-column="24" />
-          <folding>
-            <element signature="e#237#238#0" expanded="false" />
-            <element signature="e#267#268#0" expanded="false" />
-            <element signature="e#310#311#0" expanded="false" />
-            <element signature="e#348#349#0" expanded="false" />
-            <element signature="e#374#375#0" expanded="false" />
-            <element signature="e#399#400#0" expanded="false" />
-            <element signature="e#432#433#0" expanded="false" />
-            <element signature="e#460#461#0" expanded="false" />
-            <element signature="e#493#494#0" expanded="false" />
-            <element signature="e#522#523#0" expanded="false" />
-            <element signature="e#566#567#0" expanded="false" />
-            <element signature="e#602#603#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1934,70 +1921,181 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
+        <state relative-caret-position="420">
           <caret line="14" column="8" selection-start-line="14" selection-start-column="4" selection-end-line="14" selection-end-column="8" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/utils/Constants.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="465">
-          <caret line="41" column="43" selection-start-line="41" selection-start-column="43" selection-end-line="41" selection-end-column="43" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/dao/T_ParamDao.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="130">
+        <state relative-caret-position="270">
           <caret line="22" column="84" selection-start-line="22" selection-start-column="4" selection-end-line="22" selection-end-column="84" />
+          <folding>
+            <element signature="imports" expanded="false" />
+            <element signature="e#807#808#0" expanded="false" />
+            <element signature="e#900#901#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/想法.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="1" column="12" selection-start-line="1" selection-start-column="12" selection-end-line="1" selection-end-column="12" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/service/Monitor_Thread.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/jobs/Job.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="11" column="33" selection-start-line="11" selection-start-column="19" selection-end-line="11" selection-end-column="33" />
+        <state relative-caret-position="495">
+          <caret line="18" column="29" selection-start-line="18" selection-start-column="29" selection-end-line="18" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/dao/TaskDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="245">
+          <caret line="24" column="81" selection-start-line="24" selection-start-column="4" selection-end-line="24" selection-end-column="81" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/utils/Constants.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="60" column="18" selection-start-line="60" selection-start-column="18" selection-end-line="60" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/jobs/JobInterface.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="7" column="29" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/schedule/ScheduleTask.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="11" column="20" selection-start-line="11" selection-start-column="20" selection-end-line="11" selection-end-column="20" />
           <folding>
-            <element signature="e#341#342#0" expanded="true" />
-            <element signature="e#370#371#0" expanded="true" />
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/basis_schedule_sys.iml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="30" column="64" selection-start-line="30" selection-start-column="64" selection-end-line="30" selection-end-column="64" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-web/4.3.1.RELEASE/spring-web-4.3.1.RELEASE-sources.jar!/org/springframework/web/method/support/InvocableHandlerMethod.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="156">
+          <caret line="231" column="36" selection-start-line="231" selection-start-column="36" selection-end-line="231" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/controller/TestController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="510">
+          <caret line="73" column="9" selection-start-line="70" selection-start-column="8" selection-end-line="73" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/controller/ScheduleController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="298">
+          <caret line="30" column="10" selection-start-line="30" selection-start-column="10" selection-end-line="30" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/schedule-mapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="498">
+          <caret line="18" column="32" selection-start-line="18" selection-start-column="32" selection-end-line="18" selection-end-column="32" />
+          <folding>
+            <marker date="1479871078621" expanded="true" signature="303:870" ph="select task.... t_task" />
+            <marker date="1479871078621" expanded="true" signature="947:1104" ph="insert into t_task_list... " />
+            <marker date="1479871078621" expanded="true" signature="979:1057" ph="select task_... t_task" />
+            <marker date="1479871078621" expanded="true" signature="1210:1261" ph="select count... t_task_list" />
+            <marker date="1479871078621" expanded="true" signature="1210:1272" ph="select count... t_task_list" />
+            <marker date="1479871078621" expanded="true" signature="1210:1303" ph="select count... t_task_list" />
+            <marker date="1479871078621" expanded="true" signature="1401:1482" ph="select count... t_task_list" />
+            <marker date="1479871078621" expanded="true" signature="1572:1680" ph="UPDATE t_tas... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/model/RunnableList.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="11" column="32" selection-start-line="11" selection-start-column="19" selection-end-line="11" selection-end-column="32" />
+          <folding>
+            <element signature="e#283#284#0" expanded="true" />
+            <element signature="e#313#314#0" expanded="true" />
+            <element signature="e#537#538#0" expanded="true" />
+            <element signature="e#564#565#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/service/ScheduleService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="73" column="0" selection-start-line="73" selection-start-column="0" selection-end-line="73" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#830#831#0" expanded="true" />
+            <element signature="e#857#858#0" expanded="true" />
+            <element signature="method#isInterfaceExist#0;class#ScheduleService#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/dao/ScheduleDao.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="451">
-          <caret line="92" column="41" selection-start-line="92" selection-start-column="41" selection-end-line="92" selection-end-column="41" />
+        <state relative-caret-position="120">
+          <caret line="25" column="29" selection-start-line="25" selection-start-column="29" selection-end-line="25" selection-end-column="29" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/service/ScheduleService.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/schedule/JobThread.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-3780">
-          <caret line="6" column="26" selection-start-line="6" selection-start-column="26" selection-end-line="6" selection-end-column="26" />
+        <state relative-caret-position="-420">
+          <caret line="19" column="13" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
           <folding>
-            <element signature="method#isInterfaceExist#0;class#ScheduleService#0" expanded="false" />
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/schedule-mapper.xml">
+    <entry file="file://$PROJECT_DIR$/src/main/java/service/Monitor_Thread.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1260">
-          <caret line="42" column="26" selection-start-line="42" selection-start-column="26" selection-end-line="42" selection-end-column="26" />
+        <state relative-caret-position="240">
+          <caret line="35" column="22" selection-start-line="35" selection-start-column="22" selection-end-line="35" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/jobs/TestJob.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="16" column="21" selection-start-line="16" selection-start-column="21" selection-end-line="16" selection-end-column="21" />
           <folding>
-            <marker date="1479812075857" expanded="true" signature="303:788" ph="select task.... t_task" />
-            <marker date="1479812075857" expanded="true" signature="865:1022" ph="insert into t_task_list... " />
-            <marker date="1479812075857" expanded="true" signature="897:975" ph="select task_... t_task" />
-            <marker date="1479812075857" expanded="true" signature="1128:1179" ph="select count... t_task_list" />
-            <marker date="1479812075857" expanded="true" signature="1128:1190" ph="select count... t_task_list" />
-            <marker date="1479812075857" expanded="true" signature="1128:1221" ph="select count... t_task_list" />
-            <marker date="1479812075857" expanded="true" signature="1319:1400" ph="select count... t_task_list" />
-            <marker date="1479812075857" expanded="true" signature="1490:1598" ph="UPDATE t_tas... " />
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>

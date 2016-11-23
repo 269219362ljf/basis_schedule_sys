@@ -3,3 +3,4 @@
 或者work（JSONObject param），构造函数有一个无参函数。调度中，使用
 job testobj=(job)Class.forName("classname").newInstance();
 testobj.work(param)来实现任务的执行(未实现)
+3 由于需要自定义调度方式和监控JOB，可能就不能用FJP

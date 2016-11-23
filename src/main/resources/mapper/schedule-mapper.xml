@@ -5,10 +5,11 @@
 
     <!-- 根据依赖查询目前可执行任务信息 -->
     <select id="queryRunnableList" resultType="RunnableList">
-        select task_list.task_id,tast_list.st,tast_list.t_date
+        select task_list.task_id,task_list.st,task.para,task.taskclassname
         from t_task_list task_list
             left join t_dep dep on (task_list.task_id=dep.task_id)
             inner join t_task_list parent_st on (dep.parent_id=parent_st.task_id)
+            left join t_task task on (task.task_id=task_list.task_id)
         where (
                   parent_st.st=3
                   or parent_st.st=5

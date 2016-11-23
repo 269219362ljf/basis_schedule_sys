@@ -1,5 +1,11 @@
 package service;
 
+import jobs.Job;
+import schedule.JobThread;
+import schedule.ScheduleTask;
+import utils.Constants;
+
+import java.util.List;
 import java.util.concurrent.ForkJoinPool;
 import java.util.concurrent.RecursiveAction;
 
@@ -18,24 +24,25 @@ public class Monitor_Thread extends Thread {
     //启动线程池并开始执行任务
     @Override
     public void run() {
-        //休眠时长
-        int sleeptime = 1000;
-        //线程长度
-        int threadcount = 50;
-        ForkJoinPool pool = new ForkJoinPool(threadcount);
-        while (true) {
-            try {
-                //新建任务
-                MonitorTask task=new MonitorTask();
-                //放入线程池执行
-                pool.execute(task);
+        //新建线程池
+        ForkJoinPool pool = new ForkJoinPool(Constants.THREADCOUNT);
 
+            try {
+                //此处是实现调度算法的
+//                Job runJob=null;
+//                runJob= ScheduleTask.getjob();
+                List<Job> jobs=ScheduleService.getInstance();
+                for (Job runjob : jobs) {
+                    JobThread jobThread = new JobThread(runjob);
+                    pool.execute(jobThread);
+                    //pool.execute(new MonitorTask());
+                }
             }
             catch(Exception e){
                 e.printStackTrace();
             }
         }
-    }
+
 
     //测试用任务类
     private class MonitorTask extends RecursiveAction {

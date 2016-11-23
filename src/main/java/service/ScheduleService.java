@@ -124,7 +124,7 @@ public class ScheduleService {
 
         //初始化系统执行任务列表
         List<RunnableList> runnableLists=scheduleDao.queryRunnableList();
-        runnableLists.clear();
+        ScheduleService.getInstance().clear();
         for(RunnableList runnableList:runnableLists){
             addJob2Jobs(runnableList.getTask_id(),runnableList.getPara(),runnableList.getTaskclassname());
         }
