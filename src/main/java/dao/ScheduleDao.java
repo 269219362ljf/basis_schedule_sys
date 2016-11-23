@@ -1,6 +1,7 @@
 package dao;
 
 import model.RunnableList;
+import model.Task_List;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.mybatis.spring.SqlSessionTemplate;
@@ -11,9 +12,7 @@ import utils.LogUtil;
 
 import java.util.List;
 
-/**
- * Created by lu on 2016/10/16.
- */
+
 @Repository
 public class ScheduleDao {
 
@@ -60,7 +59,7 @@ public class ScheduleDao {
         }
     }
 
-    //获取过往任务存在错误数
+    //查询数据库是否已经初始化
     public int queryIsInit(){
         int result=Constants.FAIL;
         try {
@@ -85,11 +84,28 @@ public class ScheduleDao {
             LogUtil.SuccessLogAdd(logger,
                     Constants.LOG_INFO,
                     "方法 updateAllTaskList ", "执行",true);
-            return result;
+            return Constants.SUCCESS;
         } catch (Exception e) {
             LogUtil.ErrorLogAdd(logger,
                     Constants.LOG_ERROR,
                     "方法 updateAllTaskList ", "执行", "未知原因",true);
+            return result;
+        }
+    }
+
+    //更新任务列表任务状态，根据TaskList
+    public int updateTaskListByTask_List(Task_List task_list){
+        int result=Constants.FAIL;
+        try {
+            result=sqlSessionSchedule.update(Constants.MAPPER_Schedule + ".updateTaskListByTask_List",task_list);
+            LogUtil.SuccessLogAdd(logger,
+                    Constants.LOG_INFO,
+                    "方法 updateTaskListByTask_List ", "执行",true);
+            return Constants.SUCCESS;
+        } catch (Exception e) {
+            LogUtil.ErrorLogAdd(logger,
+                    Constants.LOG_ERROR,
+                    "方法 updateTaskListByTask_List ", "执行", "未知原因",true);
             return result;
         }
     }

@@ -22,15 +22,15 @@
     <!-- 初始化任务列表 -->
     <insert id="initTask_List">
         insert into t_task_list
-        select task_id,0 as st,to_char(now(),'yyyymmdd') as t_date
+        select task_id,(case when task_id=0 then 3 else 0 end) as st,to_char(now(),'yyyymmdd') as t_date
         from t_task
         ON CONFLICT(task_id,t_date) DO NOTHING
     </insert>
 
-    <!-- 获取之前是否存在错误任务-->
+    <!-- 获取之前是否存在错误或者未完成任务-->
     <select id="queryBeforeErrorCount" resultType="int">
         select count(1) from t_task_list
-        where st=4 and t_date &lt; to_char(now(),'yyyymmdd')
+        where st in (0,1,2,4) and t_date &lt; to_char(now(),'yyyymmdd')
     </select>
 
     <!-- 获取当前任务是否需要初始化 -->
@@ -45,6 +45,13 @@
         set st=0
         where t_date=to_char(now(),'yyyymmdd')
         and st in (1,2,4)
+    </update>
+
+    <!-- 更新任务状态，根据Task_List -->
+    <update id="updateTaskListByTask_List" parameterType="Task_List">
+        UPDATE t_task_list
+        set st = #{st}
+        where t_date = #{t_date} and task_id = #{task_id}
     </update>
 
     <!-- 插入数据

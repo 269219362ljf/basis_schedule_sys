@@ -1,28 +1,33 @@
 package schedule;
 
+import dao.ScheduleDao;
 import jobs.Job;
 import jobs.JobInterface;
+import model.Task_List;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import service.ScheduleService;
+import org.springframework.web.context.ContextLoader;
+import org.springframework.web.context.WebApplicationContext;
 import utils.Constants;
 import utils.LogUtil;
 
 import java.util.Date;
-import java.util.List;
 import java.util.concurrent.RecursiveAction;
 
-/**
- * Created by Administrator on 2016/11/23.
- */
+
 public class JobThread extends RecursiveAction {
 
     private Job job;
 
     private static Logger logger = LogManager.getLogger(JobThread.class.getName());
 
+    private ScheduleDao scheduleDao;
+
     public JobThread (Job job){
         this.job=job;
+        WebApplicationContext context = ContextLoader.getCurrentWebApplicationContext();
+        String scheduleDaoBean=(context.getBeanNamesForType(ScheduleDao.class))[0];
+        this.scheduleDao= (ScheduleDao) context.getBean(scheduleDaoBean);
     }
 
     @Override
@@ -43,9 +48,9 @@ public class JobThread extends RecursiveAction {
                 st=3;
             }
             job.setTask_st(st);
-            //任务完成删除
-            List<Job> jobList= ScheduleService.getInstance();
-            jobList.remove(job);
+            //更新数据库任务列表状态
+            Task_List task_list=new Task_List(job.getTask_id(),job.getTask_st());
+            scheduleDao.updateTaskListByTask_List(task_list);
             LogUtil.SuccessLogAdd(logger,
                     Constants.LOG_INFO,
                     "JobThread task_id "+job.getTask_id(),"执行",true);

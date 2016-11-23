@@ -1,17 +1,20 @@
 package service;
 
+import dao.ScheduleDao;
 import jobs.Job;
-import schedule.JobThread;
+import model.RunnableList;
+import model.Task_List;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+import org.json.JSONObject;
+import org.springframework.web.context.ContextLoader;
+import org.springframework.web.context.WebApplicationContext;
 import utils.Constants;
+import utils.LogUtil;
 
 import java.util.List;
-import java.util.concurrent.ForkJoinPool;
-import java.util.concurrent.RecursiveAction;
 
-/**
- * Created by lu on 2016/11/10.
- */
-//监控任务线程，主要用于启动调度模块，为调度模块主入口
+
 public class Monitor_Thread extends Thread {
     //单例线程
     private static Monitor_Thread thread=new Monitor_Thread();
@@ -20,36 +23,67 @@ public class Monitor_Thread extends Thread {
         return thread;
     }
 
-    //启动线程池并开始执行任务
+    private static Logger logger = LogManager.getLogger(Monitor_Thread.class.getName());
+
+    private ScheduleDao scheduleDao;
+
+    private Monitor_Thread(){
+        WebApplicationContext context = ContextLoader.getCurrentWebApplicationContext();
+        String scheduleDaoBean=(context.getBeanNamesForType(ScheduleDao.class))[0];
+        this.scheduleDao= (ScheduleDao) context.getBean(scheduleDaoBean);
+    }
+
     @Override
     public void run() {
-        //新建线程池
-        ForkJoinPool pool = new ForkJoinPool(Constants.THREADCOUNT);
+        //测试输出
+        System.out.println("Monitor_Thread begin");
+        try {
+            while (true) {
 
-            try {
-                //此处是实现调度算法的
-//                Job runJob=null;
-//                runJob= ScheduleTask.getjob();
-                List<Job> jobs=ScheduleService.getInstance();
-                for (Job runjob : jobs) {
-                    JobThread jobThread = new JobThread(runjob);
-                    pool.execute(jobThread);
-                    //pool.execute(new MonitorTask());
+                //获取可跑任务
+                List<RunnableList> runnableLists = scheduleDao.queryRunnableList();
+                //存在可跑任务
+                if (!runnableLists.isEmpty()) {
+                    //测试输出
+                    System.out.println("Monitor_Thread add");
+                    for (RunnableList runnableList : runnableLists) {
+                        int result = ScheduleService.checkJob(runnableList.getTask_id()
+                                , runnableList.getPara()
+                                , runnableList.getTaskclassname());
+                        if (result == Constants.FAIL) {
+                            continue;
+                        }
+                        Job job = new Job(runnableList.getTask_id()
+                                , new JSONObject(runnableList.getPara())
+                                , runnableList.getTaskclassname(), Constants.TASK_READY);
+                        ScheduleService.getInstance().add(job);
+                        Task_List task_list = new Task_List(runnableList.getTask_id(), Constants.TASK_WAIT);
+                        scheduleDao.updateTaskListByTask_List(task_list);
+                        LogUtil.SuccessLogAdd(logger
+                                , Constants.LOG_INFO
+                                , "Monitor_Thread task_id " + runnableList.getTask_id()
+                                , Monitor_Thread.class.getName()
+                                , true);
+                    }
+                } else {
+                    //测试输出
+                    System.out.println("Monitor_Thread skip");
+                    sleep(Constants.MONITORSLEEPTIME);
                 }
+
             }
-            catch(Exception e){
-                e.printStackTrace();
-            }
-        }
-
-
-    //测试用任务类
-    private class MonitorTask extends RecursiveAction {
-
-        @Override
-        protected void compute() {
-            System.out.println("test");
+        }catch (Exception e){
+            e.printStackTrace();
+            LogUtil.ErrorLogAdd(logger
+                    , Constants.LOG_INFO
+                    , "Monitor_Thread "
+                    , Monitor_Thread.class.getName()
+                    ,e.getClass().getName()
+                    , true);
         }
     }
+
+
+
 
 }

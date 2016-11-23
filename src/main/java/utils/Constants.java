@@ -59,6 +59,7 @@ public class Constants {
      */
 
     public  static int SLEEPTIME=1000;
+    public  static int MONITORSLEEPTIME=10000;
     public  static int THREADCOUNT=10;
 
     private static int LOGTYPE=-1;

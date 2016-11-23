@@ -1,15 +1,22 @@
 package schedule;
 
 import jobs.Job;
+import service.ScheduleService;
 
 
-/**
- * Created by Administrator on 2016/11/23.
- */
+
+
 public class ScheduleTask {
 
     public static Job getjob(){
-        return null;
+        //FIFO
+        if(!ScheduleService.getInstance().isEmpty()){
+        Job returnjob=ScheduleService.getInstance().get(0);
+        ScheduleService.getInstance().remove(0);
+        return returnjob;}
+        else{
+            return null;
+        }
 
     }
 

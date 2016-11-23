@@ -1,15 +1,26 @@
 package model;
 
 import java.io.Serializable;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
-/**
- * Created by lu on 2016/10/19.
- */
+
 public class Task_List implements Serializable {
 
     private int task_id;
     private int st;
     private String t_date;
+
+    public Task_List (){super();}
+
+    public Task_List(int task_id,int st){
+        SimpleDateFormat sdf=new SimpleDateFormat("yyyyMMdd");
+        this.task_id=task_id;
+        this.st=st;
+        this.t_date=sdf.format(new Date());
+    }
+
+
 
     public int getTask_id() {
         return task_id;
@@ -34,4 +45,6 @@ public class Task_List implements Serializable {
     public void setT_date(String t_date) {
         this.t_date = t_date;
     }
+
+
 }
