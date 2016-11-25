@@ -27,6 +27,26 @@ $(document).ready(function() {
         arrow.classList.add('close');
     };
 
+//TAB点击方法
+    function tabclick(event){
+        event.preventDefault();
+        //单击左键
+        if(event.which=1){
+            if ($(this).closest("li").attr("id") == "current"){ //detection for current tab
+                return;
+            }
+            else{
+                $("#tabs li").attr("id",""); //Reset id's
+                $(this).parent().attr("id","current"); // Activate this
+                $("#maincontent").load("../html/testhtml/test2.html"); // Show content for the current tab
+            }
+        }else
+        if(event.which=3)//单击右键
+        {
+            alert("右键");
+        }
+    };
+
 //赋予每个dropdown点击方法
     dropdownArray.forEach(function (el) {
         var button = el.querySelector('a[data-toggle="dropdown"]'),
@@ -53,15 +73,40 @@ $(document).ready(function() {
                     }
                 }
             });
+
+            // //新增tab
+            // var tab=document.createElement("li");
+            // var tab_a=document.createElement("a");
+            // tab_a.setAttribute('href','#');
+            // tab_a.innerHTML = "bbbb";
+            // tab_a.onclick=tabclick;
+            // tab.appendChild(tab_a);
+            // tabs.append(tab);
         };
     });
-    
+    //初始化tabs，仅为前期测试用
+    $("#tabs li:first").attr("id", "current"); // Activate the first tab
+    $("#maincontent").load("../html/testhtml/test1.html");
+    $('ul#tabs').on('click',
+        'a',
+        tabclick
+    );
+
     //设置菜单栏点击事件
-    $('a#schedule').click(function (event) {
+    $('a#test1').click(function (event) {
         event.preventDefault();
-        $("#contentid").load("../html/schedule/schedule.html");
+        $("#maincontent").load("../html/testhtml/test1.html");
     });
-    
+
+    $('a#test2').click(function (event) {
+        event.preventDefault();
+        $("#maincontent").load("../html/testhtml/test2.html");
+    });
+
+    $('a#test3').click(function (event) {
+        event.preventDefault();
+        $("#maincontent").load("../html/testhtml/test3.html");
+    });
 
 
 

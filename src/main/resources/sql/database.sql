@@ -12,8 +12,8 @@ create table IF NOT EXISTS T_TASK
   ST INT,
   PARA VARCHAR(500),
   PRIOR NUMERIC(10),
-  BEG_TIME TIMESTAMP,
-  END_TIME TIMESTAMP,
+  BEG_TIME timestamp(0) without time zone,
+  END_TIME timestamp(0) without time zone,
   COST NUMERIC(19,6),
   AVG_COST NUMERIC(19,6)
 )

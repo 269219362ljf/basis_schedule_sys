@@ -27,7 +27,11 @@ public class ScheduleController {
         try{
         int result= Constants.FAIL;
         result=scheduleService.init();
-        request.setAttribute("result",result);
+        switch (result){
+            case Constants.BEFOREERRORXIST:request.setAttribute("result","BEFOREERRORXIST");break;
+            case Constants.FAIL:request.setAttribute("result","FAIL");break;
+            default:request.setAttribute("result","SUCCESS");
+        }
         } catch (Exception e){
             e.printStackTrace();
         }
