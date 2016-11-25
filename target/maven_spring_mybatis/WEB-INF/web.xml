@@ -58,7 +58,7 @@
   </servlet-mapping>
 
   <welcome-file-list>
-    <welcome-file>html/testIndex.html</welcome-file>
+    <welcome-file>html/index.html</welcome-file>
   </welcome-file-list>
 
 
