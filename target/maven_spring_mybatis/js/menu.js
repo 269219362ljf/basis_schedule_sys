@@ -59,7 +59,7 @@ $(document).ready(function() {
     //设置菜单栏点击事件
     $('a#schedule').click(function (event) {
         event.preventDefault();
-        $("#contentid").load("../html/schedule/schedule.html");
+        $("#contentid").load($('#schedule').attr('href'));
     });
     
 

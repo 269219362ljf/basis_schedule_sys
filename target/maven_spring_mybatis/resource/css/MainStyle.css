@@ -26,6 +26,7 @@ body, div {
 }
 
 .systemcontainer{
+    width: auto;
     height: 800px ;
     top:100px;
     bottom: 100px;
@@ -41,7 +42,7 @@ body, div {
 }
 
 .content{
-    width: 100%;
+    width:1400px;
     left: 200px;
     height: 100%;
     position: relative;

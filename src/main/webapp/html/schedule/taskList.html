@@ -2,17 +2,17 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <link href="../../resource/css/jquery.dataTables.min.css" rel="stylesheet" type="text/css"  />
-
-
-    <title>Title</title>
+    <link href="../../resource/css/themes/smoothness/jquery-ui.css" rel="stylesheet" type="text/css"/>
+    <link href="../../resource/css/themes/smoothness/theme.css" rel="stylesheet" type="text/css">
+    <link href="../../resource/css/dataTables.jqueryui.css" rel="stylesheet" type="text/css"  />
+    <link href="../../resource/css/jquery.dataTables.css" rel="stylesheet" type="text/css"  />
+    <link href="../../resource/css/schedule/taskList.css" rel="stylesheet" type="text/css">
 </head>
 <body>
-
-<table id="taskTable" class="display">
+<div class="taskListDiv">
+<table id="taskTable" class="display" >
     <thead>
     <tr>
-        <th></th>
         <th>序号</th>
         <th>标题</th>
         <th>连接</th>
@@ -20,19 +20,16 @@
     </thead>
     <tbody>
     <tr>
-        <th></th>
         <th>1</th>
         <th>测试1</th>
         <th>连接1</th>
     </tr>
     <tr>
-        <th></th>
         <th>2</th>
         <th>测试2</th>
         <th>连接2</th>
     </tr>
     <tr>
-        <th></th>
         <th>3</th>
         <th>测试3</th>
         <th>连接3</th>
@@ -40,19 +37,14 @@
 
     </tbody>
     <tfoot>
-    <tr>
-        <th></th>
-        <th>序号</th>
-        <th>标题</th>
-        <th>连接</th>
-    </tr>
     </tfoot>
     <!-- tbody是必须的 -->
 </table>
-
+</div>
 
 <script type="text/javascript" src="../../js/jquery-3.1.1.js"></script>
-<script type="text/javascript" charset="utf8" src="../../js/jquery.dataTables.min.js"></script>
+<script type="text/javascript" src="../../js/jquery.dataTables.js"></script>
+<script type="text/javascript" charset="utf8" src="../../js/dataTables.jqueryui.js"></script>
 <script type="text/javascript" charset="utf8" src="../../js/schedule/taskList.js"></script>
 
 
