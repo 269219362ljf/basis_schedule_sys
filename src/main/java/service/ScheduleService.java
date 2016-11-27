@@ -1,10 +1,12 @@
 package service;
 
 import dao.ScheduleDao;
+import dao.TaskDao;
 import dao.Task_ListDao;
 import jobs.Job;
 import jobs.JobInterface;
 import model.RunnableList;
+import model.Task;
 import model.Task_List;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -26,6 +28,10 @@ public class ScheduleService {
 
     @Autowired
     private Task_ListDao task_listDao;
+
+    @Autowired
+    private TaskDao taskDao;
+
 
     @Autowired
     private ScheduleDao scheduleDao;
@@ -167,6 +173,10 @@ public class ScheduleService {
         return Constants.SUCCESS;
     }
 
+    //查询所有任务
+    public List<Task> queryAllTask(){
+        return taskDao.query();
+    }
 
 
 

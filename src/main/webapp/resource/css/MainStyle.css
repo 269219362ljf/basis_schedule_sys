@@ -27,7 +27,7 @@ body, div {
 
 .systemcontainer{
     width: auto;
-    height: 800px ;
+    height: 1200px ;
     top:100px;
     bottom: 100px;
     position: absolute;
@@ -44,7 +44,7 @@ body, div {
 .content{
     width:1400px;
     left: 200px;
-    height: 100%;
+    height: 800px;
     position: relative;
     overflow-x:hidden;
 }

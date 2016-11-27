@@ -9,15 +9,15 @@ import java.util.Date;
 public class Task  implements Serializable {
 
     private int task_id;
-    private String name;
-    private String des;
-    private String taskclassname;
+    private String name=null;
+    private String des=null;
+    private String taskclassname=null;
     private int type;
     private int st;
-    private String para;
+    private String para=null;
     private int prior;
-    private Date beg_time;
-    private Date end_time;
+    private Date beg_time=null;
+    private Date end_time=null;
     private double cost;
     private double avg_cost;
 

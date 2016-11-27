@@ -27,10 +27,15 @@ public class TaskDao {
     @Autowired
     private SqlSessionTemplate sqlSessionSchedule;
 
-    //查询任务表所有任务信息
+    //查询任务表所有任务信息(分页)
     public List<Task> query(int page, int rows) {
 
         return sqlSessionSchedule.selectList(Constants.MAPPER_TASK + ".queryTask", new RowBounds((page - 1) * rows, rows));
+    }
+
+    //查询任务表所有任务信息(不分页)
+    public List<Task> query() {
+        return sqlSessionSchedule.selectList(Constants.MAPPER_TASK + ".queryTask");
     }
 
     //插入任务信息，成功返回插入数据的id
