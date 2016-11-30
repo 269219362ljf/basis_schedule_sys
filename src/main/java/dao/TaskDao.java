@@ -16,13 +16,10 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-/**
- * Created by Administrator on 2016/11/18.
- */
+
 @Repository
 public class TaskDao {
 
-    private static Logger logger = LogManager.getLogger(TaskDao.class.getName());
 
     @Autowired
     private SqlSessionTemplate sqlSessionSchedule;
@@ -42,23 +39,23 @@ public class TaskDao {
     public int insert(Task task) {
         try {
             sqlSessionSchedule.insert(Constants.MAPPER_TASK + ".insertTask", task);
-            LogUtil.SuccessLogAdd(logger,
+            LogUtil.SuccessLogAdd(
                     Constants.LOG_INFO,
                     "任务 " + task.getTask_id(), "插入",true);
             return task.getTask_id();
         } catch (DuplicateKeyException e) {
-            LogUtil.ErrorLogAdd(logger
-                    , Constants.LOG_ERROR
+            LogUtil.ErrorLogAdd(
+                    Constants.LOG_ERROR
                     , "任务 " + task.getTask_id(), "插入", "键值重复",true);
             return Constants.DUPLICATEKEYERROR;
         } catch (DataIntegrityViolationException e) {
-            LogUtil.ErrorLogAdd(logger
-                    , Constants.LOG_ERROR
+            LogUtil.ErrorLogAdd(
+                    Constants.LOG_ERROR
                     , "任务 " + task.getTask_id(), "插入", "违反完整性约束",true);
             return Constants.DATAVIOLATIONERROR;
         } catch (Exception e) {
-            LogUtil.ErrorLogAdd(logger
-                    , Constants.LOG_ERROR
+            LogUtil.ErrorLogAdd(
+                    Constants.LOG_ERROR
                     , "任务 " + task.getTask_id(), "插入", "其他原因",true);
             return Constants.UNKNOWNERROR;
         }
@@ -71,12 +68,12 @@ public class TaskDao {
             try {
                 sqlSessionSchedule.delete(Constants.MAPPER_TASK + ".deleteTask", i);
                 resultMap.put(i,Constants.SUCCESS);
-                LogUtil.SuccessLogAdd(logger,
+                LogUtil.SuccessLogAdd(
                         Constants.LOG_INFO,
                         "任务 " + i, "删除",true);
             } catch (Exception e) {
                 resultMap.put(i,Constants.FAIL);
-                LogUtil.ErrorLogAdd(logger,
+                LogUtil.ErrorLogAdd(
                         Constants.LOG_ERROR,
                         "任务 " + i, "删除", "未知原因",true);
             }

@@ -17,16 +17,16 @@ body, div {
 
 .systoppage{
     height:100px;
-    width: 100%;
+    width: 1400px;
     top:0;
-    background-color: blue;
-    position: relative;
+    background-color: green;
+    position: absolute;
     overflow-x:hidden;
     z-index:5;
 }
 
 .systemcontainer{
-    width: auto;
+    width: 1400px;
     height: 1200px ;
     top:100px;
     bottom: 100px;
@@ -42,11 +42,12 @@ body, div {
 }
 
 .content{
-    width:1400px;
+    width:auto;
     left: 200px;
     height: 800px;
     position: relative;
     overflow-x:hidden;
+    overflow-y:hidden;<!-- 因为是用load网页，所以这里外部禁止垂直滚动，以防止内部tabs被滚走 -->
 }
 
 

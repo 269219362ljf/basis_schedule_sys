@@ -19,7 +19,6 @@ public class JobThread extends RecursiveAction {
 
     private Job job;
 
-    private static Logger logger = LogManager.getLogger(JobThread.class.getName());
 
     private ScheduleDao scheduleDao;
 
@@ -48,15 +47,18 @@ public class JobThread extends RecursiveAction {
                 st=3;
             }
             job.setTask_st(st);
+
             //更新数据库任务列表状态
             Task_List task_list=new Task_List(job.getTask_id(),job.getTask_st());
+            task_list.setBeg_time(begin);
+            task_list.setEnd_time(end);
             scheduleDao.updateTaskListByTask_List(task_list);
-            LogUtil.SuccessLogAdd(logger,
+            LogUtil.SuccessLogAdd(
                     Constants.LOG_INFO,
                     "JobThread task_id "+job.getTask_id(),"执行",true);
         } catch (Exception e) {
             e.printStackTrace();
-            LogUtil.ErrorLogAdd(logger,
+            LogUtil.ErrorLogAdd(
                     Constants.LOG_ERROR,
                     "JobThread task_id "+job.getTask_id(),"执行",e.getClass().getName(),true);
         }

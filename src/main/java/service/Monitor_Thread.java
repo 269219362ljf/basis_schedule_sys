@@ -4,13 +4,12 @@ import dao.ScheduleDao;
 import jobs.Job;
 import model.RunnableList;
 import model.Task_List;
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
 import org.json.JSONObject;
 import org.springframework.web.context.ContextLoader;
 import org.springframework.web.context.WebApplicationContext;
 import utils.Constants;
 import utils.LogUtil;
+import utils.ScheduleUtil;
 
 import java.util.List;
 
@@ -23,7 +22,6 @@ public class Monitor_Thread extends Thread {
         return thread;
     }
 
-    private static Logger logger = LogManager.getLogger(Monitor_Thread.class.getName());
 
     private ScheduleDao scheduleDao;
 
@@ -47,7 +45,7 @@ public class Monitor_Thread extends Thread {
                     //测试输出
                     System.out.println("Monitor_Thread add");
                     for (RunnableList runnableList : runnableLists) {
-                        int result = ScheduleService.checkJob(runnableList.getTask_id()
+                        int result = ScheduleUtil.checkJob(runnableList.getTask_id()
                                 , runnableList.getPara()
                                 , runnableList.getTaskclassname());
                         if (result == Constants.FAIL) {
@@ -59,8 +57,7 @@ public class Monitor_Thread extends Thread {
                         ScheduleService.getInstance().add(job);
                         Task_List task_list = new Task_List(runnableList.getTask_id(), Constants.TASK_WAIT);
                         scheduleDao.updateTaskListByTask_List(task_list);
-                        LogUtil.SuccessLogAdd(logger
-                                , Constants.LOG_INFO
+                        LogUtil.SuccessLogAdd( Constants.LOG_INFO
                                 , "Monitor_Thread task_id " + runnableList.getTask_id()
                                 , Monitor_Thread.class.getName()
                                 , true);
@@ -74,8 +71,7 @@ public class Monitor_Thread extends Thread {
             }
         }catch (Exception e){
             e.printStackTrace();
-            LogUtil.ErrorLogAdd(logger
-                    , Constants.LOG_INFO
+            LogUtil.ErrorLogAdd( Constants.LOG_INFO
                     , "Monitor_Thread "
                     , Monitor_Thread.class.getName()
                     ,e.getClass().getName()

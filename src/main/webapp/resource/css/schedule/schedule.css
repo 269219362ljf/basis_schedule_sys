@@ -1,4 +1,6 @@
 .maincontentClass{
     width: 1200px;
     height: auto;
+    overflow-y: hidden;
+    overflow-x: hidden;
 }

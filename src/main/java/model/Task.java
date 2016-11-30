@@ -3,9 +3,7 @@ package model;
 import java.io.Serializable;
 import java.util.Date;
 
-/**
- * Created by lu on 2016/10/16.
- */
+
 public class Task  implements Serializable {
 
     private int task_id;
@@ -16,8 +14,6 @@ public class Task  implements Serializable {
     private int st;
     private String para=null;
     private int prior;
-    private Date beg_time=null;
-    private Date end_time=null;
     private double cost;
     private double avg_cost;
 
@@ -83,22 +79,6 @@ public class Task  implements Serializable {
 
     public void setPrior(int prior) {
         this.prior = prior;
-    }
-
-    public Date getBeg_time() {
-        return beg_time;
-    }
-
-    public void setBeg_time(Date beg_time) {
-        this.beg_time = beg_time;
-    }
-
-    public Date getEnd_time() {
-        return end_time;
-    }
-
-    public void setEnd_time(Date end_time) {
-        this.end_time = end_time;
     }
 
     public double getCost() {

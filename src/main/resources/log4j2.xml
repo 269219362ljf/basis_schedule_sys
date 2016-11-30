@@ -38,6 +38,11 @@
             <appender-ref ref="historyfile"/>
         </logger>
 
+        <logger name="utils.LogUtil" level="trace" additivity="true">
+            <appender-ref ref="runninglog"/>
+            <appender-ref ref="historyfile"/>
+        </logger>
+
         <root level="error">
             <appender-ref ref="Console"/>
         </root>

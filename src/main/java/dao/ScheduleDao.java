@@ -16,7 +16,6 @@ import java.util.List;
 @Repository
 public class ScheduleDao {
 
-    private static Logger logger = LogManager.getLogger(ScheduleDao.class.getName());
     @Autowired
     private SqlSessionTemplate sqlSessionSchedule;
 
@@ -30,12 +29,13 @@ public class ScheduleDao {
     public int initTaskList(){
         try {
             sqlSessionSchedule.insert(Constants.MAPPER_Schedule + ".initTask_List");
-            LogUtil.SuccessLogAdd(logger,
+            LogUtil.SuccessLogAdd(
                     Constants.LOG_INFO,
                     "方法 initTaskList ", "执行",true);
             return Constants.SUCCESS;
         } catch (Exception e) {
-            LogUtil.ErrorLogAdd(logger,
+            e.printStackTrace();
+            LogUtil.ErrorLogAdd(
                     Constants.LOG_ERROR,
                     "方法 initTaskList ", "执行", "未知原因",true);
             return Constants.FAIL;
@@ -47,12 +47,12 @@ public class ScheduleDao {
         int result=Constants.FAIL;
         try {
             result=sqlSessionSchedule.selectOne(Constants.MAPPER_Schedule + ".queryBeforeErrorCount");
-            LogUtil.SuccessLogAdd(logger,
+            LogUtil.SuccessLogAdd(
                     Constants.LOG_INFO,
                     "方法 queryErrorCount ", "执行",true);
             return result;
         } catch (Exception e) {
-            LogUtil.ErrorLogAdd(logger,
+            LogUtil.ErrorLogAdd(
                     Constants.LOG_ERROR,
                     "方法 queryErrorCount ", "执行", "未知原因",true);
             return result;
@@ -64,12 +64,12 @@ public class ScheduleDao {
         int result=Constants.FAIL;
         try {
             result=sqlSessionSchedule.selectOne(Constants.MAPPER_Schedule + ".queryIsInit");
-            LogUtil.SuccessLogAdd(logger,
+            LogUtil.SuccessLogAdd(
                     Constants.LOG_INFO,
                     "方法 queryIsInit ", "执行",true);
             return result;
         } catch (Exception e) {
-            LogUtil.ErrorLogAdd(logger,
+            LogUtil.ErrorLogAdd(
                     Constants.LOG_ERROR,
                     "方法 queryIsInit ", "执行", "未知原因",true);
             return result;
@@ -81,12 +81,12 @@ public class ScheduleDao {
         int result=Constants.FAIL;
         try {
             result=sqlSessionSchedule.update(Constants.MAPPER_Schedule + ".updateAllTaskList");
-            LogUtil.SuccessLogAdd(logger,
+            LogUtil.SuccessLogAdd(
                     Constants.LOG_INFO,
                     "方法 updateAllTaskList ", "执行",true);
             return Constants.SUCCESS;
         } catch (Exception e) {
-            LogUtil.ErrorLogAdd(logger,
+            LogUtil.ErrorLogAdd(
                     Constants.LOG_ERROR,
                     "方法 updateAllTaskList ", "执行", "未知原因",true);
             return result;
@@ -98,16 +98,19 @@ public class ScheduleDao {
         int result=Constants.FAIL;
         try {
             result=sqlSessionSchedule.update(Constants.MAPPER_Schedule + ".updateTaskListByTask_List",task_list);
-            LogUtil.SuccessLogAdd(logger,
+            LogUtil.SuccessLogAdd(
                     Constants.LOG_INFO,
                     "方法 updateTaskListByTask_List ", "执行",true);
             return Constants.SUCCESS;
         } catch (Exception e) {
-            LogUtil.ErrorLogAdd(logger,
+            LogUtil.ErrorLogAdd(
                     Constants.LOG_ERROR,
                     "方法 updateTaskListByTask_List ", "执行", "未知原因",true);
             return result;
         }
     }
+
+
+
 
 }

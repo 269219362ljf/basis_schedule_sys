@@ -12,8 +12,7 @@ create table IF NOT EXISTS T_TASK
   ST INT,
   PARA VARCHAR(500),
   PRIOR NUMERIC(10),
-  BEG_TIME timestamp(0) without time zone,
-  END_TIME timestamp(0) without time zone,
+
   COST NUMERIC(19,6),
   AVG_COST NUMERIC(19,6)
 )
@@ -27,8 +26,7 @@ COMMENT ON COLUMN T_TASK.TYPE IS '任务类型';
 COMMENT ON COLUMN T_TASK.ST IS '任务状态';
 COMMENT ON COLUMN T_TASK.PARA IS '任务参数';
 COMMENT ON COLUMN T_TASK.PRIOR IS '优先级';
-COMMENT ON COLUMN T_TASK.BEG_TIME IS '任务开始时间';
-COMMENT ON COLUMN T_TASK.END_TIME IS '任务结束时间';
+
 COMMENT ON COLUMN T_TASK.COST IS '任务代价';
 COMMENT ON COLUMN T_TASK.AVG_COST IS '任务平均代价';
 
@@ -39,12 +37,19 @@ create table IF NOT EXISTS T_TASK_LIST
 (
   TASK_ID INTEGER,
   ST INT,
-  T_DATE VARCHAR(8)
+  T_DATE VARCHAR(8),
+  BEG_TIME timestamp(0) without time zone,
+  END_TIME timestamp(0) without time zone
 );
 COMMENT ON TABLE T_TASK_LIST IS '任务运行表';
 COMMENT ON COLUMN T_TASK_LIST.TASK_ID IS '任务ID';
 COMMENT ON COLUMN T_TASK_LIST.ST IS '任务状态';
 COMMENT ON COLUMN T_TASK_LIST.T_DATE IS '任务日期（8位）';
+COMMENT ON COLUMN T_TASK_LIST.BEG_TIME IS '任务开始时间';
+COMMENT ON COLUMN T_TASK_LIST.END_TIME IS '任务结束时间';
+
+alter table t_task_list add primary key (task_id,t_date);
+
 
 drop table IF EXISTS T_DEP;
 create table IF NOT EXISTS T_DEP

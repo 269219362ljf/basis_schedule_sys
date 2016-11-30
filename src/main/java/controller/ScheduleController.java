@@ -9,6 +9,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
+import service.ScheduleInitSerivce;
 import service.ScheduleService;
 
 import utils.CommonUtil;
@@ -18,27 +19,23 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.util.List;
 
-/**
- * Created by lu on 2016/10/15.
- */
+
 @Controller
 public class ScheduleController {
-
-    static Logger logger = LogManager.getLogger(ScheduleController.class.getName());
 
     @Autowired
     private ScheduleService scheduleService;
 
+    @Autowired
+    private ScheduleInitSerivce scheduleInitSerivce;
+
     @RequestMapping(value="/scheduleInit.do")
     public void scheduleInit(HttpServletRequest request, HttpServletResponse response){
         try{
-        int result= Constants.FAIL;
-        result=scheduleService.init();
-        switch (result){
-            case Constants.BEFOREERRORXIST:request.setAttribute("result","BEFOREERRORXIST");break;
-            case Constants.FAIL:request.setAttribute("result","FAIL");break;
-            default:request.setAttribute("result","SUCCESS");
-        }
+            JSONObject jresult=new JSONObject();
+            jresult.put("result",scheduleInitSerivce.init());
+            CommonUtil.renderData(response,jresult);
+
         } catch (Exception e){
             e.printStackTrace();
         }
@@ -56,9 +53,13 @@ public class ScheduleController {
             //所有未初始化的都会忽略，所以如果不初始化就会导致列缺失，前台报错
             JSONArray jsonArray=CommonUtil.list2JSONResult(tasks);
             JSONObject result=new JSONObject();
+            try{
             result.put("length",jsonArray.length());
-            result.put("data",jsonArray);
-            System.out.println(jsonArray);
+            result.put("data",jsonArray);}
+            catch (NullPointerException e){
+                result.put("length",0);
+                result.put("data","{}");
+            }
             CommonUtil.renderData(response,result);
         }catch (Exception e){
             e.printStackTrace();

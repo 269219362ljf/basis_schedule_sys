@@ -2,6 +2,7 @@ package utils;
 
 import dao.T_LogDao;
 import model.T_Log;
+import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.springframework.web.context.ContextLoader;
 import org.springframework.web.context.WebApplicationContext;
@@ -13,9 +14,10 @@ import java.util.Date;
  */
 public class LogUtil {
 
+    private static Logger logger = LogManager.getLogger(LogUtil.class.getName());
 
     //增加错误日志，可根据日志级别设定记录日志
-    public static void ErrorLogAdd(Logger logger,int logType,String name,String action,String cause,boolean writeDatabase){
+    public static void ErrorLogAdd(int logType,String name,String action,String cause,boolean writeDatabase){
         String msg=name+" "+action+" 失败 ("+cause+")";
         if(logType>Constants.getLogType()) {
             switch (logType) {
@@ -44,7 +46,7 @@ public class LogUtil {
     }
 
     //增加成功日志，可根据日志级别设定记录日志
-    public static void SuccessLogAdd(Logger logger,int logType ,String name,String action,boolean writeDatabase){
+    public static void SuccessLogAdd(int logType ,String name,String action,boolean writeDatabase){
         String msg=name+" "+action+" 成功";
         if(logType>Constants.getLogType()) {
             switch (logType) {

@@ -13,12 +13,9 @@ import utils.LogUtil;
 
 import java.util.List;
 
-/**
- * Created by Administrator on 2016/11/20.
- */
+
 @Repository
 public class Task_ListDao {
-    private static Logger logger = LogManager.getLogger(Task_ListDao.class.getName());
 
     @Autowired
     private SqlSessionTemplate sqlSessionSchedule;
@@ -36,24 +33,24 @@ public class Task_ListDao {
     public int insert(Task_List task_list){
         try {
             sqlSessionSchedule.insert(Constants.MAPPER_TASK_LIST + ".insertTask_List", task_list);
-            LogUtil.SuccessLogAdd(logger,
+            LogUtil.SuccessLogAdd(
                     Constants.LOG_INFO,
                     "任务列表 " + task_list.getTask_id(), "插入", true);
             return Constants.SUCCESS;
         } catch (DuplicateKeyException e) {
-            LogUtil.ErrorLogAdd(logger
-                    , Constants.LOG_ERROR
+            LogUtil.ErrorLogAdd(
+                     Constants.LOG_ERROR
                     , "任务列表 " + task_list.getTask_id(), "插入", "键值重复", true);
             return Constants.DUPLICATEKEYERROR;
         } catch (DataIntegrityViolationException e) {
-            LogUtil.ErrorLogAdd(logger
-                    , Constants.LOG_ERROR
+            LogUtil.ErrorLogAdd(
+                    Constants.LOG_ERROR
                     , "任务列表 " + task_list.getTask_id(), "插入", "违反完整性约束", true);
             return Constants.DATAVIOLATIONERROR;
         } catch (Exception e) {
             //e.printStackTrace();
-            LogUtil.ErrorLogAdd(logger
-                    , Constants.LOG_ERROR
+            LogUtil.ErrorLogAdd(
+                    Constants.LOG_ERROR
                     , "任务列表 " + task_list.getTask_id(), "插入", "其他原因", true);
             return Constants.UNKNOWNERROR;
         }
@@ -63,13 +60,13 @@ public class Task_ListDao {
     public int  delete(int task_id) {
         try {
             sqlSessionSchedule.delete(Constants.MAPPER_TASK_LIST + ".deleteTask_ListById", task_id);
-            LogUtil.SuccessLogAdd(logger,
+            LogUtil.SuccessLogAdd(
                     Constants.LOG_INFO,
                     "任务列表 task_id" + task_id, "删除",true);
             return Constants.SUCCESS;
         } catch (Exception e) {
             e.printStackTrace();
-            LogUtil.ErrorLogAdd(logger,
+            LogUtil.ErrorLogAdd(
                     Constants.LOG_ERROR,
                     "任务列表 task_id" + task_id, "删除", "未知原因",true);
             return Constants.FAIL;

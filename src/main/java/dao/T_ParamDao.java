@@ -15,12 +15,9 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-/**
- * Created by Administrator on 2016/11/20.
- */
+
 @Repository
 public class T_ParamDao {
-    private static Logger logger = LogManager.getLogger(T_ParamDao.class.getName());
 
     @Autowired
     private SqlSessionTemplate sqlSessionSchedule;
@@ -34,24 +31,24 @@ public class T_ParamDao {
     public int insert(T_param t_param) {
         try {
             sqlSessionSchedule.insert(Constants.MAPPER_T_PARAM + ".insertT_param", t_param);
-            LogUtil.SuccessLogAdd(logger,
+            LogUtil.SuccessLogAdd(
                     Constants.LOG_INFO,
                     "参数 " + t_param.getName(), "插入", true);
             return Constants.SUCCESS;
         } catch (DuplicateKeyException e) {
-            LogUtil.ErrorLogAdd(logger
-                    , Constants.LOG_ERROR
+            LogUtil.ErrorLogAdd(
+                    Constants.LOG_ERROR
                     , "参数 " + t_param.getName(), "插入", "键值重复", true);
             return Constants.DUPLICATEKEYERROR;
         } catch (DataIntegrityViolationException e) {
-            LogUtil.ErrorLogAdd(logger
-                    , Constants.LOG_ERROR
+            LogUtil.ErrorLogAdd(
+                    Constants.LOG_ERROR
                     , "参数 " + t_param.getName(), "插入", "违反完整性约束", true);
             return Constants.DATAVIOLATIONERROR;
         } catch (Exception e) {
             //e.printStackTrace();
-            LogUtil.ErrorLogAdd(logger
-                    , Constants.LOG_ERROR
+            LogUtil.ErrorLogAdd(
+                    Constants.LOG_ERROR
                     , "参数 " + t_param.getName(), "插入", "其他原因", true);
             return Constants.UNKNOWNERROR;
         }
@@ -64,12 +61,12 @@ public class T_ParamDao {
             try {
                 sqlSessionSchedule.delete(Constants.MAPPER_T_PARAM + ".deleteT_param", name);
                 resultMap.put(name,Constants.SUCCESS);
-                LogUtil.SuccessLogAdd(logger,
+                LogUtil.SuccessLogAdd(
                         Constants.LOG_INFO,
                         "参数 " + name, "删除",true);
             } catch (Exception e) {
                 resultMap.put(name,Constants.FAIL);
-                LogUtil.ErrorLogAdd(logger,
+                LogUtil.ErrorLogAdd(
                         Constants.LOG_ERROR,
                         "参数 " + name, "删除", "未知原因",true);
             }

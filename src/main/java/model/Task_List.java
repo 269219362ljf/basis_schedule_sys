@@ -10,6 +10,8 @@ public class Task_List implements Serializable {
     private int task_id;
     private int st;
     private String t_date;
+    private Date beg_time=null;
+    private Date end_time=null;
 
     public Task_List (){super();}
 
@@ -46,5 +48,19 @@ public class Task_List implements Serializable {
         this.t_date = t_date;
     }
 
+    public Date getBeg_time() {
+        return beg_time;
+    }
 
+    public void setBeg_time(Date beg_time) {
+        this.beg_time = beg_time;
+    }
+
+    public Date getEnd_time() {
+        return end_time;
+    }
+
+    public void setEnd_time(Date end_time) {
+        this.end_time = end_time;
+    }
 }

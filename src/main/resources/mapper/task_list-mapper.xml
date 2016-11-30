@@ -5,7 +5,7 @@
 
     <!-- 查询全部任务信息 -->
     <select id="queryTask_List" resultType="Task_List">
-    SELECT task_id, st, t_date
+    SELECT task_id, st, t_date,beg_time,end_time
 	FROM t_task_list
     </select>
     <!-- 插入数据 -->

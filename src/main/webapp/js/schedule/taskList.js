@@ -1,16 +1,16 @@
 $(document).ready(function() {
-    var dataSet;
-    $.ajax({
-        url:"/queryTaskList.do",
-        type:"get",
-        dataType:"json",
-        success:function (data) {
-            alert("success "+data.toString());
-        },
-        error:function (data) {
-            alert("fail "+data.toString());
-        }
-    });
+    
+    // $.ajax({
+    //     url:"/queryTaskList.do",
+    //     type:"get",
+    //     dataType:"json",
+    //     success:function (data) {
+    //         alert("success "+data.toString());
+    //     },
+    //     error:function (data) {
+    //         alert("fail "+data.toString());
+    //     }
+    // });
 
 
 
@@ -20,7 +20,9 @@ $(document).ready(function() {
         "bProcessing": true,//启用进度显示
         "bScrollInfinite": true,//开启内置滚动条，并且显示所有数据
         "bScrollCollapse": true,
-        "bInfo":false,
+        //"sScrollY" : 450, //DataTables的高
+        "sScrollX" : 1200, //DataTables的宽
+        "bInfo" : true, //是否显示页脚信息，DataTables插件左下角显示记录数
         "oLanguage": {                          //汉化
             "sLengthMenu": "每页显示 _MENU_ 条记录",
             "sZeroRecords": "没有检索到数据",
@@ -41,7 +43,8 @@ $(document).ready(function() {
             type: "get",
             dataType: "json",
             dataSrc:"data"
-        },
+        }
+        ,
         aoColumns: [
             {"mDataProp":"task_id"},
             {"mDataProp":"name"},
@@ -51,11 +54,8 @@ $(document).ready(function() {
             {"mDataProp":"st"},
             {"mDataProp":"para"},
             {"mDataProp":"prior"},
-            {"mDataProp":"beg_time"},
-            {"mDataProp":"end_time"},
             {"mDataProp":"cost"},
             {"mDataProp":"avg_cost"}
-            ]
-
+        ]
     });
 });

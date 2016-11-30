@@ -1,8 +1,10 @@
 package utils;
 
+import jobs.JobInterface;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.json.JSONArray;
+import org.json.JSONException;
 import org.json.JSONObject;
 
 import javax.servlet.http.HttpServletResponse;
@@ -12,13 +14,10 @@ import java.lang.reflect.Method;
 import java.lang.reflect.Modifier;
 import java.util.List;
 
-/**
- * Created by Administrator on 2016/11/25.
- */
+
 public class CommonUtil {
 
-    private static Logger logger = LogManager.getLogger(CommonUtil.class.getName());
-    /**
+   /**
      * 通过PrintWriter将响应数据写入response，ajax可以接受到这个数据
      *
      * @param response
@@ -30,7 +29,7 @@ public class CommonUtil {
             printWriter = response.getWriter();
             printWriter.print(data);
         } catch (IOException ex) {
-            LogUtil.ErrorLogAdd(logger,Constants.LOG_ERROR,"renderData ","返回数据",ex.getCause().toString(),true);
+            LogUtil.ErrorLogAdd(Constants.LOG_ERROR,"renderData ","返回数据",ex.getCause().toString(),true);
         } finally {
             if (null != printWriter) {
                 printWriter.flush();
@@ -54,7 +53,7 @@ public class CommonUtil {
 
     //由于原有的初始化函数会导致未初始化属性掉失，所以截取JSONObject内部代码来补充
     //当未初始化属性时应如何处理
-    public static JSONObject object2JSONObject(Object bean) {
+    private static JSONObject object2JSONObject(Object bean) {
         JSONObject jresult = new JSONObject();
         Class klass = bean.getClass();
         boolean includeSuperClass = klass.getClassLoader() != null;
@@ -93,11 +92,13 @@ public class CommonUtil {
                     }
                 }
             } catch (Exception var10) {
-                ;
+                var10.printStackTrace();
             }
         }
         return jresult;
     }
+
+
 
 
 }
