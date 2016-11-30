@@ -1,5 +1,5 @@
 $(document).ready(function() {
-    
+
     // $.ajax({
     //     url:"/queryTaskList.do",
     //     type:"get",
@@ -12,9 +12,21 @@ $(document).ready(function() {
     //     }
     // });
 
-
-
+    // dom元素：
+    // l - Length changing 每页显示多少条数据选项
+    // f - Filtering input 搜索框
+    // t - The Table 表格
+    // i - Information 表格信息
+    // p - Pagination 分页按钮
+    // r - pRocessing 加载等待显示信息
+    // < and > - div elements 一个div元素
+    // <"#id" and > - div with an id 指定id的div元素
+    // <"class" and > - div with a class 指定样式名的div元素
+    // <"#id.class" and > - div with an id and class 指定id和样式的div元素
+    //H - jQueryUI'header'classes,<H *>将jQueryUI皮肤（头部）应用到*
+    //F - jQueryUI'footer'classes,<F *>将jQueryUI皮肤（脚部）应用到*
     $('#taskTable').DataTable({
+        "dom": '<"H"<"toolbar">lfr  > t <"F"ip >',
         "bAutoWidth": false,//禁用自动适应列宽
         "bJQueryUI": true,//JQueryUI皮肤插件
         "bProcessing": true,//启用进度显示
@@ -58,4 +70,6 @@ $(document).ready(function() {
             {"mDataProp":"avg_cost"}
         ]
     });
+
+    $("div.toolbar").html('<b style="color:red">自定义文字、图片等等</b>');
 });
