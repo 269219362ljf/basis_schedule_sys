@@ -49,7 +49,7 @@ public class ScheduleInitSerivce {
             ScheduleService.addJob2Jobs(runnableList.getTask_id(),runnableList.getPara(),runnableList.getTaskclassname());
             //更改任务列表状态
             Task_List jobTask=new Task_List(runnableList.getTask_id(),2);
-            scheduleDao.updateTaskListByTask_List(jobTask);
+            task_listDao.updateTaskListByTask_List(jobTask);
         }
         return Constants.SUCCESS;
     }

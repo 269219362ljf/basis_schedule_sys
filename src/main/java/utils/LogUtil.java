@@ -19,7 +19,7 @@ public class LogUtil {
     //增加错误日志，可根据日志级别设定记录日志
     public static void ErrorLogAdd(int logType,String name,String action,String cause,boolean writeDatabase){
         String msg=name+" "+action+" 失败 ("+cause+")";
-        if(logType>Constants.getLogType()) {
+        if(logType>=Constants.getLogType()) {
             switch (logType) {
                 case Constants.LOG_DEBUG:
                     logger.debug(msg);
@@ -48,7 +48,7 @@ public class LogUtil {
     //增加成功日志，可根据日志级别设定记录日志
     public static void SuccessLogAdd(int logType ,String name,String action,boolean writeDatabase){
         String msg=name+" "+action+" 成功";
-        if(logType>Constants.getLogType()) {
+        if(logType>=Constants.getLogType()) {
             switch (logType) {
                 case Constants.LOG_DEBUG:
                     logger.debug(msg);

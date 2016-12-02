@@ -1,6 +1,7 @@
 package service;
 
 import dao.ScheduleDao;
+import dao.Task_ListDao;
 import jobs.Job;
 import model.RunnableList;
 import model.Task_List;
@@ -25,10 +26,14 @@ public class Monitor_Thread extends Thread {
 
     private ScheduleDao scheduleDao;
 
+    private Task_ListDao task_listDao;
+
     private Monitor_Thread(){
         WebApplicationContext context = ContextLoader.getCurrentWebApplicationContext();
         String scheduleDaoBean=(context.getBeanNamesForType(ScheduleDao.class))[0];
         this.scheduleDao= (ScheduleDao) context.getBean(scheduleDaoBean);
+        String task_listDaoBean=(context.getBeanNamesForType(Task_ListDao.class))[0];
+        this.task_listDao= (Task_ListDao) context.getBean(task_listDaoBean);
     }
 
     @Override
@@ -56,7 +61,7 @@ public class Monitor_Thread extends Thread {
                                 , runnableList.getTaskclassname(), Constants.TASK_READY);
                         ScheduleService.getInstance().add(job);
                         Task_List task_list = new Task_List(runnableList.getTask_id(), Constants.TASK_WAIT);
-                        scheduleDao.updateTaskListByTask_List(task_list);
+                        task_listDao.updateTaskListByTask_List(task_list);
                         LogUtil.SuccessLogAdd( Constants.LOG_INFO
                                 , "Monitor_Thread task_id " + runnableList.getTask_id()
                                 , Monitor_Thread.class.getName()

@@ -47,12 +47,7 @@
         and st in (1,2,4)
     </update>
 
-    <!-- 更新任务状态，根据Task_List -->
-    <update id="updateTaskListByTask_List" parameterType="Task_List">
-        UPDATE t_task_list
-        set st = #{st},beg_time = #{beg_time},end_time = #{end_time}
-        where t_date = #{t_date} and task_id = #{task_id}
-    </update>
+
 
     <!-- 插入数据
     <insert id="" parameterType="">
