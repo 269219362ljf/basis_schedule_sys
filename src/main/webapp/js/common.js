@@ -1,4 +1,6 @@
 //将通用设置参数独立出来
+
+//dataTable通用设置
 function createDataTableCommonParam(ajaxUrl) {
     var opt={
         "bAutoWidth": false,//禁用自动适应列宽
