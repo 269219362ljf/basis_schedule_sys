@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!-- 定义命名空间 -->
+<mapper namespace="mapperNS.">
+
+    <!--&lt;!&ndash; 查询全部任务信息 &ndash;&gt;-->
+    <!--<select id="" resultType="">-->
+
+    <!--</select>-->
+    <!--&lt;!&ndash; 插入数据 &ndash;&gt;-->
+    <!--<insert id="" parameterType="">-->
+    <!--</insert>-->
+
+    <!--&lt;!&ndash; 删除数据 &ndash;&gt;-->
+    <!--<delete id="" parameterType="">-->
+
+    <!--</delete>-->
+</mapper>
