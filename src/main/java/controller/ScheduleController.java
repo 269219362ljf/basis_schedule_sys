@@ -1,6 +1,7 @@
 package controller;
 
 import model.Task;
+import model.Task_List;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.json.JSONArray;
@@ -50,17 +51,8 @@ public class ScheduleController {
     public void queryTaskList(HttpServletRequest request, HttpServletResponse response){
         try{
             List<Task> tasks= scheduleService.queryAllTask();
-            //所有未初始化的都会忽略，所以如果不初始化就会导致列缺失，前台报错
-            JSONArray jsonArray=CommonUtil.list2JSONResult(tasks);
-            JSONObject result=new JSONObject();
-            try{
-            result.put("length",jsonArray.length());
-            result.put("data",jsonArray);}
-            catch (NullPointerException e){
-                result.put("length",0);
-                result.put("data","{}");
-            }
-            CommonUtil.renderData(response,result);
+            //返回到前端的dataTables
+            list2dataTables(response,tasks);
         }catch (Exception e){
             e.printStackTrace();
             //return null;
@@ -68,7 +60,30 @@ public class ScheduleController {
 
     }
 
+    @RequestMapping(value = "/queryRunningState.do")
+    public void queryRunningState(HttpServletRequest request, HttpServletResponse response){
+        try{
+            List<Task_List> task_lists=scheduleService.queryAllTask_List();
+            list2dataTables(response,task_lists);
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+    }
 
+    //将list数据集返回到前端dataTables
+    private void list2dataTables(HttpServletResponse response,List list){
+        //所有未初始化的都会忽略，所以如果不初始化就会导致列缺失，前台报错
+        JSONArray jsonArray=CommonUtil.list2JSONResult(list);
+        JSONObject result=new JSONObject();
+        try{
+            result.put("length",jsonArray.length());
+            result.put("data",jsonArray);}
+        catch (NullPointerException e){
+            result.put("length",0);
+            result.put("data","{}");
+        }
+        CommonUtil.renderData(response,result);
+    }
 
 
 

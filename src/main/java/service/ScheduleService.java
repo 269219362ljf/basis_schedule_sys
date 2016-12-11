@@ -2,6 +2,7 @@ package service;
 
 import dao.ScheduleDao;
 import dao.TaskDao;
+import dao.Task_ListDao;
 import jobs.Job;
 import model.Task;
 import model.Task_List;
@@ -24,6 +25,8 @@ public class ScheduleService {
     @Autowired
     private TaskDao taskDao;
 
+    @Autowired
+    private Task_ListDao task_listDao;
 
     //可执行任务列表
     private static List<Job> jobs=new ArrayList<Job>();
@@ -73,7 +76,10 @@ public class ScheduleService {
         return taskDao.query();
     }
 
-
+    //查询任务执行状态
+    public List<Task_List> queryAllTask_List(){
+        return task_listDao.query();
+    }
 
 
 

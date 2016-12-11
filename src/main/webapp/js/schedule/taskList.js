@@ -26,7 +26,7 @@ $(document).ready(function() {
     //H - jQueryUI'header'classes,<H *>将jQueryUI皮肤（头部）应用到*
     //F - jQueryUI'footer'classes,<F *>将jQueryUI皮肤（脚部）应用到*
     $('#taskTable').DataTable({
-        "dom": '<"H"<"toolbar">lfr  > t <"F"ip >',
+        "dom": '<"H"<"toolbar"> Blfr  > t <"F"ip >',
         "bAutoWidth": false,//禁用自动适应列宽
         "bJQueryUI": true,//JQueryUI皮肤插件
         "bProcessing": true,//启用进度显示
@@ -50,24 +50,32 @@ $(document).ready(function() {
             },
             "sInfoFiltered":"(从总共 _MAX_ 条数据中)"
         },
-        ajax: {
+        "ajax": {
             url: "/queryTaskList.do",
             type: "get",
             dataType: "json",
             dataSrc:"data"
         }
         ,
-        aoColumns: [
+        "aoColumns": [
             {"mDataProp":"task_id"},
             {"mDataProp":"name"},
             {"mDataProp":"des"},
             {"mDataProp":"taskclassname"},
             {"mDataProp":"type"},
-            {"mDataProp":"st"},
             {"mDataProp":"para"},
             {"mDataProp":"prior"},
             {"mDataProp":"cost"},
             {"mDataProp":"avg_cost"}
+        ],
+        buttons:[
+            {
+                extend:"copy",
+                text:'复制'
+            },{
+                extend:"print",
+                text:'打印'
+            }
         ]
     });
 

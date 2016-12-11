@@ -73,5 +73,20 @@ public class Task_ListDao {
         }
     }
 
-
+    //更新任务列表任务状态，根据TaskList
+    public int updateTaskListByTask_List(Task_List task_list){
+        int result=Constants.FAIL;
+        try {
+            result=sqlSessionSchedule.update(Constants.MAPPER_TASK_LIST + ".updateTaskListByTask_List",task_list);
+            LogUtil.SuccessLogAdd(
+                    Constants.LOG_INFO,
+                    "方法 updateTaskListByTask_List ", "执行",true);
+            return Constants.SUCCESS;
+        } catch (Exception e) {
+            LogUtil.ErrorLogAdd(
+                    Constants.LOG_ERROR,
+                    "方法 updateTaskListByTask_List ", "执行", "未知原因",true);
+            return result;
+        }
+    }
 }

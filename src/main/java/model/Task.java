@@ -11,7 +11,6 @@ public class Task  implements Serializable {
     private String des=null;
     private String taskclassname=null;
     private int type;
-    private int st;
     private String para=null;
     private int prior;
     private double cost;
@@ -55,14 +54,6 @@ public class Task  implements Serializable {
 
     public void setType(int type) {
         this.type = type;
-    }
-
-    public int getSt() {
-        return st;
-    }
-
-    public void setSt(int st) {
-        this.st = st;
     }
 
     public String getPara() {
