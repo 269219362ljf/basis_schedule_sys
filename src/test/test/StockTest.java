@@ -1,5 +1,9 @@
 package test;
 
+import org.json.JSONArray;
+import org.json.JSONObject;
+import stock.StockUtil;
+
 import java.io.*;
 import java.net.HttpURLConnection;
 import java.net.URL;
@@ -100,20 +104,28 @@ public class StockTest {
 
 
     public static void main(String[] args){
-        //test();
-        try {
-            List<String> codes = new ArrayList<String>() ;
-            String batchstackcodes=StockTest.getBatchStackCodes(new URL("http://vip.stock.finance.sina.com.cn/q/go.php/vIR_CustomSearch/index.phtml?p=1"));
-            codes.addAll(StockTest.handleStockCode(batchstackcodes));
-            for(String temp:codes){
-                System.out.println(temp);
-            }
-
-
-
-        } catch (IOException e) {
-            e.printStackTrace();
+        StockUtil stockUtil=new StockUtil();
+        JSONArray testResults=stockUtil.getTrainningFromCode("sh600000","20161201","20161211");
+        for(int i=0;i<testResults.length();i++){
+            JSONObject temp=testResults.getJSONObject(i);
+            System.out.println(temp);
         }
+
+
+
+//        try {
+//            List<String> codes = new ArrayList<String>() ;
+//            String batchstackcodes=StockTest.getBatchStackCodes(new URL("http://vip.stock.finance.sina.com.cn/q/go.php/vIR_CustomSearch/index.phtml?p=1"));
+//            codes.addAll(StockTest.handleStockCode(batchstackcodes));
+//            for(String temp:codes){
+//                System.out.println(temp);
+//            }
+//
+//
+//
+//        } catch (IOException e) {
+//            e.printStackTrace();
+//        }
     }
 
 }

@@ -48,7 +48,7 @@ public class Monitor_Thread extends Thread {
                 //存在可跑任务
                 if (!runnableLists.isEmpty()) {
                     //测试输出
-                    System.out.println("Monitor_Thread add");
+                    //System.out.println("Monitor_Thread add");
                     for (RunnableList runnableList : runnableLists) {
                         int result = ScheduleUtil.checkJob(runnableList.getTask_id()
                                 , runnableList.getPara()
@@ -59,6 +59,9 @@ public class Monitor_Thread extends Thread {
                         Job job = new Job(runnableList.getTask_id()
                                 , new JSONObject(runnableList.getPara())
                                 , runnableList.getTaskclassname(), Constants.TASK_READY);
+                        if(ScheduleService.getInstance().contains(job)){
+                            continue;
+                        }
                         ScheduleService.getInstance().add(job);
                         Task_List task_list = new Task_List(runnableList.getTask_id(), Constants.TASK_WAIT);
                         task_listDao.updateTaskListByTask_List(task_list);
@@ -69,7 +72,7 @@ public class Monitor_Thread extends Thread {
                     }
                 } else {
                     //测试输出
-                    System.out.println("Monitor_Thread skip");
+                    //System.out.println("Monitor_Thread skip");
                     sleep(Constants.MONITORSLEEPTIME);
                 }
 

@@ -12,7 +12,7 @@ public class TestJob implements JobInterface {
     public int work(JSONObject param) {
         System.out.println("job param is "+param.toString()+" begin");
         try {
-            Thread.sleep(10000);
+            Thread.sleep(1000);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }

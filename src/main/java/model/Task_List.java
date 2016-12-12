@@ -1,5 +1,7 @@
 package model;
 
+import utils.CommonUtil;
+
 import java.io.Serializable;
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -16,10 +18,9 @@ public class Task_List implements Serializable {
     public Task_List (){super();}
 
     public Task_List(int task_id,int st){
-        SimpleDateFormat sdf=new SimpleDateFormat("yyyyMMdd");
         this.task_id=task_id;
         this.st=st;
-        this.t_date=sdf.format(new Date());
+        this.t_date= CommonUtil.date2string8(new Date());
     }
 
 

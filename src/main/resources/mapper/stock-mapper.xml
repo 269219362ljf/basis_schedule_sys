@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!-- 定义命名空间 -->
+<mapper namespace="mapperNS.Stock">
+
+    <!--&lt;!&ndash; 查询全部任务信息 &ndash;&gt;-->
+    <!--<select id="" resultType="">-->
+
+    <!--</select>-->
+    <!-- 插入数据 -->
+    <insert id="t_stock_info_insert" parameterType="List">
+        insert into t_stock_info (stock_id,stock_name)
+        values
+        <foreach collection="list" item="item" index="index" separator="," >
+            (#{item.stock_id},#{item.stock_name})
+        </foreach>
+        ON CONFLICT(stock_id) DO NOTHING
+    </insert>
+
+    <!--&lt;!&ndash; 删除数据 &ndash;&gt;-->
+    <!--<delete id="" parameterType="">-->
+
+    <!--</delete>-->
+</mapper>

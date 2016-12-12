@@ -68,11 +68,7 @@ public class LogUtil {
         t_log.setLog_time(new java.sql.Date(new Date().getTime()));
         t_log.setLog_level(log_lv);
         t_log.setLog_msg(msg);
-        WebApplicationContext context = ContextLoader.getCurrentWebApplicationContext();
-        //经过使用context.getBeanNamesForType()获取bean名
-        //再由bean名获取自动注入的bean
-        String t_LogDaoBean=(context.getBeanNamesForType(T_LogDao.class))[0];
-        T_LogDao t_logdao= (T_LogDao) context.getBean(t_LogDaoBean);
+        T_LogDao t_logdao= (T_LogDao) CommonUtil.getBean(T_LogDao.class);
         t_logdao.insert(t_log);
     }
 

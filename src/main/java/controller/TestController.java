@@ -4,6 +4,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import dao.T_LogDao;
+import jobs.SCodesInitJob;
 import jobs.TestJob;
 import model.Task;
 import model.Task_List;
@@ -59,10 +60,13 @@ public class TestController {
                 task.setTaskclassname(TestJob.class.getName());
                 daoService.insertTask(task);
             }
+            Task task=new Task();
+            task.setTask_id(20);
+            task.setName("stockInit");
+            task.setPara("{a:0,b:0}");
+            task.setTaskclassname(SCodesInitJob.class.getName());
+            daoService.insertTask(task);
             List<Task_List> task_lists=daoService.queryTask_List();
-
-
-
             for(Task_List task_list:task_lists){
                 System.out.println("Task_list : "+task_list.getTask_id());
             }

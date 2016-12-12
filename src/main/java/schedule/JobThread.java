@@ -5,10 +5,10 @@ import dao.Task_ListDao;
 import jobs.Job;
 import jobs.JobInterface;
 import model.Task_List;
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
 import org.springframework.web.context.ContextLoader;
 import org.springframework.web.context.WebApplicationContext;
+import service.ScheduleService;
+import utils.CommonUtil;
 import utils.Constants;
 import utils.LogUtil;
 
@@ -39,11 +39,13 @@ public class JobThread extends RecursiveAction {
         try{
             //开始时间
             Date begin=new Date();
+            String date_string= CommonUtil.date2string8(begin);
             //执行任务
             Class jobclass=Class.forName(job.getJobClass());
             JobInterface work=(JobInterface)jobclass.newInstance();
             //更新数据库任务列表状态
             Task_List task_list=new Task_List(job.getTask_id(),job.getTask_st());
+            task_list.setT_date(date_string);
             task_list.setBeg_time(begin);
             task_listDao.updateTaskListByTask_List(task_list);
             //获取结果
@@ -55,9 +57,11 @@ public class JobThread extends RecursiveAction {
             if(result== Constants.SUCCESS){
                 st=3;
             }
+            //执行结束，更新状态并从当前任务执行列表中去除
             job.setTask_st(st);
             task_list.setEnd_time(end);
             task_listDao.updateTaskListByTask_List(task_list);
+            ScheduleService.getInstance().remove(job);
             LogUtil.SuccessLogAdd(
                     Constants.LOG_INFO,
                     "JobThread task_id "+job.getTask_id(),"执行",true);

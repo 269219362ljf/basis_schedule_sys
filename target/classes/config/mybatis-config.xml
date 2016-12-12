@@ -10,6 +10,7 @@
         <typeAlias alias="T_Log" type="model.T_Log"/>
         <typeAlias alias="T_param" type="model.T_param"/>
         <typeAlias alias="RunnableList" type="model.RunnableList"/>
+        <typeAlias alias="List" type="java.util.List"/>
     </typeAliases>
 
 </configuration>

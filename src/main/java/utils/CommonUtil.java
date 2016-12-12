@@ -6,12 +6,16 @@ import org.apache.logging.log4j.Logger;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
+import org.springframework.web.context.ContextLoader;
+import org.springframework.web.context.WebApplicationContext;
 
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.lang.reflect.Method;
 import java.lang.reflect.Modifier;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.List;
 
 
@@ -98,7 +102,19 @@ public class CommonUtil {
         return jresult;
     }
 
+    //获取自动注入类
+    public static Object getBean(Class c){
+        //经过使用context.getBeanNamesForType()获取bean名
+        //再由bean名获取自动注入的bean
+        WebApplicationContext context = ContextLoader.getCurrentWebApplicationContext();
+        String bean_name=(context.getBeanNamesForType(c))[0];
+        return context.getBean(bean_name);
+    }
 
-
+    //date转String8位
+    public static String date2string8(Date date){
+        SimpleDateFormat sdf=new SimpleDateFormat("yyyyMMdd");
+        return sdf.format(date);
+    }
 
 }

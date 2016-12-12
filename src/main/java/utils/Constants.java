@@ -17,7 +17,7 @@ public class Constants {
     public final static String MAPPER_T_PARAM="mapperNS.T_param";
     public final static String MAPPER_TASK_LIST="mapperNS.Task_List";
     public final static String MAPPER_Schedule="mapperNS.Schedule";
-
+    public final static String MAPPER_STOCK="mapperNS.Stock";
 
 
     /*
@@ -85,6 +85,10 @@ public class Constants {
             e.printStackTrace();
         }
     }
+
+
+
+
 
 
 
