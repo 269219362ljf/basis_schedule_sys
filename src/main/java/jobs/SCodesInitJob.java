@@ -44,6 +44,8 @@ public class SCodesInitJob implements JobInterface {
             return Constants.FAIL;
         }
         t_stock_infoDao.insert(stockarray);
+        //测试输出
+        System.out.println("initStockCodes success");
         return Constants.SUCCESS;
     }
 

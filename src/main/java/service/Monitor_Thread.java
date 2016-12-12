@@ -39,7 +39,7 @@ public class Monitor_Thread extends Thread {
     @Override
     public void run() {
         //测试输出
-        System.out.println("Monitor_Thread begin");
+//        System.out.println("Monitor_Thread begin");
         try {
             while (true) {
 
@@ -50,19 +50,16 @@ public class Monitor_Thread extends Thread {
                     //测试输出
                     //System.out.println("Monitor_Thread add");
                     for (RunnableList runnableList : runnableLists) {
+                        //检查任务数据是否正确
                         int result = ScheduleUtil.checkJob(runnableList.getTask_id()
                                 , runnableList.getPara()
                                 , runnableList.getTaskclassname());
-                        if (result == Constants.FAIL) {
+                        //检查任务是否已在待执行列表中，任务数据是否正确
+                        if (result == Constants.FAIL
+                                || ScheduleService.checkIsInRunnableList(runnableList.getTask_id())) {
                             continue;
                         }
-                        Job job = new Job(runnableList.getTask_id()
-                                , new JSONObject(runnableList.getPara())
-                                , runnableList.getTaskclassname(), Constants.TASK_READY);
-                        if(ScheduleService.getInstance().contains(job)){
-                            continue;
-                        }
-                        ScheduleService.getInstance().add(job);
+                        ScheduleService.addJob2Jobs(runnableList.getTask_id(),runnableList.getPara(),runnableList.getTaskclassname());
                         Task_List task_list = new Task_List(runnableList.getTask_id(), Constants.TASK_WAIT);
                         task_listDao.updateTaskListByTask_List(task_list);
                         LogUtil.SuccessLogAdd( Constants.LOG_INFO

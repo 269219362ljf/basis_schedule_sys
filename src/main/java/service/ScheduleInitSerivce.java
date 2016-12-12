@@ -45,7 +45,7 @@ public class ScheduleInitSerivce {
 
         //初始化系统执行任务列表
         List<RunnableList> runnableLists=scheduleDao.queryRunnableList();
-        ScheduleService.getInstance().clear();
+        ScheduleService.clearJobs();
         for(RunnableList runnableList:runnableLists){
             ScheduleService.addJob2Jobs(runnableList.getTask_id(),runnableList.getPara(),runnableList.getTaskclassname());
             //更改任务列表状态

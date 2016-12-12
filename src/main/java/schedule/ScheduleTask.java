@@ -10,10 +10,10 @@ public class ScheduleTask {
 
     public static Job getjob(){
         //FIFO
-        if(!ScheduleService.getInstance().isEmpty()){
-        Job returnjob=ScheduleService.getInstance().get(0);
-        ScheduleService.getInstance().remove(0);
-        return returnjob;}
+        if(!ScheduleService.checkJobsEmpty()){
+        int task_id=(int)ScheduleService.getJobids().toArray()[0];
+        Job returnjob=ScheduleService.getJob(task_id);
+            return returnjob;}
         else{
             return null;
         }

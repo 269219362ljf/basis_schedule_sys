@@ -27,10 +27,10 @@ public class Schedule_Thread extends Thread {
             try {
                 //循环检查执行任务列表，有可以执行的就进行调度，没有进行休眠
                 while(true) {
-                    if(!ScheduleService.getInstance().isEmpty()) {
+                    if(!ScheduleService.checkJobsEmpty()) {
                         //此处是实现调度算法的
                         Job runJob = null;
-                        while (!ScheduleService.getInstance().isEmpty()) {
+                        while (!ScheduleService.checkJobsEmpty()) {
                             runJob = ScheduleTask.getjob();
                             if(runJob ==null){
                                 continue;

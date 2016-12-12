@@ -37,14 +37,14 @@ public class JobThread extends RecursiveAction {
     @Override
     protected void compute() {
         try{
-            //开始时间
+            //记录开始时间
             Date begin=new Date();
             String date_string= CommonUtil.date2string8(begin);
             //执行任务
             Class jobclass=Class.forName(job.getJobClass());
             JobInterface work=(JobInterface)jobclass.newInstance();
             //更新数据库任务列表状态
-            Task_List task_list=new Task_List(job.getTask_id(),job.getTask_st());
+            Task_List task_list=new Task_List(job.getTask_id(),Constants.TASK_RUNNING);
             task_list.setT_date(date_string);
             task_list.setBeg_time(begin);
             task_listDao.updateTaskListByTask_List(task_list);
@@ -53,15 +53,15 @@ public class JobThread extends RecursiveAction {
             //结束时间
             Date end=new Date();
             //更新任务状态
-            int st=4;
+            int st=Constants.TASK_FAIL;
             if(result== Constants.SUCCESS){
-                st=3;
+                st=Constants.TASK_SUCCESS;
             }
             //执行结束，更新状态并从当前任务执行列表中去除
-            job.setTask_st(st);
+            task_list.setSt(st);
             task_list.setEnd_time(end);
             task_listDao.updateTaskListByTask_List(task_list);
-            ScheduleService.getInstance().remove(job);
+            ScheduleService.removeJobsByTask_id(task_list.getTask_id());
             LogUtil.SuccessLogAdd(
                     Constants.LOG_INFO,
                     "JobThread task_id "+job.getTask_id(),"执行",true);

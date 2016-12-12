@@ -10,6 +10,10 @@ public class ScheduleUtil {
     //校验任务
     public static int checkJob(int task_id,String param,String jobClassName){
         try {
+            //避免无参数任务在转换参数时产生错误
+            if(param==null){
+                param="{}";
+            }
             //转化参数为JSONOBJECT类型
             JSONObject jparam = new JSONObject(param);
             //检查jobClassName所指的类是否存在

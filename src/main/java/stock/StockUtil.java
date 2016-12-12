@@ -51,7 +51,6 @@ public class StockUtil {
                 br.close();
                 br = null;
             }
-            System.out.println(sb.toString());
             return sb.toString();
 
         } catch (IOException e) {
@@ -122,6 +121,8 @@ public class StockUtil {
                 result.put("min",splitlines[4]);
                 results.put(result);
             }
+            //测试输出
+            System.out.println("getTrainningFromCode success");
             LogUtil.SuccessLogAdd(
                     Constants.LOG_INFO,
                     "getTrainningFromCode", "执行", true);
