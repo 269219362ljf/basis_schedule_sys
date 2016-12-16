@@ -68,7 +68,14 @@ public class StockUtil {
         int start = code.lastIndexOf("=");
         code = code.substring(start);
         code = code.substring(code.indexOf("\"") + 1, code.lastIndexOf("\""));
-        codes = Arrays.asList(code.split(","));
+        String[] codesplit=code.split(",");
+        codes=new ArrayList<String>();
+        for(String temp:codesplit){
+            //去除非代码数据
+            if(temp.length()==8){
+                codes.add(temp);
+            }
+        }
         return codes;
     }
 
@@ -107,7 +114,6 @@ public class StockUtil {
             BufferedReader reader = new BufferedReader(new InputStreamReader(url.openStream(), "GBK"));
             String line;
             while ((line = reader.readLine()) != null) {
-                System.out.println(line);
                 String[] splitlines=line.split(",");
                 if(splitlines.length<6){
                     continue;
@@ -121,8 +127,6 @@ public class StockUtil {
                 result.put("min",splitlines[4]);
                 results.put(result);
             }
-            //测试输出
-            System.out.println("getTrainningFromCode success");
             LogUtil.SuccessLogAdd(
                     Constants.LOG_INFO,
                     "getTrainningFromCode", "执行", true);

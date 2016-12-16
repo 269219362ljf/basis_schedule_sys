@@ -8,10 +8,12 @@ import model.Task_List;
 import org.json.JSONObject;
 import org.springframework.web.context.ContextLoader;
 import org.springframework.web.context.WebApplicationContext;
+import utils.CommonUtil;
 import utils.Constants;
 import utils.LogUtil;
 import utils.ScheduleUtil;
 
+import java.util.Date;
 import java.util.List;
 
 
@@ -61,6 +63,7 @@ public class Monitor_Thread extends Thread {
                         }
                         ScheduleService.addJob2Jobs(runnableList.getTask_id(),runnableList.getPara(),runnableList.getTaskclassname());
                         Task_List task_list = new Task_List(runnableList.getTask_id(), Constants.TASK_WAIT);
+                        task_list.setT_date(CommonUtil.date2string8(new Date()));
                         task_listDao.updateTaskListByTask_List(task_list);
                         LogUtil.SuccessLogAdd( Constants.LOG_INFO
                                 , "Monitor_Thread task_id " + runnableList.getTask_id()

@@ -93,11 +93,16 @@ public class ScheduleService {
         if(!checkIsInRunnableList(task_id)){
             return Constants.FAIL;
         }
+        Job job=null;
         //存在则从jobs中去除
-        for(Job job:jobs){
-            if(job.getTask_id()==task_id){
-                jobs.remove(job);
+        for(Job tempjob:jobs){
+            if(tempjob.getTask_id()==task_id){
+                job=tempjob;
             }
+        }
+        if(job!=null){
+            jobs.remove(job);
+            jobids.remove(task_id);
         }
         return Constants.SUCCESS;
     }

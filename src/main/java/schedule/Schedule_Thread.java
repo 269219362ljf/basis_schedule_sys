@@ -35,6 +35,8 @@ public class Schedule_Thread extends Thread {
                             if(runJob ==null){
                                 continue;
                             }
+                            //获取任务后从任务列表中摘除
+                            ScheduleService.removeJobsByTask_id(runJob.getTask_id());
                             JobThread jobThread = new JobThread(runJob);
                             pool.execute(jobThread);
                         }

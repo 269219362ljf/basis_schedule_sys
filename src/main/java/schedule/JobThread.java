@@ -57,11 +57,10 @@ public class JobThread extends RecursiveAction {
             if(result== Constants.SUCCESS){
                 st=Constants.TASK_SUCCESS;
             }
-            //执行结束，更新状态并从当前任务执行列表中去除
+            //执行结束，更新状态
             task_list.setSt(st);
             task_list.setEnd_time(end);
             task_listDao.updateTaskListByTask_List(task_list);
-            ScheduleService.removeJobsByTask_id(task_list.getTask_id());
             LogUtil.SuccessLogAdd(
                     Constants.LOG_INFO,
                     "JobThread task_id "+job.getTask_id(),"执行",true);

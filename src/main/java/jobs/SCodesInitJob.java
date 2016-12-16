@@ -1,7 +1,7 @@
 package jobs;
 
 import dao.T_stock_infoDao;
-import model.T_stock_info;
+import stock.T_stock_info;
 import org.json.JSONObject;
 import stock.StockUtil;
 import utils.CommonUtil;

@@ -11,6 +11,8 @@
         <typeAlias alias="T_param" type="model.T_param"/>
         <typeAlias alias="RunnableList" type="model.RunnableList"/>
         <typeAlias alias="List" type="java.util.List"/>
+        <typeAlias alias="T_stock_info" type="stock.T_stock_info"/>
+        <typeAlias alias="T_stock_trainning_info" type="stock.T_stock_trainning_info"/>
     </typeAliases>
 
 </configuration>

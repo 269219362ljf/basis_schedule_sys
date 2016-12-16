@@ -1,6 +1,6 @@
 package dao;
 
-import model.T_stock_info;
+import stock.T_stock_info;
 import org.mybatis.spring.SqlSessionTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
@@ -34,6 +34,17 @@ public class T_stock_infoDao {
         }
     }
 
+    //股票代码信息获取（全）
+    public List<T_stock_info> selectAll(){
+        try{
+            return sqlSessionSchedule.selectList(Constants.MAPPER_STOCK+".t_stock_info_selectAll");
+        }catch (Exception e){
+            LogUtil.ErrorLogAdd(
+                    Constants.LOG_ERROR
+                    , "T_stock_infoDao  selectAll", "获取", e.getCause().toString(), true);
+            return null;
+        }
 
+    }
 
 }
