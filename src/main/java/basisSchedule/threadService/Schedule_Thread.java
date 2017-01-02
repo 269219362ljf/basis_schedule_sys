@@ -1,0 +1,57 @@
+package basisSchedule.threadService;
+
+import basisSchedule.jobs.Job;
+import basisSchedule.scheduleService.ScheduleService;
+import utils.Constants;
+
+
+import java.util.concurrent.ForkJoinPool;
+import java.util.concurrent.RecursiveAction;
+
+
+//监控任务线程，主要用于启动调度模块，为调度模块主入口
+public class Schedule_Thread extends Thread {
+    //单例线程
+    private static Schedule_Thread thread=new Schedule_Thread();
+
+    public static Schedule_Thread getInstance(){
+        return thread;
+    }
+
+    //启动线程池并开始执行任务
+    @Override
+    public void run() {
+            try {
+                //循环检查执行任务列表，有可以执行的就进行调度，没有进行休眠
+                while(true) {
+                    if(!JobsPool.getInstance().checkJobsEmpty()) {
+                        //此处是实现调度算法的
+                        Job runJob = null;
+                        //循环将任务列表分发到线程池
+                        while (!JobsPool.getInstance().checkJobsEmpty()) {
+                            runJob = ScheduleTask.getjob();
+                            if(runJob ==null){
+                                continue;
+                            }
+                            //获取任务后从任务列表中摘除
+                            JobsPool.getInstance().removeJob(runJob.getTask_id());
+                            //建立任务线程
+                            JobThread jobThread = new JobThread(runJob);
+
+                            //目前仅用到定长线程池，后续更改任务类，添加任务类型
+                            ThreadPool.getInstance().workThreadPool.execute(jobThread);
+                        }
+                    }else{
+                        sleep(Constants.SLEEPTIME);
+                    }
+                }
+            }
+            catch(Exception e){
+                e.printStackTrace();
+            }
+        }
+
+
+
+
+}

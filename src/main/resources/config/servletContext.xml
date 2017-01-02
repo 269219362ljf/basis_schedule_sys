@@ -14,6 +14,11 @@
     <mvc:annotation-driven />
 
     <!-- 自动扫描controller 包下的@Controller标注的类控制器类 -->
-    <context:component-scan base-package="controller" />
+    <!-- 调度系统控制类 -->
+    <context:component-scan base-package="basisSchedule.scheduleController" />
+
+    <!-- 股票分析控制类 -->
+    <context:component-scan base-package="stockSystem.stockController" />
+
 
 </beans>

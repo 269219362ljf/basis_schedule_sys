@@ -4,13 +4,18 @@
 
     <!-- 命名空间 -->
     <typeAliases>
-        <typeAlias alias="Test" type="model.Test"/>
+        <!-- 通用类型 -->
+        <typeAlias alias="List" type="java.util.List"/>
+
+        <!-- 调度系统 -->
         <typeAlias alias="Task" type="model.Task"/>
         <typeAlias alias="Task_List" type="model.Task_List"/>
         <typeAlias alias="T_Log" type="model.T_Log"/>
         <typeAlias alias="T_param" type="model.T_param"/>
-        <typeAlias alias="RunnableList" type="model.RunnableList"/>
-        <typeAlias alias="List" type="java.util.List"/>
+
+        <!-- 股票分析系统 -->
+        <typeAlias alias="T_stock_info" type="stock.T_stock_info"/>
+        <typeAlias alias="T_stock_trainning_info" type="stock.T_stock_trainning_info"/>
     </typeAliases>
 
 </configuration>

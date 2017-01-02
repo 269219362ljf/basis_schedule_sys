@@ -1,6 +1,6 @@
 package utils;
 
-import config.XmlConfig;
+
 import org.json.JSONObject;
 
 /**
@@ -11,7 +11,6 @@ public class Constants {
     /**
      * mybatis映射XML
      */
-    public final static String MAPPER_TEST= "mapperNS.Test";
     public final static String MAPPER_TASK="mapperNS.Task";
     public final static String MAPPER_T_LOG="mapperNS.T_Log";
     public final static String MAPPER_T_PARAM="mapperNS.T_param";
@@ -41,7 +40,10 @@ public class Constants {
 
     public final static int BEFOREERRORXIST=1;
 
-
+    public final static int TASK_HURRY=0;
+    public final static int TASK_NORMAL=1;
+    public final static int TASK_SCHEDULE=2;
+    public final static int TASK_SINGLE=3;
 
 
     private final static String PropertyFile="system-property.xml";
