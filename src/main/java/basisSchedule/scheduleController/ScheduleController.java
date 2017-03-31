@@ -1,15 +1,15 @@
 package basisSchedule.scheduleController;
 
+import basisSchedule.resultModel.Dep;
 import basisSchedule.resultModel.Task;
 import basisSchedule.resultModel.Task_List;
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
+
 import org.json.JSONArray;
 import org.json.JSONObject;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.ResponseBody;
+
 import basisSchedule.scheduleService.ScheduleInitSerivce;
 import basisSchedule.scheduleService.ScheduleService;
 
@@ -18,6 +18,7 @@ import utils.Constants;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import java.util.ArrayList;
 import java.util.List;
 
 
@@ -30,13 +31,12 @@ public class ScheduleController {
     @Autowired
     private ScheduleInitSerivce scheduleInitSerivce;
 
-    @RequestMapping(value="/scheduleInit.do")
+    @RequestMapping(value="/Schedule/scheduleInit.do")
     public void scheduleInit(HttpServletRequest request, HttpServletResponse response){
         try{
             JSONObject jresult=new JSONObject();
             jresult.put("result",scheduleInitSerivce.init());
             CommonUtil.renderData(response,jresult);
-
         } catch (Exception e){
             e.printStackTrace();
         }
@@ -47,7 +47,7 @@ public class ScheduleController {
      *  @param request
      * @param response
      */
-    @RequestMapping(value = "/queryTaskList.do")
+    @RequestMapping(value = "/Schedule/queryTaskList.do")
     public void queryTaskList(HttpServletRequest request, HttpServletResponse response){
         try{
             List<Task> tasks= scheduleService.queryAllTask();
@@ -57,10 +57,9 @@ public class ScheduleController {
             e.printStackTrace();
             //return null;
         }
-
     }
 
-    @RequestMapping(value = "/queryRunningState.do")
+    @RequestMapping(value = "/Schedule/queryRunningState.do")
     public void queryRunningState(HttpServletRequest request, HttpServletResponse response){
         try{
             List<Task_List> task_lists=scheduleService.queryAllTask_List();
@@ -69,6 +68,60 @@ public class ScheduleController {
             e.printStackTrace();
         }
     }
+
+    @RequestMapping(value = "/Schedule/addTask.do")
+    public void addTask(HttpServletRequest request, HttpServletResponse response){
+        try{
+            JSONObject requestData=CommonUtil.requestdata2JSON(request);
+            JSONObject result=new JSONObject();
+            if(scheduleService.insertTask(requestData)!= Constants.SUCCESS){
+                result.put("msg","error");
+            }else{
+                result.put("msg","success");
+            }
+            System.out.println(requestData);
+            CommonUtil.renderData(response,result);
+
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+    }
+
+    @RequestMapping(value = "/Schedule/queryTaskid.do")
+    public void queryTaskid(HttpServletRequest request, HttpServletResponse response){
+        try{
+            List<Task> tasks=scheduleService.queryAllTask();
+            String ids[]=new String[tasks.size()];
+            for(int i=0;i<tasks.size();i++){
+                ids[i]=tasks.get(i).getTask_id()+"";
+            }
+            JSONObject result=new JSONObject();
+            result.put("data",ids);
+            CommonUtil.renderData(response,result);
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+    }
+
+    @RequestMapping(value = "/Schedule/queryDepState.do")
+    public void queryDepState(HttpServletRequest request, HttpServletResponse response){
+        try{
+            List<Dep> deps=scheduleService.queryAllDep();
+            list2dataTables(response,deps);
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+    }
+
+
+
+
+
+
+
+
+
+
 
     //将list数据集返回到前端dataTables
     private void list2dataTables(HttpServletResponse response,List list){

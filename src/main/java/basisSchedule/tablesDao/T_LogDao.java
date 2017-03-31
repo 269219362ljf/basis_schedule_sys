@@ -6,6 +6,7 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.mybatis.spring.SqlSessionTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Repository;
 import utils.Constants;
 import utils.LogUtil;
@@ -17,7 +18,8 @@ import java.util.List;
 @Repository
 public class T_LogDao {
 
-    @Autowired
+    @Autowired ()
+    @Qualifier( "schedulesqlSessionTemplate" )
     private SqlSessionTemplate sqlSessionSchedule;
 
     //查询日志表所有日志信息

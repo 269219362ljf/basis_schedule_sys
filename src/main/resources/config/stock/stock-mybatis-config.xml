@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration PUBLIC "-//ibatis.apache.org//DTD Config 3.0//EN" "http://mybatis.apache.org/dtd/mybatis-3-config.dtd">
+<configuration>
+
+    <!-- 命名空间 -->
+    <typeAliases>
+        <!-- 通用类型 -->
+        <typeAlias alias="List" type="java.util.List"/>
+
+        <!-- 股票分析系统 -->
+        <typeAlias alias="T_stock_info" type="stockSystem.resultModel.T_stock_info"/>
+        <typeAlias alias="T_stock_trainning_info" type="stockSystem.resultModel.T_stock_trainning_info"/>
+        <typeAlias alias="T_stock_sys_param" type="stockSystem.resultModel.T_stock_sys_param"/>
+    </typeAliases>
+
+</configuration>

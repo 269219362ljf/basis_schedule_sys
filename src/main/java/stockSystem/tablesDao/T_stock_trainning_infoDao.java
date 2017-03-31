@@ -2,6 +2,7 @@ package stockSystem.tablesDao;
 
 import org.mybatis.spring.SqlSessionTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Repository;
 import stockSystem.resultModel.T_stock_trainning_info;
 import utils.Constants;
@@ -15,7 +16,8 @@ import java.util.List;
 @Repository
 public class T_stock_trainning_infoDao {
 
-    @Autowired
+    @Autowired ()
+    @Qualifier( "stocksqlSessionTemplate" )
     private SqlSessionTemplate sqlSessionSchedule;
 
     //股票交易信息插入

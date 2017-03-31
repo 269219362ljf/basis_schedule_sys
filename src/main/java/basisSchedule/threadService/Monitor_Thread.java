@@ -17,7 +17,7 @@ import utils.ScheduleUtil;
 import java.util.Date;
 import java.util.List;
 
-
+//监控线程，负责将新任务放入执行队列和检查任务是否正确完整
 public class Monitor_Thread extends Thread {
     //单例线程
     private static Monitor_Thread thread=new Monitor_Thread();

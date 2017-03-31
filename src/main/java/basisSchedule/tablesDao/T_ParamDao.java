@@ -1,10 +1,9 @@
 package basisSchedule.tablesDao;
 
 import basisSchedule.resultModel.T_param;
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
 import org.mybatis.spring.SqlSessionTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.dao.DuplicateKeyException;
 import org.springframework.stereotype.Repository;
@@ -19,7 +18,8 @@ import java.util.Map;
 @Repository
 public class T_ParamDao {
 
-    @Autowired
+    @Autowired ()
+    @Qualifier( "schedulesqlSessionTemplate" )
     private SqlSessionTemplate sqlSessionSchedule;
 
     //查询参数表内所有参数

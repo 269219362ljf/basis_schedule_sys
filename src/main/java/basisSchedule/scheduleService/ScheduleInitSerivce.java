@@ -47,6 +47,7 @@ public class ScheduleInitSerivce {
 
         //初始化系统执行任务列表
         List<Task> runnableLists=scheduleDao.queryRunnableList();
+        //清空任务列表
         JobsPool.getInstance().clearJobs();
         for(Task runnableTask:runnableLists){
             JobsPool.getInstance().addJob2Jobs(

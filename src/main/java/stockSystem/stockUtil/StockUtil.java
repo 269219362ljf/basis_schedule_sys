@@ -17,6 +17,8 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
+import static java.lang.Thread.sleep;
+
 /**
  * Created by Administrator on 2016/12/12.
  */
@@ -88,12 +90,14 @@ public class StockUtil {
                         new URL(StockConstants.BATCHSTACKCODESURL + i)
                 );
                 codes.addAll(handleStockCodeFromSina(codesString));
+                //文明获取
+                sleep(100);
             }
             LogUtil.SuccessLogAdd(
                     Constants.LOG_INFO,
                     "getBatchStackCodesFromSina", "执行", true);
             return codes;
-        } catch (IOException e) {
+        } catch (Exception e) {
             LogUtil.ErrorLogAdd(Constants.LOG_ERROR, "getBatchStackCodesFromSina ", "获取股票代码", e.getCause().toString(), true);
             return null;
         }

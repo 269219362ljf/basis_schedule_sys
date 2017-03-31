@@ -1,6 +1,7 @@
 package utils;
 
-import jobs.JobInterface;
+
+import basisSchedule.jobs.JobInterface;
 import org.json.JSONException;
 import org.json.JSONObject;
 

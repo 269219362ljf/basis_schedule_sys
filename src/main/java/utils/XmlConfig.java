@@ -19,12 +19,14 @@ public class XmlConfig {
     }
 
     private  XmlConfig(){
-        this.xmlPath=this.getClass().getResource("").getPath();
+        //指定为根目录下的config文件，即WEB-INF/classes/config
+        this.xmlPath=this.getClass().getResource("/").getPath()+"config/";
     }
 
     //获取XML配置，结果为JSONObject
     public JSONObject getXMLconfig(String xmlFilename){
         String xmlFilePath=this.xmlPath+xmlFilename;
+        //System.out.println(xmlFilePath);
         File xmlFile=new File(xmlFilePath);
         if(!xmlFile.exists()){
             System.out.println("xmlfile not exists");

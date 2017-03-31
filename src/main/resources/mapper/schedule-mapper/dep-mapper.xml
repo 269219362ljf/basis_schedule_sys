@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!-- 定义命名空间 -->
+<mapper namespace="mapperNS.Dep">
+
+    <!--&lt;!&ndash; 查询全部任务信息 &ndash;&gt;-->
+    <!-- 查询全部任务信息 -->
+    <select id="queryDep"   resultType="Dep" >
+        SELECT task_id, parent_id
+	    FROM t_dep
+    </select>
+
+    <!--</select>-->
+    <!-- 插入数据 -->
+    <insert id="insertDep" parameterType="Dep">
+        INSERT INTO t_dep(
+	    task_id, parent_id)
+	    VALUES (#{task_id}, #{parent_id});
+    </insert>
+
+    <!--&lt;!&ndash; 删除数据 &ndash;&gt;-->
+    <!--<delete id="" parameterType="">-->
+
+    <!--</delete>-->
+</mapper>

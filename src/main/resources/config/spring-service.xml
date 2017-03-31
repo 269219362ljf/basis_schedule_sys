@@ -27,4 +27,7 @@
     <!-- 扫描股票分析系统的服务组件 -->
     <context:component-scan base-package="stockSystem.stockService" />
 
+    <!-- 扫描天池客流量预测的服务组件 -->
+    <context:component-scan base-package="tianchiPredictCustom.tianchiPredictService" />
+
 </beans>

@@ -16,7 +16,10 @@ public class Constants {
     public final static String MAPPER_T_PARAM="mapperNS.T_param";
     public final static String MAPPER_TASK_LIST="mapperNS.Task_List";
     public final static String MAPPER_Schedule="mapperNS.Schedule";
+    public final static String MAPPER_Dep="mapperNS.Dep";
+
     public final static String MAPPER_STOCK="mapperNS.Stock";
+    public final static String MAPPER_StockProcess="mapperNS.Stockprocess";
 
 
     /*
@@ -40,10 +43,11 @@ public class Constants {
 
     public final static int BEFOREERRORXIST=1;
 
-    public final static int TASK_HURRY=0;
-    public final static int TASK_NORMAL=1;
-    public final static int TASK_SCHEDULE=2;
-    public final static int TASK_SINGLE=3;
+    //任务类型
+    public final static int TASK_HURRY=0;//优先
+    public final static int TASK_NORMAL=1;//普通
+    public final static int TASK_SCHEDULE=2;//周期
+    public final static int TASK_SINGLE=3;//同步
 
 
     private final static String PropertyFile="system-property.xml";

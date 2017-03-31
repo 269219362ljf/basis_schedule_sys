@@ -3,6 +3,7 @@ package basisSchedule.tablesDao;
 import basisSchedule.resultModel.Task_List;
 import org.mybatis.spring.SqlSessionTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.dao.DuplicateKeyException;
 import org.springframework.stereotype.Repository;
@@ -15,7 +16,8 @@ import java.util.List;
 @Repository
 public class Task_ListDao {
 
-    @Autowired
+    @Autowired ()
+    @Qualifier( "schedulesqlSessionTemplate" )
     private SqlSessionTemplate sqlSessionSchedule;
 
     /*

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!-- 定义命名空间 -->
+<mapper namespace="mapperNS.Stockprocess">
+      <select id="queryCodeDateMap" resultType="map">
+          select
+          codes.stock_id,
+          max(trainning.s_date) as max_date
+          from
+          t_stock_info codes
+          left join
+          t_stock_trainning_info trainning
+          on (codes.stock_id=trainning.stock_id)
+          group by codes.stock_id
+      </select>
+
+
+</mapper>

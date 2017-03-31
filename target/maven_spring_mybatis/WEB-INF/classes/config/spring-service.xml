@@ -6,9 +6,6 @@
        http://www.springframework.org/schema/beans/spring-beans.xsd
        http://www.springframework.org/schema/context
        http://www.springframework.org/schema/context/spring-context.xsd">
-    <!-- 扫描service包下所有标注@Service的服务组件 -->
-    <context:component-scan base-package="service" />
-
 
     <!--spring 线程池(可选) -->
     <bean id="taskExecutor" class="org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor">
@@ -22,5 +19,15 @@
         <property name="keepAliveSeconds" value="300" />
     </bean>
 
+
+    <!-- 扫描service包下所有标注@Service的服务组件 -->
+    <!-- 扫描调度系统的服务组件 -->
+    <context:component-scan base-package="basisSchedule.scheduleService" />
+
+    <!-- 扫描股票分析系统的服务组件 -->
+    <context:component-scan base-package="stockSystem.stockService" />
+
+    <!-- 扫描天池客流量预测的服务组件 -->
+    <context:component-scan base-package="tianchiPredictCustom.tianchiPredictService" />
 
 </beans>

@@ -3,6 +3,7 @@ package basisSchedule.sqlDao;
 import basisSchedule.resultModel.Task;
 import org.mybatis.spring.SqlSessionTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Repository;
 import utils.Constants;
 import utils.LogUtil;
@@ -13,7 +14,8 @@ import java.util.List;
 @Repository
 public class ScheduleDao {
 
-    @Autowired
+    @Autowired ()
+    @Qualifier( "schedulesqlSessionTemplate" )
     private SqlSessionTemplate sqlSessionSchedule;
 
     //查询可执行任务信息

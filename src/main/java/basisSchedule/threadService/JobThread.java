@@ -1,6 +1,6 @@
 package basisSchedule.threadService;
 
-import basisSchedule.sqlDao.ScheduleDao;
+
 import basisSchedule.tablesDao.Task_ListDao;
 import basisSchedule.jobs.Job;
 import basisSchedule.jobs.JobInterface;
@@ -15,7 +15,7 @@ import utils.LogUtil;
 
 import java.util.Date;
 
-
+//任务执行线程，负责调用具体任务类的work函数
 public class JobThread implements Runnable {
 
     private Job job;
@@ -34,19 +34,22 @@ public class JobThread implements Runnable {
     }
 
     public void run() {
+        //记录开始时间
+        Date begin=new Date();
+        String date_string= CommonUtil.date2string8(begin);
+        //任务记录新建
+        Task_List task_list=new Task_List(job.getTask_id(),Constants.TASK_RUNNING);
+        task_list.setT_date(date_string);
+        task_list.setBeg_time(begin);
+        //默认状态为错误
+        int st=Constants.TASK_FAIL;
         try{
-            //记录开始时间
-            Date begin=new Date();
-            String date_string= CommonUtil.date2string8(begin);
             //执行任务
             Class jobclass=Class.forName(job.getJobClass());
             JobInterface work=(JobInterface)jobclass.newInstance();
             //更新数据库任务列表状态
-            Task_List task_list=new Task_List(job.getTask_id(),Constants.TASK_RUNNING);
-            task_list.setT_date(date_string);
-            task_list.setBeg_time(begin);
             task_listDao.updateTaskListByTask_List(task_list);
-            //初始化任务参数
+            //初始化任务参数，param为固定扩展参数
             if(param == null){
                 param=job.getParam();
             }else{
@@ -57,7 +60,6 @@ public class JobThread implements Runnable {
             //结束时间
             Date end=new Date();
             //更新任务状态
-            int st=Constants.TASK_FAIL;
             if(result== Constants.SUCCESS){
                 st=Constants.TASK_SUCCESS;
             }
@@ -68,8 +70,15 @@ public class JobThread implements Runnable {
             LogUtil.SuccessLogAdd(
                     Constants.LOG_INFO,
                     "JobThread task_id "+job.getTask_id(),"执行",true);
+            //此处为添加任务完成后，对任务执行情况分析和后续处理（未实现）
+            ThreadAnalyze.analyze();
+
         } catch (Exception e) {
             e.printStackTrace();
+            //执行错误，更新状态
+            task_list.setSt(st);
+            task_listDao.updateTaskListByTask_List(task_list);
+            //增加错误日志
             LogUtil.ErrorLogAdd(
                     Constants.LOG_ERROR,
                     "JobThread task_id "+job.getTask_id(),"执行",e.getClass().getName(),true);

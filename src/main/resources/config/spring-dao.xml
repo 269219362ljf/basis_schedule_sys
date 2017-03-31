@@ -12,6 +12,6 @@
     <context:component-scan base-package="basisSchedule.tablesDao"/>
 
     <!-- 扫描股票系统的DAO组件 -->
-    <context:component-scan base-package="stockSystem.sqlDao"/>
+
     <context:component-scan base-package="stockSystem.tablesDao"/>
 </beans>

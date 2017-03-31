@@ -1,0 +1,142 @@
+/*自定义插件CSS和通用设置CSS*/
+
+/*模态框CSS设置*/
+/*模态框灰罩背景*/
+.reveal-modal-bg {
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    background: #000;
+    background: rgba(0,0,0,.8);
+    z-index: 100;
+    display: none;
+    top: 0;
+    left: 0;
+}
+
+/*模态框外观设置*/
+.reveal-modal {
+    visibility: hidden;
+    top: 100px;
+    left: 50%;
+    margin-left: -300px;
+    width: 600px;
+    background: #eee url(/resource/images/modal-gloss.png) no-repeat -200px -80px;
+    position: absolute;
+    z-index: 101;
+    padding: 30px 40px 34px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    -moz-box-shadow: 0 0 10px rgba(0,0,0,.4);
+    -webkit-box-shadow: 0 0 10px rgba(0,0,0,.4);
+    -box-shadow: 0 0 10px rgba(0,0,0,.4);
+}
+
+/*模态框在不同分辨率下的大小设置*/
+.reveal-modal.small 		{ width: 200px; margin-left: -140px;}
+.reveal-modal.medium 		{ width: 400px; margin-left: -240px;}
+.reveal-modal.large 		{ width: 600px; margin-left: -340px;}
+.reveal-modal.xlarge 		{ width: 800px; margin-left: -440px;}
+
+/*模态框内部整体内容样式*/
+.reveal-modal .close-reveal-modal {
+    font-size: 22px;
+    line-height: .5;
+    position: absolute;
+    top: 8px;
+    right: 11px;
+    color: #aaa;
+    text-shadow: 0 -1px 1px rbga(0,0,0,.6);
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/*模态框内部内容头部通用样式*/
+.modal_header{
+
+}
+
+/*模态框内部内容头部标题样式*/
+.modal_header p{
+    top:8px;
+    text-align:left;
+    font-size: 30px;
+}
+
+/*模态框内部内容通用样式*/
+.modal_content{
+}
+
+/*模态框内部内容行样式*/
+.div-modal-half ,.div-modal-full{
+    float:left;
+    padding: 2px;
+    text-align: right;
+}
+
+/*模态框内部内容半行*/
+.div-modal-half{
+    width:49%;
+}
+
+/*模态框内部内容全行*/
+.div-modal-full{
+    width: 98%;
+}
+
+/*模态框内部内容半行组件样式*/
+.div-modal-half text,input,select{
+    position: relative;
+    width:50%;
+    height: 21px;
+    margin:0px;
+    padding:0px;
+    box-sizing: border-box;
+    vertical-align:middle;
+}
+
+/*模态框内部内容全行组件样式*/
+.div-modal-full textarea{
+    height:50px;
+    position: relative;
+    width: 80%;
+    box-sizing: border-box;
+    vertical-align:middle;
+}
+/*模态框CSS设置结束*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

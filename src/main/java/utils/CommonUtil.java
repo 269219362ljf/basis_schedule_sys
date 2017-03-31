@@ -1,22 +1,19 @@
 package utils;
 
-import jobs.JobInterface;
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
+
+
 import org.json.JSONArray;
-import org.json.JSONException;
 import org.json.JSONObject;
 import org.springframework.web.context.ContextLoader;
 import org.springframework.web.context.WebApplicationContext;
 
+import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import java.io.IOException;
-import java.io.PrintWriter;
+import java.io.*;
 import java.lang.reflect.Method;
 import java.lang.reflect.Modifier;
 import java.text.SimpleDateFormat;
-import java.util.Date;
-import java.util.List;
+import java.util.*;
 
 
 public class CommonUtil {
@@ -42,7 +39,7 @@ public class CommonUtil {
         }
     }
 
-
+    //list转化为JSONArray
     public static JSONArray list2JSONResult(List<?> list) {
         JSONArray result = new JSONArray();
         if (list.size() == 0) {
@@ -116,5 +113,40 @@ public class CommonUtil {
         SimpleDateFormat sdf=new SimpleDateFormat("yyyyMMdd");
         return sdf.format(date);
     }
+
+    //获取propertiesfile的所有属性键值对
+    public static HashMap<String,String> getPropertiesData(String propertiesfile){
+        try {
+            HashMap<String,String> result=new HashMap<String, String>();
+            Properties prop = new Properties();
+            InputStream in = new BufferedInputStream(new FileInputStream(propertiesfile));
+            prop.load(in);
+            Enumeration<Object> propertieskeys = prop.keys();
+            while(propertieskeys.hasMoreElements()){
+                String name=(String)propertieskeys.nextElement();
+                String value=prop.getProperty(name);
+                result.put(name,value);
+            }
+            in.close();
+            return result;
+        }catch (Exception e){
+            e.printStackTrace();
+            return null;
+        }
+    }
+
+    //将前端获取的数据转化为json类型
+    public static JSONObject requestdata2JSON(HttpServletRequest request){
+        JSONObject result=new JSONObject();
+        Enumeration<String> names=request.getParameterNames();
+        while(names.hasMoreElements()){
+            String temp=names.nextElement();
+            result.put(temp,request.getParameter(temp));
+        }
+        return result;
+    }
+
+
+
 
 }

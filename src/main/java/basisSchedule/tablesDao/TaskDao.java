@@ -2,10 +2,9 @@ package basisSchedule.tablesDao;
 
 import basisSchedule.resultModel.Task;
 import org.apache.ibatis.session.RowBounds;
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
 import org.mybatis.spring.SqlSessionTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.dao.DuplicateKeyException;
 import org.springframework.stereotype.Repository;
@@ -21,7 +20,8 @@ import java.util.Map;
 public class TaskDao {
 
 
-    @Autowired
+    @Autowired ()
+    @Qualifier( "schedulesqlSessionTemplate" )
     private SqlSessionTemplate sqlSessionSchedule;
 
     //查询任务表所有任务信息(分页)
@@ -42,7 +42,7 @@ public class TaskDao {
             LogUtil.SuccessLogAdd(
                     Constants.LOG_INFO,
                     "任务 " + task.getTask_id(), "插入",true);
-            return task.getTask_id();
+            return Constants.SUCCESS;
         } catch (DuplicateKeyException e) {
             LogUtil.ErrorLogAdd(
                     Constants.LOG_ERROR

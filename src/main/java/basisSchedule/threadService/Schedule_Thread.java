@@ -1,15 +1,11 @@
 package basisSchedule.threadService;
 
 import basisSchedule.jobs.Job;
-import basisSchedule.scheduleService.ScheduleService;
 import utils.Constants;
 
 
-import java.util.concurrent.ForkJoinPool;
-import java.util.concurrent.RecursiveAction;
 
-
-//监控任务线程，主要用于启动调度模块，为调度模块主入口
+//调度主线程，主要用于调度执行队列，包装jobThread并分配到线程池ThreadPool执行
 public class Schedule_Thread extends Thread {
     //单例线程
     private static Schedule_Thread thread=new Schedule_Thread();
@@ -37,9 +33,8 @@ public class Schedule_Thread extends Thread {
                             JobsPool.getInstance().removeJob(runJob.getTask_id());
                             //建立任务线程
                             JobThread jobThread = new JobThread(runJob);
-
-                            //目前仅用到定长线程池，后续更改任务类，添加任务类型
-                            ThreadPool.getInstance().workThreadPool.execute(jobThread);
+                            //线程池执行任务
+                            ThreadPool.getInstance().execute(jobThread,runJob.getTask_type());
                         }
                     }else{
                         sleep(Constants.SLEEPTIME);
@@ -50,8 +45,4 @@ public class Schedule_Thread extends Thread {
                 e.printStackTrace();
             }
         }
-
-
-
-
 }

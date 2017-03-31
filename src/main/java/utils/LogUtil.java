@@ -1,7 +1,8 @@
 package utils;
 
-import dao.T_LogDao;
-import model.T_Log;
+
+import basisSchedule.resultModel.T_Log;
+import basisSchedule.tablesDao.T_LogDao;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.springframework.web.context.ContextLoader;
