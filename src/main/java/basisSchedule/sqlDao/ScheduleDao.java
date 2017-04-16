@@ -5,9 +5,11 @@ import org.mybatis.spring.SqlSessionTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Repository;
+import utils.CommonUtil;
 import utils.Constants;
 import utils.LogUtil;
 
+import java.util.Date;
 import java.util.List;
 
 
@@ -20,25 +22,23 @@ public class ScheduleDao {
 
     //查询可执行任务信息
    public List<Task> queryRunnableList(){
-       return sqlSessionSchedule.selectList(Constants.MAPPER_Schedule+".queryRunnableList");
+       return sqlSessionSchedule.selectList(Constants.MAPPER_Schedule+".queryRunnableList",null);
    }
 
+    //查询指定可执行任务信息
+    public List<Task> queryRunnableListByDateString(String dateString){
+        return sqlSessionSchedule.selectList(Constants.MAPPER_Schedule+".queryRunnableList", dateString);
+    }
 
-    //初始化任务列表
-    public int initTaskList(){
-        try {
-            sqlSessionSchedule.insert(Constants.MAPPER_Schedule + ".initTask_List");
-            LogUtil.SuccessLogAdd(
-                    Constants.LOG_INFO,
-                    "方法 initTaskList ", "执行",true);
-            return Constants.SUCCESS;
-        } catch (Exception e) {
-            e.printStackTrace();
-            LogUtil.ErrorLogAdd(
-                    Constants.LOG_ERROR,
-                    "方法 initTaskList ", "执行", "未知原因",true);
-            return Constants.FAIL;
-        }
+    //查询指定可执行任务信息
+    public List<String> querynotfinishDate(){
+        return sqlSessionSchedule.selectList(Constants.MAPPER_Schedule+".querynotfinishDate");
+    }
+
+
+    //初始化指定日期任务列表
+    public int initTaskList(String dateString){
+        return insert("initTask_List",dateString);
     }
 
     //获取过往任务存在错误数
@@ -77,19 +77,59 @@ public class ScheduleDao {
 
     //更新任务列表任务状态（全表变更）
     public int updateAllTaskList(){
-        int result=Constants.FAIL;
+        return update("updateAllTaskList",null);
+    }
+
+    //更新任务列表任务状态（全表变更）
+    public int updateAllTaskListBefore(){
+        return update("updateAllTaskListBefore",null);
+    }
+
+    //更新表操作
+    private int update(String sqlid,Object parameter){
+
         try {
-            result=sqlSessionSchedule.update(Constants.MAPPER_Schedule + ".updateAllTaskList");
+            if(parameter==null) {
+                sqlSessionSchedule.update(Constants.MAPPER_Schedule + "." + sqlid);
+            }else{
+                sqlSessionSchedule.update(Constants.MAPPER_Schedule + "." + sqlid,parameter);
+            }
             LogUtil.SuccessLogAdd(
                     Constants.LOG_INFO,
-                    "方法 updateAllTaskList ", "执行",true);
+                    "方法 updateAllTaskList "+sqlid, "执行",true);
             return Constants.SUCCESS;
         } catch (Exception e) {
             LogUtil.ErrorLogAdd(
                     Constants.LOG_ERROR,
-                    "方法 updateAllTaskList ", "执行", "未知原因",true);
-            return result;
+                    "方法 updateAllTaskList "+sqlid, "执行", "未知原因",true);
+            return Constants.FAIL;
         }
     }
+
+    //初始化任务列表
+    private int insert(String sqlid,Object parameter){
+        try {
+
+            if(parameter==null) {
+                sqlSessionSchedule.insert(Constants.MAPPER_Schedule + "." + sqlid);
+            }else{
+                sqlSessionSchedule.insert(Constants.MAPPER_Schedule + "." + sqlid,parameter);
+            }
+            LogUtil.SuccessLogAdd(
+                    Constants.LOG_INFO,
+                    "方法 initTaskList "+sqlid, "执行",true);
+            return Constants.SUCCESS;
+        } catch (Exception e) {
+            e.printStackTrace();
+            LogUtil.ErrorLogAdd(
+                    Constants.LOG_ERROR,
+                    "方法 initTaskList "+sqlid, "执行", "未知原因",true);
+            return Constants.FAIL;
+        }
+    }
+
+
+
+
 
 }

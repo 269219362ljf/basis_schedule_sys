@@ -64,27 +64,36 @@ public class StockUtil {
 
     // 解析一组股票代码字符串   把code中包括的所有股票代码放入List中(新浪用)
     private List<String> handleStockCodeFromSina(String code) {
-        List<String> codes = null;
-        int end = code.indexOf(";");
-        code = code.substring(0, end);
-        int start = code.lastIndexOf("=");
-        code = code.substring(start);
-        code = code.substring(code.indexOf("\"") + 1, code.lastIndexOf("\""));
-        String[] codesplit=code.split(",");
-        codes=new ArrayList<String>();
-        for(String temp:codesplit){
-            //去除非代码数据
-            if(temp.length()==8){
-                codes.add(temp);
+        try {
+            List<String> codes = null;
+            int end = code.indexOf(";");
+            code = code.substring(0, end);
+            int start = code.lastIndexOf("=");
+            code = code.substring(start);
+            code = code.substring(code.indexOf("\"") + 1, code.lastIndexOf("\""));
+            String[] codesplit = code.split(",");
+            codes = new ArrayList<String>();
+            for (String temp : codesplit) {
+                //去除非代码数据
+                if (temp.length() == 8) {
+                    codes.add(temp);
+                }
             }
+            return codes;
+        }catch (Exception e){
+            e.printStackTrace();
+            //增加错误日志
+            LogUtil.ErrorLogAdd(
+                    Constants.LOG_ERROR,
+                    "handleStockCodeFromSina","执行",e.getClass().getName(),true);
+            return null;
         }
-        return codes;
     }
 
     //从新浪的URL获取所有股票代码
     public List<String> getBatchStackCodesFromSina() {
+        List<String> codes = new ArrayList<String>();
         try {
-            List<String> codes = new ArrayList<String>();
             for (int i = 0; i < StockConstants.SINAPAGES; i++) {
                 String codesString = getBatchStackCodesFromSinaUrl(
                         new URL(StockConstants.BATCHSTACKCODESURL + i)
@@ -98,8 +107,8 @@ public class StockUtil {
                     "getBatchStackCodesFromSina", "执行", true);
             return codes;
         } catch (Exception e) {
-            LogUtil.ErrorLogAdd(Constants.LOG_ERROR, "getBatchStackCodesFromSina ", "获取股票代码", e.getCause().toString(), true);
-            return null;
+            LogUtil.ErrorLogAdd(Constants.LOG_ERROR, "getBatchStackCodesFromSina ", "获取股票代码", e.getClass().getName(), true);
+            return codes;
         }
 
     }
@@ -141,9 +150,7 @@ public class StockUtil {
                     "getTrainningFromCode", "执行", true);
             return results;
         } catch (Exception e) {
-            e.printStackTrace();
-            LogUtil.ErrorLogAdd(Constants.LOG_ERROR, "getTrainningFromCode ", "获取股票价格", e.getCause().toString(), true);
-
+            LogUtil.ErrorLogAdd(Constants.LOG_ERROR, "getTrainningFromCode ", "获取股票价格", e.getClass().toString(), true);
             return null;
         }
 

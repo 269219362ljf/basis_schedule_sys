@@ -4,6 +4,7 @@ import basisSchedule.resultModel.Dep;
 import basisSchedule.resultModel.Task;
 import basisSchedule.resultModel.Task_List;
 
+import basisSchedule.scheduleService.ScheduleRepairService;
 import org.json.JSONArray;
 import org.json.JSONObject;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -31,11 +32,19 @@ public class ScheduleController {
     @Autowired
     private ScheduleInitSerivce scheduleInitSerivce;
 
+    @Autowired
+    private ScheduleRepairService scheduleRepairService;
+
     @RequestMapping(value="/Schedule/scheduleInit.do")
     public void scheduleInit(HttpServletRequest request, HttpServletResponse response){
         try{
             JSONObject jresult=new JSONObject();
-            jresult.put("result",scheduleInitSerivce.init());
+            int result=scheduleRepairService.checkNotFinish();
+            if(result==Constants.FAIL){
+                jresult.put("result",result);
+            }else {
+                jresult.put("result",scheduleInitSerivce.init());
+            }
             CommonUtil.renderData(response,jresult);
         } catch (Exception e){
             e.printStackTrace();

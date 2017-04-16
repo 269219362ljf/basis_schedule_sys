@@ -8,6 +8,7 @@ import utils.LogUtil;
 import utils.ScheduleUtil;
 
 import java.util.HashSet;
+import java.util.Iterator;
 import java.util.Set;
 import java.util.concurrent.Semaphore;
 
@@ -16,7 +17,7 @@ import java.util.concurrent.Semaphore;
  */
 public class JobsPool {
 
-    private static JobsPool jobsPool=new JobsPool();
+    private  static  JobsPool jobsPool=new JobsPool();
 
     public static JobsPool getInstance(){
         return jobsPool;
@@ -24,10 +25,7 @@ public class JobsPool {
 
     //可执行任务列表
     private Set<Job> jobs=new HashSet<Job>();
-    //可执行任务列表的id
-    private Set<Integer> jobids=new HashSet<Integer>();
-    //可执行任务列表信号量
-    private final static Semaphore semaphore=new Semaphore(1);
+
 
     //添加任务到当前执行任务列表
     public int addJob2Jobs(int task_id,String param,String jobClassName,int task_type){
@@ -45,14 +43,8 @@ public class JobsPool {
             //经过检查，添加到任务执行列表
             Job job=new Job(task_id,new JSONObject(param),jobClassName,Constants.TASK_READY,task_type);
             //获取信号量后进行插入操作
-            try {
-                semaphore.acquire();
-                jobs.add(job);
-                jobids.add(job.getTask_id());
-                semaphore.release();
-            }catch (Exception e){
-                semaphore.release();
-                throw e;
+            synchronized (jobs){
+                    jobs.add(job);
             }
             LogUtil.SuccessLogAdd(Constants.LOG_INFO,
                     "任务"+task_id,
@@ -70,66 +62,58 @@ public class JobsPool {
 
     //将任务从执行任务列表中去除
     public  int removeJob(int task_id){
-        int result=Constants.FAIL;
         try{
-            //不存在该任务编号
-            if(!jobids.contains(task_id)){
-                return result;
-            }
-            semaphore.acquire();
-            Job target=null;
-            for(Job job:jobs){
-                if(job.getTask_id()==task_id){
-                    target=job;
-                    break;
+
+                Iterator<Job> it=jobs.iterator();
+                //迭代查找,找到就删除
+                while(it.hasNext()){
+                    Job temp=it.next();
+                    if(temp.getTask_id()==task_id){
+                        //当找到后，再获取锁，再删除
+                        synchronized (jobs) {
+                            it.remove();
+                        }
+                        LogUtil.SuccessLogAdd(Constants.LOG_INFO,
+                                "任务"+task_id,
+                                "removeJob",true);
+                        return Constants.SUCCESS;
+                    }
                 }
-            }
-            if(target==null){
-                semaphore.release();
-                return result;
-            }
-            jobs.remove(target);
-            jobids.remove(task_id);
-            semaphore.release();
-            result=Constants.SUCCESS;
-            LogUtil.SuccessLogAdd(Constants.LOG_INFO,
-                    "任务"+task_id,
-                    "removeJob",true);
-            return result;
+            return Constants.FAIL;
         }catch (Exception e){
             e.printStackTrace();
             LogUtil.ErrorLogAdd(
                     Constants.LOG_ERROR,
                     "任务类 任务编号："+task_id,"removeJob","未知错误",true);
-            return result;
+            return Constants.FAIL;
         }
-
-
-
-
-
-
     }
 
-    //检查任务是否存在可执行任务列表
-    public boolean checkIsInRunnableList(int task_id){
-        return jobids.contains(task_id);
+    //待执行列表是否包括该任务
+    public boolean containJobs(int task_id){
+        Iterator<Job> it=jobs.iterator();
+        while(it.hasNext()){
+            if(it.next().getTask_id()==task_id){
+                return true;
+            }
+        }
+        return false;
     }
+
 
     //待执行列表是否为空
     public boolean checkJobsEmpty(){
-        return jobids.isEmpty();
+        return jobs.isEmpty();
     }
 
     //待执行列表清空
     public int clearJobs(){
         try {
-            semaphore.acquire();
-        jobs.clear();
-        jobids.clear();
-        semaphore.release();
+            synchronized (jobs) {
+                jobs.clear();
+            }
             return Constants.SUCCESS;
-        } catch (InterruptedException e) {
+        } catch (Exception e) {
             e.printStackTrace();
             return Constants.FAIL;
         }
@@ -137,19 +121,23 @@ public class JobsPool {
 
     //获取待执行列表中的任务（根据task_id）
     public Job getJob(int task_id){
-        if(checkIsInRunnableList(task_id)){
-            for(Job job:jobs){
-                if(job.getTask_id()==task_id){
-                    return job;
-                }
+        Iterator<Job> it=jobs.iterator();
+        while(it.hasNext()){
+            Job target=it.next();
+            if(target.getTask_id()==task_id){
+                return target;
             }
         }
         return null;
     }
 
-    //获取
-    public Integer  getJobids(int index){
-        return (Integer)jobids.toArray()[index];
+    //获取待执行列表中的任务
+    public Job getJob(){
+        Iterator<Job> it=jobs.iterator();
+        if(it.hasNext()){
+            return it.next();
+        }
+        return null;
     }
 
 

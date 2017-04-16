@@ -48,20 +48,17 @@ public class Monitor_Thread extends Thread {
                 List<Task> runnableLists = scheduleDao.queryRunnableList();
                 //存在可跑任务
                 if (!runnableLists.isEmpty()) {
-
                     for (Task runnableTask : runnableLists) {
-                        //检查任务数据是否正确
-                        int result = ScheduleUtil.checkJob(runnableTask.getTask_id()
-                                , runnableTask.getPara()
-                                , runnableTask.getTaskclassname());
-                        //检查任务是否已在待执行列表中，任务数据是否正确
-                        if (result == Constants.FAIL
-                                || JobsPool.getInstance().checkIsInRunnableList(runnableTask.getTask_id())) {
+                        //检查任务是否已在待执行列表中
+                        if (JobsPool.getInstance().containJobs(runnableTask.getTask_id())) {
                             continue;
                         }
                         //增加到可执行列表
-                        JobsPool.getInstance().addJob2Jobs(
-                                runnableTask.getTask_id(),runnableTask.getPara(),runnableTask.getTaskclassname(),runnableTask.getType());
+                        if(JobsPool.getInstance().addJob2Jobs(
+                                runnableTask.getTask_id(),runnableTask.getPara(),runnableTask.getTaskclassname(),runnableTask.getType())
+                                ==Constants.FAIL){
+                            continue;
+                        };
                         //更改状态为等待
                         Task_List task_list = new Task_List(runnableTask.getTask_id(), Constants.TASK_WAIT);
                         task_list.setT_date(CommonUtil.date2string8(new Date()));
