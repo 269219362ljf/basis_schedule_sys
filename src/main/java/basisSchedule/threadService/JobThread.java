@@ -44,8 +44,15 @@ public class JobThread implements Runnable {
         //默认状态为错误
         int st=Constants.TASK_FAIL;
         try{
+            Class jobclass;
+            //加载任务类型，如果未加载，则到自定义类路径下寻找，若仍寻找失败，则抛出错误
+            try {
+                jobclass = Class.forName(job.getJobClass());
+            }catch (ClassNotFoundException e){
+                String classname=job.getJobClass().substring(job.getJobClass().lastIndexOf(".")+1);
+                jobclass=JobsLoader.getInstance().loadClass(classname);
+            }
             //执行任务
-            Class jobclass=Class.forName(job.getJobClass());
             JobInterface work=(JobInterface)jobclass.newInstance();
             //更新数据库任务列表状态
             task_listDao.updateTaskListByTask_List(task_list);
