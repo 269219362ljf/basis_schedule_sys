@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!-- 定义命名空间 -->
+<mapper namespace="mapperNS.T_class_type">
+
+    <!-- 根据依赖查询目前可执行任务信息 -->
+    <select id="queryT_class_typeByModel" parameterType="T_class_type"  resultType="T_class_type">
+            select
+              taskclassname
+            from T_class_type
+    </select>
+
+    <insert id="insertT_class_type" parameterType="T_class_type">
+        INSERT INTO T_class_type(
+        taskclassname)
+        VALUES (
+        #{taskclassname}
+        )
+    </insert>
+
+    <delete id="deleteT_class_type" parameterType="T_class_type">
+        DELETE
+        FROM T_class_type
+        where taskclassname = #{taskclassname}
+
+    </delete>
+
+</mapper>

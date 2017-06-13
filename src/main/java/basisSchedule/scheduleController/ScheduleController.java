@@ -122,6 +122,12 @@ public class ScheduleController {
         }
     }
 
+    @RequestMapping(value = "/Schedule/queryTaskType.do")
+    public void queryTaskType(HttpServletRequest request, HttpServletResponse response){
+
+    }
+
+
 
 
 

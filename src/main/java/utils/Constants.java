@@ -17,6 +17,7 @@ public class Constants {
     public final static String MAPPER_TASK_LIST="mapperNS.Task_List";
     public final static String MAPPER_Schedule="mapperNS.Schedule";
     public final static String MAPPER_Dep="mapperNS.Dep";
+    public final static String MAPPER_T_CLASS_TYPE="mapperNS.T_class_type";
 
     public final static String MAPPER_STOCK="mapperNS.Stock";
     public final static String MAPPER_StockProcess="mapperNS.Stockprocess";

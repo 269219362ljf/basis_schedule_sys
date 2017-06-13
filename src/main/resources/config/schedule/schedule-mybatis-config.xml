@@ -13,6 +13,8 @@
         <typeAlias alias="T_Log" type="basisSchedule.resultModel.T_Log"/>
         <typeAlias alias="T_param" type="basisSchedule.resultModel.T_param"/>
         <typeAlias alias="Dep" type="basisSchedule.resultModel.Dep" />
+        <typeAlias alias="T_class_type" type="basisSchedule.resultModel.T_class_type" />
+
 
         </typeAliases>
 

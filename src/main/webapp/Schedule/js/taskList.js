@@ -135,7 +135,7 @@ $(document).ready(function() {
             parent_ids=$.parseJSON(data).data;
             //将数据添加到select框
             for(var i=0;i<parent_ids.length;i++)
-                $('.parent_class').append("<option value='" + parent_ids[i] + "'>" + parent_ids[i] + "</option>");
+                $('#parent_id').append("<option value='" + parent_ids[i] + "'>" + parent_ids[i] + "</option>");
         }
         }
     );

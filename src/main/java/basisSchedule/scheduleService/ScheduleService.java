@@ -2,7 +2,9 @@ package basisSchedule.scheduleService;
 
 
 import basisSchedule.resultModel.Dep;
+import basisSchedule.resultModel.T_class_type;
 import basisSchedule.tablesDao.DepDao;
+import basisSchedule.tablesDao.T_class_typeDao;
 import basisSchedule.tablesDao.TaskDao;
 import basisSchedule.tablesDao.Task_ListDao;
 import basisSchedule.resultModel.Task;
@@ -29,6 +31,9 @@ public class ScheduleService {
 
     @Autowired
     private DepDao depDao;
+
+    @Autowired
+    private T_class_typeDao t_class_typeDao;
 
     //查询所有任务
     public List<Task> queryAllTask(){
@@ -69,6 +74,15 @@ public class ScheduleService {
     //查询所有依赖关系
     public List<Dep> queryAllDep(){
         return depDao.queryDep();
+    }
+
+    public List<T_class_type> queryT_class_type(){
+        return t_class_typeDao.queryT_class_type();
+    }
+
+    public int insertT_class_type(String classname){
+
+        return 0;
     }
 
 }

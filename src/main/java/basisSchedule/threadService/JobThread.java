@@ -9,6 +9,7 @@ import org.json.JSONObject;
 import org.springframework.web.context.ContextLoader;
 import org.springframework.web.context.WebApplicationContext;
 
+import utils.ClassUtil;
 import utils.CommonUtil;
 import utils.Constants;
 import utils.LogUtil;
@@ -50,10 +51,9 @@ public class JobThread implements Runnable {
                 jobclass = Class.forName(job.getJobClass());
             }catch (ClassNotFoundException e){
                 String classname=job.getJobClass().substring(job.getJobClass().lastIndexOf(".")+1);
-                jobclass=JobsLoader.getInstance().loadClass(classname);
+                jobclass=ClassUtil.getInstance().getClass(classname);
             }
-            //执行任务
-            JobInterface work=(JobInterface)jobclass.newInstance();
+
             //更新数据库任务列表状态
             task_listDao.updateTaskListByTask_List(task_list);
             //初始化任务参数，param为固定扩展参数
@@ -62,8 +62,11 @@ public class JobThread implements Runnable {
             }else{
                 param=job.getParam().append("EXParam",param);
             }
+            //执行任务
+            JobInterface work=(JobInterface)jobclass.newInstance();
             //获取结果
-            int result=work.work(param);
+            //int result=work.work(param);
+            int result= ClassUtil.getInstance().invokemethod(jobclass,"work",param);
             //结束时间
             Date end=new Date();
             //更新任务状态

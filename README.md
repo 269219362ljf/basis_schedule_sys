@@ -31,6 +31,7 @@
  context.getBeanNamesForType(*.class)获取同类型的所有bean名字
  再通过bean名字获取bean的实体
  (*) context.getBean(String BeanName)
+ 4新增上传类文件，只要类内部实现一个work(JSONObject param)函数即可
 
 
 
