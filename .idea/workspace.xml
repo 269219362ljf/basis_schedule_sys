@@ -8,36 +8,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6ad4375c-ee73-4909-8766-556bf0697e7d" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/encodings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_fileupload_commons_fileupload_1_3_2.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_io_commons_io_2_2.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_logging_log4j_log4j_web_2_6_2.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/database/database.sql" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/tempFileDir/temp" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/artifacts/basis_schedule_sys_war.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/log/runninglog.log" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/logs/historyfile.log" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/stockSystem/stockController" afterPath="$PROJECT_DIR$/src/main/java/stockSystem/stockController" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/utils/Constants.class" afterPath="$PROJECT_DIR$/target/classes/utils/Constants.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/artifacts/basis_schedule_sys_war_exploded.xml" afterPath="$PROJECT_DIR$/.idea/artifacts/basis_schedule_sys_war_exploded.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/basis_schedule_sys.iml" afterPath="$PROJECT_DIR$/basis_schedule_sys.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/basisSchedule/scheduleController/ScheduleController.java" afterPath="$PROJECT_DIR$/src/main/java/basisSchedule/scheduleController/ScheduleController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/basisSchedule/scheduleService/ScheduleService.java" afterPath="$PROJECT_DIR$/src/main/java/basisSchedule/scheduleService/ScheduleService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/utils/ClassUtil.java" afterPath="$PROJECT_DIR$/src/main/java/utils/ClassUtil.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/utils/CommonUtil.java" afterPath="$PROJECT_DIR$/src/main/java/utils/CommonUtil.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/utils/Constants.java" afterPath="$PROJECT_DIR$/src/main/java/utils/Constants.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/config/applicationContext.xml" afterPath="$PROJECT_DIR$/src/main/resources/config/applicationContext.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/log4j2.xml" afterPath="$PROJECT_DIR$/src/main/resources/log4j2.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/Schedule/html/taskList.html" afterPath="$PROJECT_DIR$/src/main/webapp/Schedule/html/taskList.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/Schedule/js/taskList.js" afterPath="$PROJECT_DIR$/src/main/webapp/Schedule/js/taskList.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/html/test.html" afterPath="$PROJECT_DIR$/src/main/webapp/html/test.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resource/css/common.css" afterPath="$PROJECT_DIR$/src/main/webapp/resource/css/common.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/config/applicationContext.xml" afterPath="$PROJECT_DIR$/target/classes/config/applicationContext.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/log4j2.xml" afterPath="$PROJECT_DIR$/target/classes/log4j2.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/想法.txt" afterPath="$PROJECT_DIR$/想法.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/错误记录" afterPath="$PROJECT_DIR$/错误记录" />
     </list>
     <ignored path="basis_schedule_sys.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -74,70 +48,45 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="taskList.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/Schedule/html/taskList.html">
+      <file leaf-file-name="错误记录" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/错误记录">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="380">
-              <caret line="111" column="38" selection-start-line="111" selection-start-column="38" selection-end-line="111" selection-end-column="38" />
+            <state relative-caret-position="60">
+              <caret line="2" column="3" selection-start-line="2" selection-start-column="3" selection-end-line="2" selection-end-column="3" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="common.css" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/resource/css/common.css">
+      <file leaf-file-name="想法.txt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/想法.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="360">
-              <caret line="81" column="1" selection-start-line="81" selection-start-column="1" selection-end-line="81" selection-end-column="1" />
+            <state relative-caret-position="240">
+              <caret line="8" column="16" selection-start-line="8" selection-start-column="16" selection-end-line="8" selection-end-column="16" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="taskList.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/Schedule/js/taskList.js">
+      <file leaf-file-name="T_class_type.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/basisSchedule/resultModel/T_class_type.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="150" column="19" selection-start-line="150" selection-start-column="19" selection-end-line="150" selection-end-column="19" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="common.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/js/common.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1353">
-              <caret line="162" column="20" selection-start-line="162" selection-start-column="12" selection-end-line="162" selection-end-column="20" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ScheduleController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/basisSchedule/scheduleController/ScheduleController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="151" column="38" selection-start-line="151" selection-start-column="38" selection-end-line="151" selection-end-column="38" />
+            <state relative-caret-position="30">
+              <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
               <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="method#scheduleInit#0;class#ScheduleController#0" expanded="false" />
-                <element signature="docComment;method#queryTaskList#0;class#ScheduleController#0" expanded="false" />
-                <element signature="method#queryTaskList#0;class#ScheduleController#0" expanded="false" />
-                <element signature="method#queryRunningState#0;class#ScheduleController#0" expanded="false" />
+                <element signature="e#175#176#0" expanded="true" />
+                <element signature="e#211#212#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ScheduleService.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/basisSchedule/scheduleService/ScheduleService.java">
+      <file leaf-file-name="log4j2.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/log4j2.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="318">
-              <caret line="110" column="36" selection-start-line="110" selection-start-column="36" selection-end-line="110" selection-end-column="36" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="180">
+              <caret line="15" column="111" selection-start-line="15" selection-start-column="12" selection-end-line="15" selection-end-column="111" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -171,7 +120,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/resources/mapper/stock-mapper/stockprocess-mapper.xml" />
         <option value="$PROJECT_DIR$/src/main/java/stockSystem/tablesDao/StockProcessDao.java" />
         <option value="$PROJECT_DIR$/src/main/java/stockSystem/stockController/StockController.java" />
         <option value="$PROJECT_DIR$/src/main/java/stockSystem/stockJobs/SCodesInitJob.java" />
@@ -198,13 +146,11 @@
         <option value="$PROJECT_DIR$/src/main/resources/mapper/schedule-mapper/dao-mapper.xml" />
         <option value="$PROJECT_DIR$/src/main/java/basisSchedule/resultModel/T_task_type.java" />
         <option value="$PROJECT_DIR$/src/main/resources/config/schedule/schedule-mybatis-config.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/basisSchedule/resultModel/T_class_type.java" />
         <option value="$PROJECT_DIR$/src/main/resources/mapper/schedule-mapper/t_class_type-mapper.xml" />
         <option value="$PROJECT_DIR$/src/main/java/basisSchedule/tablesDao/T_class_typeDao.java" />
         <option value="$PROJECT_DIR$/src/main/java/utils/ClassLoaderUtil.java" />
         <option value="$PROJECT_DIR$/src/main/java/basisSchedule/threadService/JobThread.java" />
         <option value="$PROJECT_DIR$/README.md" />
-        <option value="$PROJECT_DIR$/想法.txt" />
         <option value="$PROJECT_DIR$/src/main/webapp/html/test.html" />
         <option value="$PROJECT_DIR$/src/main/resources/config/applicationContext.xml" />
         <option value="$PROJECT_DIR$/src/main/resources/tempFileDir/temp" />
@@ -222,6 +168,9 @@
         <option value="$PROJECT_DIR$/src/main/webapp/Schedule/js/taskList.js" />
         <option value="$PROJECT_DIR$/src/main/webapp/Schedule/html/taskList.html" />
         <option value="$PROJECT_DIR$/src/main/webapp/resource/css/common.css" />
+        <option value="$PROJECT_DIR$/错误记录" />
+        <option value="$PROJECT_DIR$/想法.txt" />
+        <option value="$PROJECT_DIR$/src/main/java/basisSchedule/resultModel/T_class_type.java" />
       </list>
     </option>
   </component>
@@ -1639,7 +1588,7 @@
       <workItem from="1493712846154" duration="604000" />
       <workItem from="1497170294625" duration="8098000" />
       <workItem from="1497354579845" duration="8275000" />
-      <workItem from="1497668391363" duration="23204000" />
+      <workItem from="1497668391363" duration="23711000" />
     </task>
     <task id="LOCAL-00001" summary="增加线程调度主入口">
       <created>1478793276167</created>
@@ -1865,11 +1814,18 @@
       <option name="project" value="LOCAL" />
       <updated>1497371101314</updated>
     </task>
-    <option name="localTasksCounter" value="33" />
+    <task id="LOCAL-00033" summary="优化动态加载，修改日志目录和编码，增加文件上传功能">
+      <created>1497710040346</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1497710040346</updated>
+    </task>
+    <option name="localTasksCounter" value="34" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="594149000" />
+    <option name="totallyTimeSpent" value="594656000" />
   </component>
   <component name="TodoView" selected-index="4">
     <todo-panel id="selected-file">
@@ -1931,7 +1887,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="更新日志注释" />
     <MESSAGE value="添加系统配置xml和日志级别分层" />
     <MESSAGE value="添加参数表数据库接口，日志删除逻辑" />
     <MESSAGE value="增加信号量，执行任务列表，执行任务相关。但初始化未做" />
@@ -1956,7 +1911,8 @@
     <MESSAGE value="将遍历集合改为遍历集合的迭代器，增加股票部分输出" />
     <MESSAGE value="修改任务类调度加载，支持上传类文件执行" />
     <MESSAGE value="作业调度使用类加载器实现动态加载" />
-    <option name="LAST_COMMIT_MESSAGE" value="作业调度使用类加载器实现动态加载" />
+    <MESSAGE value="优化动态加载，修改日志目录和编码，增加文件上传功能" />
+    <option name="LAST_COMMIT_MESSAGE" value="优化动态加载，修改日志目录和编码，增加文件上传功能" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1995,22 +1951,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/想法.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="3" column="61" selection-start-line="3" selection-start-column="61" selection-end-line="3" selection-end-column="61" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="858">
-          <caret line="33" column="45" selection-start-line="33" selection-start-column="45" selection-end-line="33" selection-end-column="45" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/Schedule/html/schedule.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="300">
@@ -2293,14 +2233,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/log4j2.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="15" column="26" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="26" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/basisSchedule/threadService/JobsPool.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="510">
@@ -2327,14 +2259,6 @@
             <element signature="e#1918#1919#0" expanded="false" />
             <element signature="e#1950#1951#0" expanded="false" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/basisSchedule/resultModel/T_class_type.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="8" selection-start-line="0" selection-start-column="8" selection-end-line="0" selection-end-column="33" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2415,6 +2339,41 @@
         <state relative-caret-position="360">
           <caret line="81" column="1" selection-start-line="81" selection-start-column="1" selection-end-line="81" selection-end-column="1" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/log4j2.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="15" column="111" selection-start-line="15" selection-start-column="12" selection-end-line="15" selection-end-column="111" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/错误记录">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="2" column="3" selection-start-line="2" selection-start-column="3" selection-end-line="2" selection-end-column="3" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/想法.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="8" column="16" selection-start-line="8" selection-start-column="16" selection-end-line="8" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/basisSchedule/resultModel/T_class_type.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+          <folding>
+            <element signature="e#175#176#0" expanded="true" />
+            <element signature="e#211#212#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

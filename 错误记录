@@ -1,1 +1,3 @@
 1 dataTables出现swidth有可能是html的列配置和数据配置不一致
+2 log4j2输出日志文件会出现乱码，是由于编码配置不对，在PatternLayout增加charset选项即可
+例子：<PatternLayout charset="UTF-8"/>
