@@ -19,6 +19,7 @@
     <commons-dbcp2.version>2.1.1</commons-dbcp2.version>
     <json.version>20160810</json.version>
     <jython.version>2.7.0</jython.version>
+    <commons-fileupload.version>1.3.2</commons-fileupload.version>
   </properties>
 
   <dependencies>
@@ -60,6 +61,12 @@
     <dependency>
       <groupId>org.apache.logging.log4j</groupId>
       <artifactId>	log4j-taglib</artifactId>
+      <version>${log4j.version}</version>
+    </dependency>
+
+    <dependency>
+      <groupId>org.apache.logging.log4j</groupId>
+      <artifactId>log4j-web</artifactId>
       <version>${log4j.version}</version>
     </dependency>
 
@@ -150,6 +157,13 @@
       <!--<artifactId>jython</artifactId>-->
       <!--<version>${jython.version}</version>-->
     <!--</dependency>-->
+
+    <!-- 文件上传依赖 -->
+    <dependency>
+      <groupId>commons-fileupload</groupId>
+      <artifactId>commons-fileupload</artifactId>
+      <version>${commons-fileupload.version}</version>
+    </dependency>
 
 
 

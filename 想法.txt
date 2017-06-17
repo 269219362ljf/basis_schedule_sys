@@ -1,7 +1,7 @@
 1 采用链式编程，加入队列的任务结点中添加method型变量，用于执行任务
 2 在数据库中保存className和param，然后规定任务类必须实现接口job，继承work（String param）
 或者work（JSONObject param），构造函数有一个无参函数。调度中，使用
-job testobj=(job)Class.forName("classname").newInstance();
+job testobj=(job)Class.forName("classname").newInstance();(废弃)
 testobj.work(param)来实现任务的执行(未实现)
 3 由于需要自定义调度方式和监控JOB，可能就不能用FJP
 4 现在虽然已经跑成功，但由于是使用for循环，只能跑一轮，需要修改

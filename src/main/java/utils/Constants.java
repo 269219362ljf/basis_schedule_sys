@@ -3,10 +3,14 @@ package utils;
 
 import org.json.JSONObject;
 
+import java.io.File;
+
 /**
  * Created by Administrator on 0004 2016/8/4.
  */
 public class Constants {
+
+    private static String separator= File.separator;
 
     /**
      * mybatis映射XML
@@ -68,6 +72,11 @@ public class Constants {
     public  static int SLEEPTIME=1000;
     public  static int MONITORSLEEPTIME=10000;
     public  static int THREADCOUNT=10;
+    public  static String UPLOADDIR=System.getProperty("webApp.root")
+            +separator+"WEB-INF"
+            +separator+"upload"
+            +separator;
+
 
     private static int LOGTYPE=-1;
 

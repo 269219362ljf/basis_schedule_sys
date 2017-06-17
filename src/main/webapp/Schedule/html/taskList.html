@@ -90,9 +90,28 @@
             </div>
             <div class="div-modal-full" style="text-align: center">
                 <button id="add-modal-submit">提交</button>
-                <button id="close">退出</button>
+                <button class="close">退出</button>
             </div>
         </form>
+        </div>
+    </div>
+
+    <div id="classfile-modal" class="reveal-modal">
+        <div class="modal_header">
+            <a class="close-reveal-modal">&#215;</a><!-- 交叉图案 -->
+            <p class="left-title" >
+                上传类文件
+            </p>
+        </div>
+        <div class="modal_content">
+            <form id="classfile-modal-form" enctype="multipart/form-data">
+                <div class="div-modal-full">
+                    <input id="classpath" name="classpath" type="file" />
+                </div>
+                <div class="div-modal-full" style="text-align: center">
+                    <button id="classfile-modal-submit">上传文件</button>
+                </div>
+            </form>
         </div>
     </div>
 </div>

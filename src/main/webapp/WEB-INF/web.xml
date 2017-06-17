@@ -2,7 +2,9 @@
  "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
  "http://java.sun.com/dtd/web-app_2_3.dtd" >
 
-<web-app>
+<web-app xmlns="http://java.sun.com/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
+         version="3.0">
 
   <display-name>maven_spring_test</display-name>
 
@@ -17,6 +19,8 @@
     <param-name>contextConfigLocation</param-name>
     <param-value>classpath:config/applicationContext.xml</param-value>
   </context-param>
+
+
 
 
 
@@ -38,9 +42,32 @@
     <url-pattern>/*</url-pattern>
   </filter-mapping>
 
+  <!-- log4j2配置，添加配置上下文环境和获取访问的URI和执行前的时间信息 -->
+  <listener>
+    <listener-class>org.apache.logging.log4j.web.Log4jServletContextListener</listener-class>
+  </listener>
+  <filter>
+    <filter-name>log4jServletFilter</filter-name>
+    <filter-class>org.apache.logging.log4j.web.Log4jServletFilter</filter-class>
+  </filter>
+  <filter-mapping>
+    <filter-name>log4jServletFilter</filter-name>
+    <url-pattern>/*</url-pattern>
+  </filter-mapping>
+  <!-- log4j2配置完 -->
+
+
+
   <!-- 启动Web容器时，自动装配ApplicationContext的配置信息  -->
   <listener>
     <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+  </listener>
+
+  <!-- 负责将 Web 应用根目录以 webAppRootKey 上下文参数指定的属性名添加到系统参数中  -->
+  <listener>
+    <listener-class>
+      org.springframework.web.util.WebAppRootListener
+    </listener-class>
   </listener>
 
   <servlet>

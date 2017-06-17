@@ -32,8 +32,18 @@ public class ClassUtil {
 
         //将class文件转化为2进制流
         private byte[] getClassData(String name) {
+            String classFilePath="";
             //完整文件路径
-            String classFilePath = path + name + ".class";
+            //不以class结尾加上.class
+            if(name.length()-name.lastIndexOf(".class")!=6 || name.lastIndexOf(".class")<0)name=name + ".class";
+            //加上.class后，如果.位置一样，则直接加上路径，否则取类名
+            if(name.indexOf(".")==name.lastIndexOf(".")) {
+                classFilePath = path + name;
+            }
+            else{
+                classFilePath=path+name.substring(name.substring(0,name.lastIndexOf(".")).lastIndexOf(".")+1);
+            }
+            //获取文件对象并转化为2进制数组
             File classFile = new File(classFilePath);
             try {
                 InputStream in = new FileInputStream(classFile);
@@ -48,6 +58,8 @@ public class ClassUtil {
         }
     }
 
+
+
     //单例线程
     private static ClassUtil classUtil=new ClassUtil();
 
@@ -59,8 +71,8 @@ public class ClassUtil {
 
     private ClassUtil(){
         loader=new JobsLoader();
-        //指定为根目录下的uploadclass，即WEB-INF/classes/uploadclass
-        loader.setPath(this.getClass().getResource("/").getPath()+"uploadclass/");
+        //指定为根目录下的uploadclass，即WEB-INF/upload
+        loader.setPath(Constants.UPLOADDIR);
     }
 
     public boolean hasClass(String classname){
@@ -78,6 +90,7 @@ public class ClassUtil {
             return result;
         } catch (ClassNotFoundException e) {
             try {
+
                 result=loader.loadClass(classname);
                 return result;
             } catch (ClassNotFoundException e1) {

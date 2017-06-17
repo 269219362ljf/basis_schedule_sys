@@ -49,6 +49,12 @@ $(document).ready(function() {
                 action: function ( e, dt, node, config ) {
                     dtable.ajax.reload();
                 }
+            },
+            {
+                text : '类文件上传',
+                action: function ( e, dt, node, config ) {
+                    var modal=$("#classfile-modal").reveal();
+                }
             }
         ]
     }
@@ -121,10 +127,39 @@ $(document).ready(function() {
         })
     });
     
-    $('#close').bind('click',function () {
+    $('.close').bind('click',function () {
         $(".reveal-modal").trigger('reveal:close')
     });
     //按钮绑定完成
+
+    $('#classfile-modal-submit').bind("click",function () {
+        var formData=new FormData($("#classfile-modal-form")[0]);
+        $.ajax({
+            url:"/Schedule/classFileUpload.do",
+            type:"POST",
+            data: formData,
+            async: false,
+            cache: false,
+            contentType: false,
+            processData: false,
+            success: function (returndata) {
+                var obj=eval('(' + returndata + ')');
+                alert(obj.result);
+                $(".reveal-modal").trigger('reveal:close');
+            },
+            error: function (returndata) {
+                var obj=eval('(' + returndata + ')');
+                alert(obj.result);
+                $(".reveal-modal").trigger('reveal:close');
+            }
+        })
+    });
+    
+    
+    
+    
+    
+
 
     //模态框的父id选择框填充
     //获取数据
@@ -140,4 +175,22 @@ $(document).ready(function() {
         }
     );
     //模态框的父id选择框填充完成
+
+    //模态框的任务类选择框填充
+    //获取数据
+    $.ajax({
+            url:"/Schedule/queryTaskclassname.do",
+            async:false,
+            success:function (data) {
+                classnames=$.parseJSON(data).data;
+                //将数据添加到select框
+                for(var i=0;i<classnames.length;i++)
+                    $('#taskclassname').append("<option value='" + classnames[i] + "'>" + classnames[i] + "</option>");
+            }
+        }
+    );
+    //模态框的任务类选择框填充完成
+    
+    
+    
 });

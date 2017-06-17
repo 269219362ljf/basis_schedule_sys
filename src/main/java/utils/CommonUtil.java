@@ -146,6 +146,18 @@ public class CommonUtil {
         return result;
     }
 
+    //检查文件夹是否存在，不存在就创建
+    public static boolean checkDir(String path){
+        File dir=new File(path);
+        if(!dir.exists()){
+            return dir.mkdir();
+        }
+        if(!dir.isDirectory()){
+            return false;
+        }else {
+            return true;
+        }
+    }
 
 
 

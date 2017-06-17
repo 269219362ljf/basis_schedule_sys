@@ -1,8 +1,0 @@
-<component name="ArtifactManager">
-  <artifact type="war" name="basis_schedule_sys:war">
-    <output-path>$PROJECT_DIR$/target</output-path>
-    <root id="archive" name="maven_spring_mybatis.war">
-      <element id="artifact" artifact-name="basis_schedule_sys:war exploded" />
-    </root>
-  </artifact>
-</component>

@@ -13,10 +13,14 @@ import basisSchedule.resultModel.Task_List;
 import org.json.JSONObject;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.web.multipart.MultipartFile;
+import utils.ClassUtil;
+import utils.CommonUtil;
 import utils.Constants;
 import utils.ReflectUtil;
 
 
+import java.io.File;
 import java.util.List;
 
 
@@ -81,8 +85,40 @@ public class ScheduleService {
     }
 
     public int insertT_class_type(String classname){
-
-        return 0;
+        T_class_type newclass=new T_class_type();
+        newclass.setTaskclassname(classname);
+        return t_class_typeDao.insert(newclass);
     }
+
+
+    public int classFileUpload(MultipartFile file){
+        try{
+            //检查常量中，上传文件夹是否正常
+            if(!CommonUtil.checkDir(Constants.UPLOADDIR)){
+                return Constants.FAIL;
+            }
+            //将临时文件转为正式文件
+            File newFile=new File(Constants.UPLOADDIR+file.getOriginalFilename());
+            file.transferTo(newFile);
+            //转后若文件不存在，则返回错误
+            if(!newFile.exists()){
+                return Constants.FAIL;
+            }
+            //尝试加载，并获取类名
+            //Class jobclass= ClassUtil.getInstance().getClass(file.getName());
+            //将类名写入数据库
+            //return insertT_class_type(jobclass.getName());
+            return Constants.SUCCESS;
+        }catch (Exception e){
+            e.printStackTrace();
+            return Constants.FAIL;
+        }
+    }
+
+
+
+
+
+
 
 }

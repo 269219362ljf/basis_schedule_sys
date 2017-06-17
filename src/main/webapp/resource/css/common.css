@@ -72,21 +72,26 @@
 .div-modal-half ,.div-modal-full{
     float:left;
     padding: 2px;
-    text-align: right;
+
 }
 
 /*模态框内部内容半行*/
 .div-modal-half{
     width:49%;
+    text-align: right;
 }
 
 /*模态框内部内容全行*/
 .div-modal-full{
     width: 98%;
+    text-align:center;
+    vertical-align:middle;
 }
 
 /*模态框内部内容半行组件样式*/
-.div-modal-half text,input,select{
+.div-modal-half text,
+.div-modal-half input,
+.div-modal-half select{
     position: relative;
     width:50%;
     height: 21px;
@@ -102,7 +107,6 @@
     position: relative;
     width: 80%;
     box-sizing: border-box;
-    vertical-align:middle;
 }
 /*模态框CSS设置结束*/
 
