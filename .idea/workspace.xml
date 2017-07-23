@@ -8,14 +8,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6ad4375c-ee73-4909-8766-556bf0697e7d" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/python/stock/__init__.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/python/stock/analyze.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/python/stock/jobBegin.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/python/stock/utils.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/stockSystem/stockController" afterPath="$PROJECT_DIR$/src/main/java/stockSystem/stockController" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/utils/DataResourceConfig.java" afterPath="$PROJECT_DIR$/src/main/java/utils/DataResourceConfig.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/utils/Dbconnection.java" afterPath="$PROJECT_DIR$/src/main/java/utils/Dbconnection.java" />
     </list>
     <ignored path="basis_schedule_sys.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -1575,7 +1569,7 @@
       <workItem from="1497354579845" duration="8275000" />
       <workItem from="1497668391363" duration="23784000" />
       <workItem from="1498748337616" duration="1423000" />
-      <workItem from="1500778720619" duration="133000" />
+      <workItem from="1500778720619" duration="164000" />
     </task>
     <task id="LOCAL-00001" summary="增加线程调度主入口">
       <created>1478793276167</created>
@@ -1815,11 +1809,18 @@
       <option name="project" value="LOCAL" />
       <updated>1497710524714</updated>
     </task>
-    <option name="localTasksCounter" value="35" />
+    <task id="LOCAL-00035" summary="增加python处理">
+      <created>1500778879364</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1500778879364</updated>
+    </task>
+    <option name="localTasksCounter" value="36" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="596285000" />
+    <option name="totallyTimeSpent" value="596316000" />
   </component>
   <component name="TodoView" selected-index="4">
     <todo-panel id="selected-file">
@@ -1881,7 +1882,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="添加参数表数据库接口，日志删除逻辑" />
     <MESSAGE value="增加信号量，执行任务列表，执行任务相关。但初始化未做" />
     <MESSAGE value="任务列表初始化（考虑到中途加入，重跑），调度系统入口（实际调度未实现）" />
     <MESSAGE value="调度部分已经完成测试，细节部分需要斟酌，但是整体通过。接下来需要添加代价，运行时间等运行信息" />
@@ -1906,7 +1906,8 @@
     <MESSAGE value="作业调度使用类加载器实现动态加载" />
     <MESSAGE value="优化动态加载，修改日志目录和编码，增加文件上传功能" />
     <MESSAGE value="增加注释，想法和错误记录" />
-    <option name="LAST_COMMIT_MESSAGE" value="增加注释，想法和错误记录" />
+    <MESSAGE value="增加python处理" />
+    <option name="LAST_COMMIT_MESSAGE" value="增加python处理" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
