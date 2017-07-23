@@ -1,10 +1,6 @@
 package utils;
 
-import org.apache.commons.dbcp2.BasicDataSource;
-import org.springframework.context.annotation.Bean;
-import utils.CommonUtil;
 
-import java.sql.SQLException;
 import java.util.HashMap;
 
 /**

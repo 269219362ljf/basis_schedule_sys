@@ -36,22 +36,6 @@ public class Dbconnection {
             databaseUser=prop.getProperty("jdbc.username");
             databasePassword=prop.getProperty("jdbc.password");
             in.close();
-//            String sql="SELECT task_id, st, t_date, beg_time, end_time FROM public.t_task_list";
-//            PreparedStatement pstmt;
-//            pstmt = (PreparedStatement)connection.prepareStatement(sql);
-//            ResultSet rs = pstmt.executeQuery();
-//            int col = rs.getMetaData().getColumnCount();
-//            System.out.println("============================");
-//            while (rs.next()) {
-//                for (int i = 1; i <= col; i++) {
-//                    System.out.print(rs.getString(i) + "\t");
-//                    if ((i == 2) && (rs.getString(i).length() < 8)) {
-//                        System.out.print("\t");
-//                    }
-//                }
-//                System.out.println("");
-//            }
-//            System.out.println("============================");
         }  catch (Exception e) {
             e.printStackTrace();
         }
