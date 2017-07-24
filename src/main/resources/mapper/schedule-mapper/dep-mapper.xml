@@ -5,14 +5,14 @@
 
     <!--&lt;!&ndash; 查询全部任务信息 &ndash;&gt;-->
     <!-- 查询全部任务信息 -->
-    <select id="queryDep"   resultType="Dep" >
+    <select id="selectAll"   resultType="Dep" >
         SELECT task_id, parent_id
 	    FROM t_dep
     </select>
 
     <!--</select>-->
     <!-- 插入数据 -->
-    <insert id="insertDep" parameterType="Dep">
+    <insert id="insert" parameterType="Dep">
         INSERT INTO t_dep(
 	    task_id, parent_id)
 	    VALUES (#{task_id}, #{parent_id});

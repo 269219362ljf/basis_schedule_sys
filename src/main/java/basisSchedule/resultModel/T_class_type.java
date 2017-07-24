@@ -1,9 +1,11 @@
 package basisSchedule.resultModel;
 
+import java.io.Serializable;
+
 /**
  * Created by lu on 2017/6/13.
  */
-public class T_class_type {
+public class T_class_type implements Serializable {
 
     public String taskclassname;
 

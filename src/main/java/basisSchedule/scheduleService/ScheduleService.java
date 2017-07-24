@@ -2,52 +2,25 @@ package basisSchedule.scheduleService;
 
 
 import basisSchedule.resultModel.Dep;
-import basisSchedule.resultModel.T_class_type;
-import basisSchedule.tablesDao.DepDao;
-import basisSchedule.tablesDao.T_class_typeDao;
-import basisSchedule.tablesDao.TaskDao;
-import basisSchedule.tablesDao.Task_ListDao;
 import basisSchedule.resultModel.Task;
-import basisSchedule.resultModel.Task_List;
 
+import common.service.ScheduleCommonService;
 import org.json.JSONObject;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;
-import utils.ClassUtil;
 import utils.CommonUtil;
 import utils.Constants;
-import utils.ReflectUtil;
 
 
 import java.io.File;
-import java.util.List;
 
 
 @Service
 public class ScheduleService {
 
     @Autowired
-    private TaskDao taskDao;
-
-    @Autowired
-    private Task_ListDao task_listDao;
-
-    @Autowired
-    private DepDao depDao;
-
-    @Autowired
-    private T_class_typeDao t_class_typeDao;
-
-    //查询所有任务
-    public List<Task> queryAllTask(){
-        return taskDao.query();
-    }
-
-    //查询任务执行状态
-    public List<Task_List> queryAllTask_List(){
-        return task_listDao.query();
-    }
+    private ScheduleCommonService scheduleCommonService;
 
     //插入任务
     public int insertTask(JSONObject input){
@@ -63,10 +36,10 @@ public class ScheduleService {
             task.setPrior(input.getInt("prior"));
             dep.setTask_id(task.getTask_id());
             dep.setParent_id(input.getInt("parent_id"));
-            if(taskDao.insert(task)!= Constants.SUCCESS){
+            if(scheduleCommonService.save(task)!= Constants.SUCCESS){
                 return Constants.FAIL;
             }else{
-                depDao.insert(dep);
+                scheduleCommonService.save(dep);
             }
             return Constants.SUCCESS;
         }catch (Exception e){
@@ -74,22 +47,6 @@ public class ScheduleService {
             return Constants.FAIL;
         }
     }
-
-    //查询所有依赖关系
-    public List<Dep> queryAllDep(){
-        return depDao.queryDep();
-    }
-
-    public List<T_class_type> queryT_class_type(){
-        return t_class_typeDao.queryT_class_type();
-    }
-
-    public int insertT_class_type(String classname){
-        T_class_type newclass=new T_class_type();
-        newclass.setTaskclassname(classname);
-        return t_class_typeDao.insert(newclass);
-    }
-
 
     public int classFileUpload(MultipartFile file){
         try{

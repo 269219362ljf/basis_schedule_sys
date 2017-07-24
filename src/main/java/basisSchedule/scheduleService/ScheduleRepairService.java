@@ -1,9 +1,6 @@
 package basisSchedule.scheduleService;
 
-import basisSchedule.resultModel.Task;
 import basisSchedule.sqlDao.ScheduleDao;
-import basisSchedule.tablesDao.TaskDao;
-import basisSchedule.tablesDao.Task_ListDao;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import utils.Constants;
@@ -15,12 +12,6 @@ import java.util.List;
  */
 @Service
 public class ScheduleRepairService {
-
-    @Autowired
-    private Task_ListDao task_listDao;
-
-    @Autowired
-    private TaskDao taskDao;
 
     @Autowired
     private ScheduleDao scheduleDao;

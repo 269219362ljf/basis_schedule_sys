@@ -4,12 +4,20 @@
 <mapper namespace="mapperNS.Stock">
 
     <!-- 查询股票代码信息 -->
-    <select id="t_stock_info_selectAll" resultType="T_stock_info">
+    <select id="T_stock_info.selectAll" resultType="T_stock_info">
         select stock_id,stock_name
         from t_stock_info
     </select>
-    <!-- 插入股票代码数据 -->
-    <insert id="t_stock_info_insert" parameterType="List">
+
+    <!-- 插入单条股票代码数据 -->
+    <insert id="T_stock_info.insert" parameterType="T_stock_info">
+        insert into t_stock_info (stock_id,stock_name)
+        values (#{item.stock_id},#{item.stock_name})
+        ON CONFLICT(stock_id) DO NOTHING
+    </insert>
+
+    <!-- 插入多条股票代码数据 -->
+    <insert id="T_stock_info.inserts" parameterType="List">
         insert into t_stock_info (stock_id,stock_name)
         values
         <foreach collection="list" item="item" index="index" separator="," >
@@ -18,8 +26,30 @@
         ON CONFLICT(stock_id) DO NOTHING
     </insert>
 
+    <!-- 插入单条股票交易数据 -->
+    <insert id="T_stock_trainning_info.insert" parameterType="T_stock_trainning_info">
+        insert into T_STOCK_TRAINNING_INFO (
+        stock_id
+        ,s_date
+        ,open_price
+        ,close_price
+        ,max_price
+        ,min_price
+        )
+        values
+        (
+            #{item.stock_id}
+            ,#{item.s_date}
+            ,#{item.open_price}
+            ,#{item.close_price}
+            ,#{item.max_price}
+            ,#{item.min_price}
+            )
+        ON CONFLICT(stock_id) DO NOTHING
+    </insert>
+
     <!-- 插入股票交易数据 -->
-    <insert id="t_stock_trainning_info_insert" parameterType="List">
+    <insert id="T_stock_trainning_info.inserts" parameterType="List">
         insert into T_STOCK_TRAINNING_INFO (
         stock_id
         ,s_date
@@ -42,8 +72,8 @@
         ON CONFLICT(stock_id,s_date) DO NOTHING
     </insert>
 
-    <!-- 查询股票代码信息 -->
-    <select id="t_stock_sys_param_selectAll" resultType="T_stock_sys_param">
+    <!-- 查询股票系统参数信息 -->
+    <select id="T_stock_sys_param.selectAll" resultType="T_stock_sys_param">
         SELECT param_name, param_value
 	    FROM t_stock_sys_param
     </select>

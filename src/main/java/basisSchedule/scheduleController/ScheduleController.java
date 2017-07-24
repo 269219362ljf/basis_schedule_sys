@@ -6,6 +6,7 @@ import basisSchedule.resultModel.Task;
 import basisSchedule.resultModel.Task_List;
 
 import basisSchedule.scheduleService.ScheduleRepairService;
+import common.service.ScheduleCommonService;
 import org.json.JSONArray;
 import org.json.JSONObject;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -43,6 +44,9 @@ public class ScheduleController {
     @Autowired
     private ScheduleRepairService scheduleRepairService;
 
+    @Autowired
+    private ScheduleCommonService scheduleCommonService;
+
     @RequestMapping(value="/Schedule/scheduleInit.do")
     public void scheduleInit(HttpServletRequest request, HttpServletResponse response){
         try{
@@ -67,7 +71,7 @@ public class ScheduleController {
     @RequestMapping(value = "/Schedule/queryTaskList.do")
     public void queryTaskList(HttpServletRequest request, HttpServletResponse response){
         try{
-            List<Task> tasks= scheduleService.queryAllTask();
+            List<Task> tasks= scheduleCommonService.listAll(Task.class);
             //返回到前端的dataTables
             list2dataTables(response,tasks);
         }catch (Exception e){
@@ -79,7 +83,7 @@ public class ScheduleController {
     @RequestMapping(value = "/Schedule/queryRunningState.do")
     public void queryRunningState(HttpServletRequest request, HttpServletResponse response){
         try{
-            List<Task_List> task_lists=scheduleService.queryAllTask_List();
+            List<Task_List> task_lists=scheduleCommonService.listAll(Task_List.class);
             list2dataTables(response,task_lists);
         }catch (Exception e){
             e.printStackTrace();
@@ -107,7 +111,7 @@ public class ScheduleController {
     @RequestMapping(value = "/Schedule/queryTaskid.do")
     public void queryTaskid(HttpServletRequest request, HttpServletResponse response){
         try{
-            List<Task> tasks=scheduleService.queryAllTask();
+            List<Task> tasks=scheduleCommonService.listAll(Task.class);
             String ids[]=new String[tasks.size()];
             for(int i=0;i<tasks.size();i++){
                 ids[i]=tasks.get(i).getTask_id()+"";
@@ -123,7 +127,7 @@ public class ScheduleController {
     @RequestMapping(value = "/Schedule/queryDepState.do")
     public void queryDepState(HttpServletRequest request, HttpServletResponse response){
         try{
-            List<Dep> deps=scheduleService.queryAllDep();
+            List<Dep> deps=scheduleCommonService.listAll(Dep.class);
             list2dataTables(response,deps);
         }catch (Exception e){
             e.printStackTrace();
@@ -133,7 +137,7 @@ public class ScheduleController {
     @RequestMapping(value = "/Schedule/queryTaskclassname.do")
     public void queryTaskType(HttpServletRequest request, HttpServletResponse response){
             try{
-                List<T_class_type> classes=scheduleService.queryT_class_type();
+                List<T_class_type> classes=scheduleCommonService.listAll(T_class_type.class);
                 String sclass[]=new String[classes.size()];
                 for(int i=0;i<classes.size();i++){
                     sclass[i]=classes.get(i).getTaskclassname()+"";
@@ -156,17 +160,6 @@ public class ScheduleController {
         }
         CommonUtil.renderData(response,result);
     }
-
-
-
-
-
-
-
-
-
-
-
 
     //将list数据集返回到前端dataTables
     private void list2dataTables(HttpServletResponse response,List list){

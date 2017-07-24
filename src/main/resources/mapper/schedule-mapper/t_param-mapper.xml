@@ -3,20 +3,43 @@
 <!-- 定义命名空间 -->
 <mapper namespace="mapperNS.T_param">
 
-    <!-- 查询全部任务信息 -->
-    <select id="queryT_param" resultType="T_param">
+    <!-- 查询全部参数信息 -->
+    <select id="selectAll" resultType="T_param">
     SELECT name, value
 	FROM t_param
     </select>
+
+    <!-- 查询参数信息 -->
+    <select id="select" resultType="T_param">
+        SELECT name, value
+        FROM t_param
+        WHERE 1=1
+        <if test="#{name}!=null">
+        and name= #{name}
+        </if>
+    </select>
+
     <!-- 插入数据 -->
-    <insert id="insertT_param" parameterType="T_param">
+    <insert id="insert" parameterType="T_param">
         INSERT INTO t_param(
             name, value)
         VALUES (#{name}, #{value})
     </insert>
 
     <!-- 删除数据 -->
-    <delete id="deleteT_param" parameterType="String">
+    <delete id="delete" parameterType="T_param">
         DELETE FROM t_param where name =#{name}
     </delete>
+
+    <!-- 更新数值 -->
+    <update id="update" parameterType="T_param" >
+        UPDATE t_param
+        <set>
+            <if test="#{value}!=null">
+                value=#{value},
+            </if>
+        </set>
+        where name = #{name}
+    </update>
+
 </mapper>

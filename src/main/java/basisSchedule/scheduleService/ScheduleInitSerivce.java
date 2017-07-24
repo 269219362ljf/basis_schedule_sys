@@ -1,11 +1,6 @@
 package basisSchedule.scheduleService;
 
-import basisSchedule.resultModel.Task;
 import basisSchedule.sqlDao.ScheduleDao;
-import basisSchedule.tablesDao.TaskDao;
-import basisSchedule.tablesDao.Task_ListDao;
-import basisSchedule.resultModel.Task_List;
-import basisSchedule.threadService.JobsPool;
 import basisSchedule.threadService.Monitor_Thread;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -14,19 +9,12 @@ import utils.CommonUtil;
 import utils.Constants;
 
 import java.util.Date;
-import java.util.List;
 
 
 @Service
 public class ScheduleInitSerivce {
 
     private static volatile boolean isNotInit=true;
-
-    @Autowired
-    private Task_ListDao task_listDao;
-
-    @Autowired
-    private TaskDao taskDao;
 
     @Autowired
     private ScheduleDao scheduleDao;

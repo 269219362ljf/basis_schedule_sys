@@ -12,6 +12,7 @@ create table IF NOT EXISTS T_TASK
   ST INT,
   PARA VARCHAR(500),
   PRIOR NUMERIC(10),
+  DAY NUMERIC(3),
   COST NUMERIC(19,6),
   AVG_COST NUMERIC(19,6)
 )
@@ -25,7 +26,7 @@ COMMENT ON COLUMN T_TASK.TYPE IS '任务类型';
 COMMENT ON COLUMN T_TASK.ST IS '任务状态';
 COMMENT ON COLUMN T_TASK.PARA IS '任务参数';
 COMMENT ON COLUMN T_TASK.PRIOR IS '优先级';
-
+COMMENT ON COLUMN T_TASK.DAY IS '每月执行/每周执行';
 COMMENT ON COLUMN T_TASK.COST IS '任务代价';
 COMMENT ON COLUMN T_TASK.AVG_COST IS '任务平均代价';
 
@@ -102,6 +103,16 @@ COMMENT ON TABLE T_TASK_ST IS '任务状态表';
 COMMENT ON COLUMN T_TASK_ST.ST IS '状态ID';
 COMMENT ON COLUMN T_TASK_ST.DES IS '状态说明';
 
+INSERT INTO T_TASK_ST VALUES
+  (0,'必须执行'),
+  (1,'可忽略，后续任务续行'),
+  (2,'可忽略，后续任务不续行'),
+  (3,'忽略，后续任务续行'),
+  (4,'忽略，后续任务不续行')
+;
+
+
+
 drop table IF EXISTS T_TASK_TYPE;
 create table IF NOT EXISTS T_TASK_TYPE
 (
@@ -112,6 +123,19 @@ COMMENT ON TABLE T_TASK_TYPE IS '任务类型表';
 COMMENT ON COLUMN T_TASK_TYPE.TYPE IS '类型ID';
 COMMENT ON COLUMN T_TASK_TYPE.DES IS '类型说明';
 
+INSERT INTO T_TASK_TYPE VALUES
+(0,'每日执行'),
+(1,'每周执行'),
+(2,'每月执行'),
+(3,'每年执行')
+;
+
+
+
+
+
+
+
 drop table IF EXISTS T_PARAM;
 create table IF NOT EXISTS T_PARAM
 (
@@ -121,8 +145,9 @@ create table IF NOT EXISTS T_PARAM
 COMMENT ON TABLE T_PARAM IS '参数表';
 COMMENT ON COLUMN T_PARAM.NAME IS '参数名';
 COMMENT ON COLUMN T_PARAM.VALUE IS '参数值';
-
-
+/*参数表参数：
+  finish_date 20170724 调度日期，若上一日期未完成，则为上一日期
+*/
 
 
 

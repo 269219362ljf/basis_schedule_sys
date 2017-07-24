@@ -4,7 +4,7 @@
 <mapper namespace="mapperNS.Task" >
 
     <!-- 查询全部任务信息 -->
-    <select id="queryTask"   resultType="Task" >
+    <select id="selectAll"   resultType="Task" >
         SELECT task_id, name, des, taskclassname, type,  para, prior, cost, avg_cost
         FROM t_task
     </select>
@@ -31,7 +31,7 @@
         这个设置是在抛出异常之前，驱动程序等待数据库返回请求结果的秒数。默认值为 unset（依赖驱动）。
         -->
     <insert
-            id="insertTask"
+            id="insert"
             parameterType="Task"
         >
         INSERT INTO t_task(
@@ -49,7 +49,7 @@
     </insert>
 
     <!-- 删除数据 -->
-    <delete id="deleteTask" parameterType="int">
+    <delete id="delete" parameterType="int">
         DELETE FROM t_task
         WHERE task_id=#{task_id}
     </delete>

@@ -10,6 +10,7 @@
     <!-- 扫描调度系统的DAO组件 -->
     <context:component-scan base-package="basisSchedule.sqlDao"/>
     <context:component-scan base-package="basisSchedule.tablesDao"/>
+    <context:component-scan base-package="common.dao"/>
 
     <!-- 扫描股票系统的DAO组件 -->
 

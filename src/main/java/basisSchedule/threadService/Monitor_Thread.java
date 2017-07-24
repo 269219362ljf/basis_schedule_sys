@@ -3,16 +3,13 @@ package basisSchedule.threadService;
 import basisSchedule.resultModel.Task;
 
 import basisSchedule.sqlDao.ScheduleDao;
-import basisSchedule.tablesDao.Task_ListDao;
 
 import basisSchedule.resultModel.Task_List;
 
-import org.springframework.web.context.ContextLoader;
-import org.springframework.web.context.WebApplicationContext;
+import common.service.ScheduleCommonService;
 import utils.CommonUtil;
 import utils.Constants;
 import utils.LogUtil;
-import utils.ScheduleUtil;
 
 import java.util.Date;
 import java.util.List;
@@ -29,14 +26,11 @@ public class Monitor_Thread extends Thread {
 
     private ScheduleDao scheduleDao;
 
-    private Task_ListDao task_listDao;
+    private ScheduleCommonService scheduleCommonService;
 
     private Monitor_Thread(){
-        WebApplicationContext context = ContextLoader.getCurrentWebApplicationContext();
-        String scheduleDaoBean=(context.getBeanNamesForType(ScheduleDao.class))[0];
-        this.scheduleDao= (ScheduleDao) context.getBean(scheduleDaoBean);
-        String task_listDaoBean=(context.getBeanNamesForType(Task_ListDao.class))[0];
-        this.task_listDao= (Task_ListDao) context.getBean(task_listDaoBean);
+        scheduleDao=(ScheduleDao)CommonUtil.getBean(ScheduleDao.class);
+        scheduleCommonService=(ScheduleCommonService)CommonUtil.getBean(ScheduleCommonService.class);
     }
 
     @Override
@@ -62,7 +56,7 @@ public class Monitor_Thread extends Thread {
                         //更改状态为等待
                         Task_List task_list = new Task_List(runnableTask.getTask_id(), Constants.TASK_WAIT);
                         task_list.setT_date(CommonUtil.date2string8(new Date()));
-                        task_listDao.updateTaskListByTask_List(task_list);
+                        scheduleCommonService.update(task_list);
                         LogUtil.SuccessLogAdd( Constants.LOG_INFO
                                 , "Monitor_Thread task_id " + runnableTask.getTask_id()
                                 , Monitor_Thread.class.getName()

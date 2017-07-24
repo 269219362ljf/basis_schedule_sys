@@ -4,12 +4,12 @@
 <mapper namespace="mapperNS.Task_List">
 
     <!-- 查询全部任务信息 -->
-    <select id="queryTask_List" resultType="Task_List">
+    <select id="selectAll" resultType="Task_List">
     SELECT task_id, st, t_date,beg_time,end_time
 	FROM t_task_list
     </select>
     <!-- 插入数据 -->
-    <insert id="insertTask_List" parameterType="Task_List">
+    <insert id="insert" parameterType="Task_List">
         INSERT INTO t_task_list(
 	task_id, st, t_date)
 	VALUES (#{task_id},
@@ -17,22 +17,36 @@
     #{t_date})
     </insert>
 
-    <!-- 删除数据按日期 -->
-    <delete id="deleteTask_ListByDate" parameterType="String">
+    <!-- 删除数据 -->
+    <delete id="delete" parameterType="Task_List">
         DELETE FROM t_task_list
-        WHERE to_date(t_date) &lt;=to_date(#{t_date})
-    </delete>
+        WHERE 1=1
+        <if test="#{task_id}!=-1">
+            AND  task_id=#{task_id}
+        </if>
+        <if test="#{st}!=-1">
+            AND  st=#{st}
+        </if>
+        <if test="#{t_date}!=null">
+            AND  t_date=#{t_date}
+        </if>
 
-    <!-- 删除数据按id -->
-    <delete id="deleteTask_ListById" parameterType="int">
-        DELETE FROM t_task_list
-        WHERE task_id=#{task_id}
     </delete>
 
     <!-- 更新任务状态，根据Task_List -->
-    <update id="updateTaskListByTask_List" parameterType="Task_List">
+    <update id="update" parameterType="Task_List">
         UPDATE t_task_list
-        set st = #{st},beg_time = #{beg_time},end_time = #{end_time}
+        <set>
+            <if test="#{st}!=-1">
+                st = #{st},
+            </if>
+            <if test="#{beg_time}!=null">
+                beg_time = #{beg_time},
+            </if>
+            <if test="#{end_time}!=null">
+                end_time = #{end_time},
+            </if>
+        </set>
         where t_date = #{t_date} and task_id = #{task_id}
     </update>
 

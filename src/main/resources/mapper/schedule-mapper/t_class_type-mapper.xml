@@ -3,14 +3,14 @@
 <!-- 定义命名空间 -->
 <mapper namespace="mapperNS.T_class_type">
 
-    <!-- 根据依赖查询目前可执行任务信息 -->
-    <select id="queryT_class_typeByModel" parameterType="T_class_type"  resultType="T_class_type">
+    <!-- 根据依赖查询目前可执行任务类信息 -->
+    <select id="selectAll" resultType="T_class_type">
             select
               taskclassname
             from T_class_type
     </select>
 
-    <insert id="insertT_class_type" parameterType="T_class_type">
+    <insert id="insert" parameterType="T_class_type">
         INSERT INTO T_class_type(
         taskclassname)
         VALUES (
@@ -18,7 +18,7 @@
         )
     </insert>
 
-    <delete id="deleteT_class_type" parameterType="T_class_type">
+    <delete id="delete" parameterType="T_class_type">
         DELETE
         FROM T_class_type
         where taskclassname = #{taskclassname}

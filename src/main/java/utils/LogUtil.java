@@ -2,11 +2,9 @@ package utils;
 
 
 import basisSchedule.resultModel.T_Log;
-import basisSchedule.tablesDao.T_LogDao;
+import common.service.ScheduleCommonService;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import org.springframework.web.context.ContextLoader;
-import org.springframework.web.context.WebApplicationContext;
 
 import java.util.Date;
 
@@ -69,8 +67,8 @@ public class LogUtil {
         t_log.setLog_time(new java.sql.Date(new Date().getTime()));
         t_log.setLog_level(log_lv);
         t_log.setLog_msg(msg);
-        T_LogDao t_logdao= (T_LogDao) CommonUtil.getBean(T_LogDao.class);
-        t_logdao.insert(t_log);
+        ScheduleCommonService scheduleCommonService= (ScheduleCommonService) CommonUtil.getBean(ScheduleCommonService.class);
+        scheduleCommonService.save(t_log);
     }
 
 }

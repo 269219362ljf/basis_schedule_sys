@@ -21,6 +21,10 @@
 
 
     <!-- 扫描service包下所有标注@Service的服务组件 -->
+
+    <!-- 扫描通用服务组件 -->
+    <context:component-scan base-package="common.service" />
+
     <!-- 扫描调度系统的服务组件 -->
     <context:component-scan base-package="basisSchedule.scheduleService" />
 

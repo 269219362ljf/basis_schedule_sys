@@ -1,13 +1,12 @@
 package basisSchedule.threadService;
 
 
-import basisSchedule.tablesDao.Task_ListDao;
+
 import basisSchedule.jobs.Job;
 import basisSchedule.jobs.JobInterface;
 import basisSchedule.resultModel.Task_List;
+import common.service.ScheduleCommonService;
 import org.json.JSONObject;
-import org.springframework.web.context.ContextLoader;
-import org.springframework.web.context.WebApplicationContext;
 
 import utils.ClassUtil;
 import utils.CommonUtil;
@@ -22,7 +21,7 @@ public class JobThread implements Runnable {
     private Job job;
     private JSONObject param=null;
 
-    private Task_ListDao task_listDao;
+    private ScheduleCommonService scheduleCommonService;
 
     public JobThread (Job job){
         this.job=job;
@@ -55,7 +54,7 @@ public class JobThread implements Runnable {
             }
 
             //更新数据库任务列表状态
-            task_listDao.updateTaskListByTask_List(task_list);
+            scheduleCommonService.update(task_list);
             //初始化任务参数，param为固定扩展参数
             if(param == null){
                 param=job.getParam();
@@ -76,7 +75,7 @@ public class JobThread implements Runnable {
             //执行结束，更新状态
             task_list.setSt(st);
             task_list.setEnd_time(end);
-            task_listDao.updateTaskListByTask_List(task_list);
+            scheduleCommonService.update(task_list);
             LogUtil.SuccessLogAdd(
                     Constants.LOG_INFO,
                     "JobThread task_id "+job.getTask_id(),"执行",true);
@@ -87,7 +86,7 @@ public class JobThread implements Runnable {
             e.printStackTrace();
             //执行错误，更新状态
             task_list.setSt(st);
-            task_listDao.updateTaskListByTask_List(task_list);
+            scheduleCommonService.update(task_list);
             //增加错误日志
             LogUtil.ErrorLogAdd(
                     Constants.LOG_ERROR,
@@ -96,9 +95,7 @@ public class JobThread implements Runnable {
     }
 
     private void initJobThread(){
-        WebApplicationContext context = ContextLoader.getCurrentWebApplicationContext();
-        String task_listDaoBean=(context.getBeanNamesForType(Task_ListDao.class))[0];
-        this.task_listDao= (Task_ListDao) context.getBean(task_listDaoBean);
+        scheduleCommonService=(ScheduleCommonService)CommonUtil.getBean(ScheduleCommonService.class);
     }
 
 

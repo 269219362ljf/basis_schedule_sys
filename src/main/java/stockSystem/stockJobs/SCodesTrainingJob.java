@@ -2,6 +2,7 @@ package stockSystem.stockJobs;
 
 
 import basisSchedule.jobs.JobInterface;
+import common.service.StockCommonService;
 import org.json.JSONArray;
 import org.json.JSONObject;
 
@@ -9,8 +10,6 @@ import stockSystem.resultModel.T_stock_info;
 import stockSystem.resultModel.T_stock_trainning_info;
 import stockSystem.stockUtil.StockUtil;
 import stockSystem.tablesDao.StockProcessDao;
-import stockSystem.tablesDao.T_stock_infoDao;
-import stockSystem.tablesDao.T_stock_trainning_infoDao;
 import utils.CommonUtil;
 import utils.Constants;
 import utils.LogUtil;
@@ -28,15 +27,13 @@ import static java.lang.Thread.sleep;
 public class SCodesTrainingJob implements JobInterface {
 
     private StockUtil stockUtil=new StockUtil();
-    private T_stock_infoDao t_stock_infoDao;
-    private T_stock_trainning_infoDao t_stock_trainning_infoDao;
     private StockProcessDao stockProcessDao;
+    private StockCommonService stockCommonService;
 
 
     public SCodesTrainingJob(){
-        this.t_stock_infoDao= (T_stock_infoDao) CommonUtil.getBean(T_stock_infoDao.class);
-        this.t_stock_trainning_infoDao= (T_stock_trainning_infoDao) CommonUtil.getBean(T_stock_trainning_infoDao.class);
         this.stockProcessDao= (StockProcessDao) CommonUtil.getBean(StockProcessDao.class);
+        this.stockCommonService=(StockCommonService)CommonUtil.getBean(StockCommonService.class);
     }
 
     public int work(JSONObject param) {
@@ -77,7 +74,7 @@ public class SCodesTrainingJob implements JobInterface {
                     trainninglists.add(insertrow);
                 }
                 if(trainninglists.size()>0) {
-                    t_stock_trainning_infoDao.insert(trainninglists);
+                    stockCommonService.inserts(trainninglists);
                 }
                 //文明获取，休眠100ms
                 try {

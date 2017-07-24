@@ -9,9 +9,9 @@ import java.util.Date;
 
 public class Task_List implements Serializable {
 
-    private int task_id;
-    private int st;
-    private String t_date;
+    private int task_id=-1;
+    private int st=-1;
+    private String t_date=null;
     private Date beg_time=null;
     private Date end_time=null;
 
