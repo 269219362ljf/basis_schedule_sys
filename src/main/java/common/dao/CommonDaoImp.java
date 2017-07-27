@@ -15,17 +15,19 @@ public class CommonDaoImp implements CommonDao {
 
     protected SqlSessionTemplate sqlSessionTemplate;
     protected String MAPPERNS;
+    protected String MAPPERSUF;
 
     @Override
     public <T extends Serializable> int save(T pojo) {
         try {
-            sqlSessionTemplate.insert(MAPPERNS+pojo.getClass().getSimpleName()+ ".insert", pojo);
+            sqlSessionTemplate.insert(MAPPERNS+pojo.getClass().getSimpleName()+MAPPERSUF+"insert", pojo);
             return Constants.SUCCESS;
         } catch (DuplicateKeyException e) {
             return Constants.DUPLICATEKEYERROR;
         } catch (DataIntegrityViolationException e) {
             return Constants.DATAVIOLATIONERROR;
         } catch (Exception e) {
+            e.printStackTrace();
             return Constants.UNKNOWNERROR;
         }
     }
@@ -33,9 +35,10 @@ public class CommonDaoImp implements CommonDao {
     @Override
     public <T extends Serializable> int update(T pojo) {
         try {
-            sqlSessionTemplate.update(MAPPERNS+pojo.getClass().getSimpleName()+ ".update", pojo);
+            sqlSessionTemplate.update(MAPPERNS+pojo.getClass().getSimpleName()+MAPPERSUF+ "update", pojo);
             return Constants.SUCCESS;
         } catch (Exception e) {
+            e.printStackTrace();
             return Constants.FAIL;
         }
     }
@@ -43,7 +46,7 @@ public class CommonDaoImp implements CommonDao {
     @Override
     public <T extends Serializable> int delete(T pojo) {
         try {
-            sqlSessionTemplate.delete(MAPPERNS+pojo.getClass().getSimpleName()+ ".delete", pojo);
+            sqlSessionTemplate.delete(MAPPERNS+pojo.getClass().getSimpleName()+MAPPERSUF+ "delete", pojo);
             return Constants.SUCCESS;
         } catch (Exception e) {
             return Constants.FAIL;
@@ -53,9 +56,18 @@ public class CommonDaoImp implements CommonDao {
     @Override
     public <T extends Serializable> List<T> get(T pojo) {
         try {
-            List<T> result=sqlSessionTemplate.selectList(MAPPERNS+pojo.getClass().getSimpleName()+ ".select", pojo);
-            return result;
+            return sqlSessionTemplate.selectList(MAPPERNS+pojo.getClass().getSimpleName()+MAPPERSUF+ "select", pojo);
         } catch (Exception e) {
+            return null;
+        }
+    }
+
+    @Override
+    public <T extends Serializable> T getOne(T pojo) {
+        try {
+            return sqlSessionTemplate.selectOne(MAPPERNS+pojo.getClass().getSimpleName()+MAPPERSUF+ "select", pojo);
+        } catch (Exception e) {
+            e.printStackTrace();
             return null;
         }
     }
@@ -63,9 +75,9 @@ public class CommonDaoImp implements CommonDao {
     @Override
     public <T extends Serializable> List<T> listAll(Class<T> clazz) {
         try {
-            List<T> result=sqlSessionTemplate.selectList(MAPPERNS+clazz.getSimpleName()+ ".selectAll");
-            return result;
+            return sqlSessionTemplate.selectList(MAPPERNS+clazz.getSimpleName()+MAPPERSUF+ "selectAll");
         } catch (Exception e) {
+            e.printStackTrace();
             return null;
         }
     }

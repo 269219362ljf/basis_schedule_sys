@@ -150,6 +150,7 @@ public class StockUtil {
                     "getTrainningFromCode", "执行", true);
             return results;
         } catch (Exception e) {
+            e.printStackTrace();
             LogUtil.ErrorLogAdd(Constants.LOG_ERROR, "getTrainningFromCode ", "获取股票价格", e.getClass().toString(), true);
             return null;
         }

@@ -15,6 +15,7 @@ public class Task  implements Serializable {
     private int prior;
     private double cost;
     private double avg_cost;
+    private String day;
 
     public int getTask_id() {
         return task_id;
@@ -86,5 +87,13 @@ public class Task  implements Serializable {
 
     public void setAvg_cost(double avg_cost) {
         this.avg_cost = avg_cost;
+    }
+
+    public String getDay() {
+        return day;
+    }
+
+    public void setDay(String day) {
+        this.day = day;
     }
 }

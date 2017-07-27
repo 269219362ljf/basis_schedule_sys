@@ -2,6 +2,7 @@ package basisSchedule.threadService;
 
 import basisSchedule.jobs.Job;
 
+import basisSchedule.resultModel.Task;
 import org.json.JSONObject;
 import utils.Constants;
 import utils.LogUtil;
@@ -28,26 +29,25 @@ public class JobsPool {
 
 
     //添加任务到当前执行任务列表
-    public int addJob2Jobs(int task_id,String param,String jobClassName,int task_type){
+    public int addJob2Jobs(Task runTask, String rundate){
         try {
-            int result= Constants.FAIL;
             //校验任务
-            result= ScheduleUtil.checkJob(task_id,param,jobClassName);
+            int result= ScheduleUtil.checkJob(runTask.getTask_id(),runTask.getPara(),runTask.getTaskclassname());
             if(result==Constants.FAIL){
                 return result;
             }
             //避免无参数任务在转换参数时产生错误
-            if(param==null){
-                param="{}";
+            if(runTask.getPara()==null){
+                runTask.setPara("{}");
             }
             //经过检查，添加到任务执行列表
-            Job job=new Job(task_id,new JSONObject(param),jobClassName,Constants.TASK_READY,task_type);
+            Job job=new Job(runTask.getTask_id(),new JSONObject(runTask.getPara()),runTask.getTaskclassname(),rundate);
             //获取信号量后进行插入操作
             synchronized (jobs){
                     jobs.add(job);
             }
             LogUtil.SuccessLogAdd(Constants.LOG_INFO,
-                    "任务"+task_id,
+                    "任务"+runTask.getTask_id(),
                     "job2jobs",true);
             return Constants.SUCCESS;
 
@@ -55,7 +55,7 @@ public class JobsPool {
             e.printStackTrace();
             LogUtil.ErrorLogAdd(
                     Constants.LOG_ERROR,
-                    "任务类"+jobClassName,"job2jobs","未知错误",true);
+                    "任务类"+runTask.getTaskclassname(),"job2jobs","未知错误",true);
             return Constants.FAIL;
         }
     }

@@ -51,7 +51,7 @@ public class ScheduleController {
     public void scheduleInit(HttpServletRequest request, HttpServletResponse response){
         try{
             JSONObject jresult=new JSONObject();
-            int result=scheduleRepairService.checkNotFinish();
+            int result=scheduleInitSerivce.init();
             if(result==Constants.FAIL){
                 jresult.put("result",result);
             }else {

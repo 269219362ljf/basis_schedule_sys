@@ -4,6 +4,7 @@ package basisSchedule.scheduleService;
 import basisSchedule.resultModel.Dep;
 import basisSchedule.resultModel.Task;
 
+import basisSchedule.sqlDao.ScheduleDao;
 import common.service.ScheduleCommonService;
 import org.json.JSONObject;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -21,6 +22,9 @@ public class ScheduleService {
 
     @Autowired
     private ScheduleCommonService scheduleCommonService;
+
+    @Autowired
+    private ScheduleDao scheduleDao;
 
     //插入任务
     public int insertTask(JSONObject input){
@@ -72,7 +76,15 @@ public class ScheduleService {
         }
     }
 
+    //初始化作业
+    public int initTask(String date){
+        return scheduleDao.initTaskList(date);
+    }
 
+    //初始化补跑作业（）
+    public int initRepairTask(String date){
+        return scheduleDao.initTaskList(date);
+    }
 
 
 

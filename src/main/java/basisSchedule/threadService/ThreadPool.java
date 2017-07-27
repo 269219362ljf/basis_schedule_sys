@@ -27,20 +27,7 @@ public class ThreadPool {
 
     //线程池执行方法
     public void execute(JobThread jobThread){
-        execute(jobThread,Constants.TASK_NORMAL);
-    }
-
-    public void execute(JobThread jobThread,int task_type){
-        switch(task_type){
-            case Constants.TASK_HURRY:monitorThreadPool.execute(jobThread);return;
-            case Constants.TASK_NORMAL:workThreadPool.execute(jobThread);return;
-            case Constants.TASK_SCHEDULE:scheduledThreadPool.execute(jobThread);return;
-            case Constants.TASK_SINGLE:singleThreadPool.execute(jobThread);return;
-            default:workThreadPool.execute(jobThread);return;
-        }
-
-
-
+        monitorThreadPool.execute(jobThread);return;
     }
 
 

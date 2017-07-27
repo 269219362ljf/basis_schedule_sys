@@ -39,6 +39,11 @@ public class ScheduleCommonService implements CommonService {
     }
 
     @Override
+    public <T extends Serializable> T getOne(T pojo) {
+        return scheduleDaoImp.getOne(pojo);
+    }
+
+    @Override
     public <T extends Serializable> List<T> listAll(Class<T> clazz) {
         return scheduleDaoImp.listAll(clazz);
     }

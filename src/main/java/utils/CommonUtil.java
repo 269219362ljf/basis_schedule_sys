@@ -103,9 +103,9 @@ public class CommonUtil {
     public static Object getBean(Class c){
         //经过使用context.getBeanNamesForType()获取bean名
         //再由bean名获取自动注入的bean
-        WebApplicationContext context = ContextLoader.getCurrentWebApplicationContext();
-        String bean_name=(context.getBeanNamesForType(c))[0];
-        return context.getBean(bean_name);
+            WebApplicationContext context = ContextLoader.getCurrentWebApplicationContext();
+            String bean_name = (context.getBeanNamesForType(c))[0];
+            return context.getBean(bean_name);
     }
 
     //date转String8位
@@ -113,6 +113,26 @@ public class CommonUtil {
         SimpleDateFormat sdf=new SimpleDateFormat("yyyyMMdd");
         return sdf.format(date);
     }
+
+   //string8位转date
+    public static Date string82date(String string){
+        try {
+            SimpleDateFormat sdf = new SimpleDateFormat("yyyyMMdd");
+            return sdf.parse(string);
+        }catch (Exception e){
+            e.printStackTrace();
+            return null;
+        }
+    }
+
+    //计算date的days间隔日期
+    public static Date dateChangeByDays(Date date,int days){
+        Calendar calendar   =   new GregorianCalendar();
+        calendar.setTime(date);
+        calendar.add(calendar.DATE,days);
+        return calendar.getTime();
+    }
+
 
     //获取propertiesfile的所有属性键值对
     public static HashMap<String,String> getPropertiesData(String propertiesfile){

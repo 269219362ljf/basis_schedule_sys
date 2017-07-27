@@ -8,6 +8,15 @@
     SELECT task_id, st, t_date,beg_time,end_time
 	FROM t_task_list
     </select>
+
+    <!-- 查询一个任务信息 -->
+    <select id="select" resultType="Task_List">
+        SELECT task_id, st, t_date,beg_time,end_time
+        FROM t_task_list
+        WHERE task_id=#{task_id} and t_date=#{t_date}
+    </select>
+
+
     <!-- 插入数据 -->
     <insert id="insert" parameterType="Task_List">
         INSERT INTO t_task_list(
@@ -35,15 +44,15 @@
 
     <!-- 更新任务状态，根据Task_List -->
     <update id="update" parameterType="Task_List">
-        UPDATE t_task_list
+        UPDATE t_task_list task_list
         <set>
-            <if test="#{st}!=-1">
+            <if test="#{st}!=null">
                 st = #{st},
             </if>
-            <if test="#{beg_time}!=null">
+            <if test="#{beg_time} != null">
                 beg_time = #{beg_time},
             </if>
-            <if test="#{end_time}!=null">
+            <if test="#{end_time} != null">
                 end_time = #{end_time},
             </if>
         </set>

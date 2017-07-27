@@ -3,39 +3,71 @@
 <!-- 定义命名空间 -->
 <mapper namespace="mapperNS.Schedule">
 
-    <!-- 根据依赖查询目前可执行任务信息 -->
-    <select id="queryRunnableList" parameterType="string"  resultType="Task">
-        select task.task_id, task.name, task.des, task.taskclassname,
-            task.type,  task.para, task.prior, task.cost, task.avg_cost
-        from t_task_list task_list
-            left join t_dep dep on (task_list.task_id=dep.task_id)
-            inner join t_task_list parent_st on (dep.parent_id=parent_st.task_id)
-            inner join t_task task on (task.task_id=task_list.task_id)
-        where (
-                  parent_st.st=3
-                  or parent_st.st=5
-              )
-              and parent_st.t_date=task_list.t_date
-          <if test="_parameter != null">
-              and task_list.t_date=#{_parameter}
-          </if>
-              and task_list.st=0
-        order by task_list.t_date asc
-    </select>
+    <!-- 初始化inittask -->
+    <insert id="initTask_ListBegin" parameterType="string">
+        insert into t_task_list
+        select task_id,0 as st,#{t_date} as t_date
+        from t_task
+        WHERE task_id = 0
+        ON CONFLICT(task_id,t_date) DO NOTHING
+    </insert>
+
 
     <!-- 初始化任务列表 -->
     <insert id="initTask_List" parameterType="string">
         insert into t_task_list
-        select task_id,(case when task_id=0 then 3 else 0 end) as st,#{t_date} as t_date
+        select task_id,0 as st,#{t_date} as t_date
         from t_task
+        where task_id != 0
         ON CONFLICT(task_id,t_date) DO NOTHING
     </insert>
 
-    <!-- 获取之前是否存在错误或者未完成任务-->
-    <select id="queryBeforeErrorCount" resultType="int">
-        select count(1) from t_task_list
-        where st in (0,1,2,4) and t_date &lt; to_char(now(),'yyyymmdd')
+    <!-- 初始化补跑任务列表（只加入必要作业） -->
+    <insert id="initRepairTask_List" parameterType="string">
+        insert into t_task_list
+        select task_id,(case when task_id=-1  then 3 else 0 end) as st,#{t_date} as t_date
+        from t_task
+        where
+            st=0 and
+            (type=0
+             or
+             (type=1 and to_number(day,'9')%7=EXTRACT(DOW from to_date(#{t_date},'yyyymmdd')))
+             or
+             (type=2 and substr(day,3,2)=substr(#{t_date},7,2))
+             or
+             (type=3 and day=substr(#{t_date},4,4))
+            )
+            and task_id != 0
+        ON CONFLICT(task_id,t_date) DO NOTHING
+    </insert>
+
+
+
+
+    <!-- 根据依赖查询目前可执行任务信息 -->
+    <select id="queryRunnableList" parameterType="string"  resultType="map">
+        select task.task_id, task.taskclassname,task.para,task_list.t_date
+        from t_task_list task_list
+        left join t_dep dep on (task_list.task_id=dep.task_id)
+        left join t_task_list parent_st on (dep.parent_id=parent_st.task_id)
+        inner join t_task task on (task.task_id=task_list.task_id)
+        where
+        (
+        parent_st.st=3
+        or parent_st.st=5
+        or parent_st is null
+        )
+        and (parent_st.t_date=task_list.t_date or parent_st.t_date is null)
+        <if test="_parameter != null">
+            and task_list.t_date=#{_parameter}
+        </if>
+        and task_list.st=0
+        order by task_list.t_date asc
     </select>
+
+
+
+
 
     <!-- 获取当前任务是否需要初始化 -->
     <select id="queryIsInit" resultType="int">
@@ -47,17 +79,9 @@
     <update id="updateAllTaskList">
         UPDATE t_task_list
         set st=0
-        where t_date=to_char(now(),'yyyymmdd')
-        and st in (1,2,4)
+        where st in (1,2,4) and task_id !=0
     </update>
 
-    <!-- 更新任务列表任务状态（补跑状态） -->
-    <update id="updateAllTaskListBefore">
-        UPDATE t_task_list
-        set st=0
-        where t_date &lt;  to_char(now(),'yyyymmdd')
-        and st in (1,2,4)
-    </update>
 
 
     <!-- 获取未完成任务日期 -->

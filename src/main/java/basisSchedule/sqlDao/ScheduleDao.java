@@ -11,6 +11,7 @@ import utils.LogUtil;
 
 import java.util.Date;
 import java.util.List;
+import java.util.Map;
 
 
 @Repository
@@ -21,7 +22,7 @@ public class ScheduleDao {
     private SqlSessionTemplate sqlSessionSchedule;
 
     //查询可执行任务信息
-   public List<Task> queryRunnableList(){
+   public List<Map<String,Object>> queryRunnableList(){
        return sqlSessionSchedule.selectList(Constants.MAPPER_Schedule+".queryRunnableList",null);
    }
 
@@ -39,6 +40,16 @@ public class ScheduleDao {
     //初始化指定日期任务列表
     public int initTaskList(String dateString){
         return insert("initTask_List",dateString);
+    }
+
+    //初始化指定日期任务列表(补跑)
+    public int initRepairTask_List(String dateString){
+        return insert("initRepairTask_List",dateString);
+    }
+
+    //初始化初始任务
+    public int initInitTask(String dateString){
+        return insert("initTask_ListBegin",dateString);
     }
 
     //获取过往任务存在错误数
@@ -78,11 +89,6 @@ public class ScheduleDao {
     //更新任务列表任务状态（全表变更）
     public int updateAllTaskList(){
         return update("updateAllTaskList",null);
-    }
-
-    //更新任务列表任务状态（全表变更）
-    public int updateAllTaskListBefore(){
-        return update("updateAllTaskListBefore",null);
     }
 
     //更新表操作

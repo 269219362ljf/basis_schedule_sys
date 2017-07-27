@@ -5,13 +5,13 @@
 <mapper namespace="mapperNS.T_Log">
 
     <!-- 查询全部任务信息 -->
-    <select id="queryT_Log" resultType="T_Log">
+    <select id="query" resultType="T_Log">
       SELECT log_time, task_id, log_level, log_type, log_msg
 	  FROM t_log
     </select>
 
     <!-- 插入数据 -->
-    <insert id="insertT_Log" parameterType="T_Log">
+    <insert id="insert" parameterType="T_Log">
       INSERT INTO t_log(
 	log_time, task_id, log_level, log_type, log_msg)
 	VALUES (
@@ -23,7 +23,7 @@
     </insert>
 
     <!-- 删除数据 -->
-    <delete id="deleteT_Log" parameterType="Date">
+    <delete id="delete" parameterType="Date">
         DELETE FROM t_log
         WHERE log_time &lt;  #{log_time}
     </delete>

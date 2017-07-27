@@ -5,7 +5,7 @@
 
     <!-- 查询全部任务信息 -->
     <select id="selectAll"   resultType="Task" >
-        SELECT task_id, name, des, taskclassname, type,  para, prior, cost, avg_cost
+        SELECT task_id, name, des, taskclassname, type,  para, prior, cost, avg_cost,day
         FROM t_task
     </select>
 
@@ -35,7 +35,7 @@
             parameterType="Task"
         >
         INSERT INTO t_task(
-            task_id,name, des,taskclassname, type,  para, prior, cost, avg_cost)
+            task_id,name, des,taskclassname, type,  para, prior, cost, avg_cost,day)
         VALUES (
             #{task_id},
             #{name},
@@ -45,7 +45,8 @@
             #{para},
             #{prior},
             #{cost},
-            #{avg_cost})
+            #{avg_cost},
+            #{day})
     </insert>
 
     <!-- 删除数据 -->

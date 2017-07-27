@@ -2,6 +2,7 @@ package common.service;
 
 import common.dao.StockDaoImp;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.io.Serializable;
 import java.util.List;
@@ -9,6 +10,7 @@ import java.util.List;
 /**
  * Created by lu on 2017/7/24.
  */
+@Service
 public class StockCommonService implements CommonService {
 
     @Autowired
@@ -32,6 +34,11 @@ public class StockCommonService implements CommonService {
     @Override
     public <T extends Serializable> List<T> get(T pojo) {
         return stockDaoImp.get(pojo);
+    }
+
+    @Override
+    public <T extends Serializable> T getOne(T pojo) {
+        return stockDaoImp.getOne(pojo);
     }
 
     @Override

@@ -8,52 +8,39 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6ad4375c-ee73-4909-8766-556bf0697e7d" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/common/dao/CommonDao.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/common/dao/CommonDaoImp.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/common/dao/ScheduleDaoImp.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/common/dao/StockDaoImp.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/common/service/CommonService.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/common/service/ScheduleCommonService.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/common/service/StockCommonService.java" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/basisSchedule/scheduleService/T_paramService.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/basisSchedule/tablesDao/DepDao.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/basisSchedule/tablesDao/T_LogDao.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/basisSchedule/tablesDao/T_ParamDao.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/basisSchedule/tablesDao/T_class_typeDao.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/basisSchedule/tablesDao/TaskDao.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/basisSchedule/tablesDao/Task_ListDao.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/stockSystem/tablesDao/T_stock_infoDao.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/stockSystem/tablesDao/T_stock_sys_paramDao.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/stockSystem/tablesDao/T_stock_trainning_infoDao.java" afterPath="" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/basisSchedule/jobs/InitJob.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/进度" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/stockSystem/stockController" afterPath="$PROJECT_DIR$/src/main/java/stockSystem/stockController" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/utils/Constants.class" afterPath="$PROJECT_DIR$/target/classes/utils/Constants.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/basisSchedule/resultModel/T_class_type.java" afterPath="$PROJECT_DIR$/src/main/java/basisSchedule/resultModel/T_class_type.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/basisSchedule/resultModel/T_param.java" afterPath="$PROJECT_DIR$/src/main/java/basisSchedule/resultModel/T_param.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/basisSchedule/resultModel/Task_List.java" afterPath="$PROJECT_DIR$/src/main/java/basisSchedule/resultModel/Task_List.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/basisSchedule/jobs/Job.java" afterPath="$PROJECT_DIR$/src/main/java/basisSchedule/jobs/Job.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/basisSchedule/resultModel/Task.java" afterPath="$PROJECT_DIR$/src/main/java/basisSchedule/resultModel/Task.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/basisSchedule/scheduleController/ScheduleController.java" afterPath="$PROJECT_DIR$/src/main/java/basisSchedule/scheduleController/ScheduleController.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/basisSchedule/scheduleService/ScheduleInitSerivce.java" afterPath="$PROJECT_DIR$/src/main/java/basisSchedule/scheduleService/ScheduleInitSerivce.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/basisSchedule/scheduleService/ScheduleRepairService.java" afterPath="$PROJECT_DIR$/src/main/java/basisSchedule/scheduleService/ScheduleRepairService.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/basisSchedule/scheduleService/ScheduleService.java" afterPath="$PROJECT_DIR$/src/main/java/basisSchedule/scheduleService/ScheduleService.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/basisSchedule/sqlDao/ScheduleDao.java" afterPath="$PROJECT_DIR$/src/main/java/basisSchedule/sqlDao/ScheduleDao.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/basisSchedule/threadService/JobThread.java" afterPath="$PROJECT_DIR$/src/main/java/basisSchedule/threadService/JobThread.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/basisSchedule/threadService/JobsPool.java" afterPath="$PROJECT_DIR$/src/main/java/basisSchedule/threadService/JobsPool.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/basisSchedule/threadService/Monitor_Thread.java" afterPath="$PROJECT_DIR$/src/main/java/basisSchedule/threadService/Monitor_Thread.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/stockSystem/stockJobs/SCodesInitJob.java" afterPath="$PROJECT_DIR$/src/main/java/stockSystem/stockJobs/SCodesInitJob.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/stockSystem/stockJobs/SCodesTrainingJob.java" afterPath="$PROJECT_DIR$/src/main/java/stockSystem/stockJobs/SCodesTrainingJob.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/stockSystem/stockService/StockService.java" afterPath="$PROJECT_DIR$/src/main/java/stockSystem/stockService/StockService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/stockSystem/stockUtil/StockConstants.java" afterPath="$PROJECT_DIR$/src/main/java/stockSystem/stockUtil/StockConstants.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/basisSchedule/threadService/Schedule_Thread.java" afterPath="$PROJECT_DIR$/src/main/java/basisSchedule/threadService/Schedule_Thread.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/basisSchedule/threadService/ThreadPool.java" afterPath="$PROJECT_DIR$/src/main/java/basisSchedule/threadService/ThreadPool.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/common/dao/CommonDao.java" afterPath="$PROJECT_DIR$/src/main/java/common/dao/CommonDao.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/common/dao/CommonDaoImp.java" afterPath="$PROJECT_DIR$/src/main/java/common/dao/CommonDaoImp.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/common/dao/ScheduleDaoImp.java" afterPath="$PROJECT_DIR$/src/main/java/common/dao/ScheduleDaoImp.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/common/dao/StockDaoImp.java" afterPath="$PROJECT_DIR$/src/main/java/common/dao/StockDaoImp.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/common/service/CommonService.java" afterPath="$PROJECT_DIR$/src/main/java/common/service/CommonService.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/common/service/ScheduleCommonService.java" afterPath="$PROJECT_DIR$/src/main/java/common/service/ScheduleCommonService.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/common/service/StockCommonService.java" afterPath="$PROJECT_DIR$/src/main/java/common/service/StockCommonService.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/stockSystem/stockUtil/StockUtil.java" afterPath="$PROJECT_DIR$/src/main/java/stockSystem/stockUtil/StockUtil.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/utils/CommonUtil.java" afterPath="$PROJECT_DIR$/src/main/java/utils/CommonUtil.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/utils/Constants.java" afterPath="$PROJECT_DIR$/src/main/java/utils/Constants.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/utils/LogUtil.java" afterPath="$PROJECT_DIR$/src/main/java/utils/LogUtil.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/config/spring-dao.xml" afterPath="$PROJECT_DIR$/src/main/resources/config/spring-dao.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/config/spring-service.xml" afterPath="$PROJECT_DIR$/src/main/resources/config/spring-service.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/mapper/schedule-mapper/dep-mapper.xml" afterPath="$PROJECT_DIR$/src/main/resources/mapper/schedule-mapper/dep-mapper.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/mapper/schedule-mapper/t_class_type-mapper.xml" afterPath="$PROJECT_DIR$/src/main/resources/mapper/schedule-mapper/t_class_type-mapper.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/mapper/schedule-mapper/t_param-mapper.xml" afterPath="$PROJECT_DIR$/src/main/resources/mapper/schedule-mapper/t_param-mapper.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/mapper/schedule-mapper/schedule-mapper.xml" afterPath="$PROJECT_DIR$/src/main/resources/mapper/schedule-mapper/schedule-mapper.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/mapper/schedule-mapper/t_log-mapper.xml" afterPath="$PROJECT_DIR$/src/main/resources/mapper/schedule-mapper/t_log-mapper.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/mapper/schedule-mapper/task-mapper.xml" afterPath="$PROJECT_DIR$/src/main/resources/mapper/schedule-mapper/task-mapper.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/mapper/schedule-mapper/task_list-mapper.xml" afterPath="$PROJECT_DIR$/src/main/resources/mapper/schedule-mapper/task_list-mapper.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/mapper/stock-mapper/stock-mapper.xml" afterPath="$PROJECT_DIR$/src/main/resources/mapper/stock-mapper/stock-mapper.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/sql/database.sql" afterPath="$PROJECT_DIR$/src/main/resources/sql/database.sql" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/config/spring-dao.xml" afterPath="$PROJECT_DIR$/target/classes/config/spring-dao.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/config/spring-service.xml" afterPath="$PROJECT_DIR$/target/classes/config/spring-service.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/sql/database.sql" afterPath="$PROJECT_DIR$/target/classes/sql/database.sql" />
     </list>
     <ignored path="basis_schedule_sys.iws" />
@@ -91,97 +78,41 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="SCodesInitJob.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/stockSystem/stockJobs/SCodesInitJob.java">
+      <file leaf-file-name="ScheduleInitSerivce.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/basisSchedule/scheduleService/ScheduleInitSerivce.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="241">
-              <caret line="53" column="16" selection-start-line="53" selection-start-column="16" selection-end-line="53" selection-end-column="16" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#608#609#0" expanded="true" />
-                <element signature="e#712#713#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="StockDaoImp.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/common/dao/StockDaoImp.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="540">
-              <caret line="36" column="72" selection-start-line="36" selection-start-column="72" selection-end-line="36" selection-end-column="72" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="StockConstants.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/stockSystem/stockUtil/StockConstants.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="60">
-              <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+            <state relative-caret-position="660">
+              <caret line="28" column="25" selection-start-line="28" selection-start-column="25" selection-end-line="28" selection-end-column="25" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="tianchiDB.properties" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/properties/tianchiDB.properties">
+      <file leaf-file-name="Schedule_Thread.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/basisSchedule/threadService/Schedule_Thread.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state relative-caret-position="630">
+              <caret line="29" column="0" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="scheduleDB.properties" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/properties/scheduleDB.properties">
+      <file leaf-file-name="Monitor_Thread.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/basisSchedule/threadService/Monitor_Thread.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state relative-caret-position="235">
+              <caret line="124" column="30" selection-start-line="124" selection-start-column="30" selection-end-line="124" selection-end-column="30" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SCodesTrainingJob.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/stockSystem/stockJobs/SCodesTrainingJob.java">
+      <file leaf-file-name="InitJob.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/basisSchedule/jobs/InitJob.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="211">
-              <caret line="11" column="45" selection-start-line="11" selection-start-column="45" selection-end-line="11" selection-end-column="45" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Constants.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/utils/Constants.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="28" column="39" selection-start-line="28" selection-start-column="39" selection-end-line="28" selection-end-column="39" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="StockService.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/stockSystem/stockService/StockService.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="60">
-              <caret line="2" column="39" selection-start-line="2" selection-start-column="39" selection-end-line="2" selection-end-column="39" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="StockController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/stockSystem/stockController/StockController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="241">
-              <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
+            <state relative-caret-position="630">
+              <caret line="31" column="25" selection-start-line="31" selection-start-column="25" selection-end-line="31" selection-end-column="25" />
               <folding />
             </state>
           </provider>
@@ -216,57 +147,57 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/target/basis_schedule_sys/historyfile.log" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" />
-        <option value="$PROJECT_DIR$/target/basis_schedule_sys/WEB-INF/log/historyfile.log" />
-        <option value="$PROJECT_DIR$/target/basis_schedule_sys/WEB-INF/log/runninglog.log" />
-        <option value="$PROJECT_DIR$/src/main/resources/log4j2.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/utils/CommonUtil.java" />
-        <option value="$PROJECT_DIR$/src/main/java/utils/ClassUtil.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/Schedule/js/taskList.js" />
-        <option value="$PROJECT_DIR$/src/main/webapp/Schedule/html/taskList.html" />
-        <option value="$PROJECT_DIR$/src/main/webapp/resource/css/common.css" />
-        <option value="$PROJECT_DIR$/错误记录" />
-        <option value="$PROJECT_DIR$/想法.txt" />
         <option value="$PROJECT_DIR$/src/main/java/utils/DataResourceConfig.java" />
         <option value="$PROJECT_DIR$/src/main/java/utils/Dbconnection.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/mapper/schedule-mapper/schedule-mapper.xml" />
-        <option value="$PROJECT_DIR$/src/main/resources/sql/database.sql" />
         <option value="$PROJECT_DIR$/src/main/java/basisSchedule/tablesDao/T_ParamDao.java" />
         <option value="$PROJECT_DIR$/src/main/java/common/dao/CommonSelect.java" />
         <option value="$PROJECT_DIR$/src/main/resources/config/spring-dao.xml" />
         <option value="$PROJECT_DIR$/src/main/resources/mapper/schedule-mapper/dep-mapper.xml" />
         <option value="$PROJECT_DIR$/src/main/java/basisSchedule/resultModel/Task_List.java" />
         <option value="$PROJECT_DIR$/src/main/resources/mapper/schedule-mapper/t_param-mapper.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/common/dao/CommonDao.java" />
-        <option value="$PROJECT_DIR$/src/main/java/common/service/CommonService.java" />
         <option value="$PROJECT_DIR$/src/main/java/common/service/CommonServiceImp.java" />
         <option value="$PROJECT_DIR$/src/main/resources/config/spring-service.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/common/service/ScheduleCommonService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/basisSchedule/scheduleService/ScheduleInitSerivce.java" />
-        <option value="$PROJECT_DIR$/src/main/java/basisSchedule/scheduleService/ScheduleRepairService.java" />
         <option value="$PROJECT_DIR$/src/main/java/basisSchedule/resultModel/T_class_type.java" />
-        <option value="$PROJECT_DIR$/src/main/java/basisSchedule/scheduleController/ScheduleController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/basisSchedule/scheduleService/ScheduleService.java" />
         <option value="$PROJECT_DIR$/src/main/java/basisSchedule/resultModel/T_param.java" />
-        <option value="$PROJECT_DIR$/src/main/java/basisSchedule/threadService/JobThread.java" />
-        <option value="$PROJECT_DIR$/src/main/java/basisSchedule/threadService/Monitor_Thread.java" />
         <option value="$PROJECT_DIR$/src/main/java/utils/LogUtil.java" />
         <option value="$PROJECT_DIR$/target/classes/mapper/schedule-mapper/task-mapper.xml" />
-        <option value="$PROJECT_DIR$/src/main/resources/mapper/schedule-mapper/task-mapper.xml" />
         <option value="$PROJECT_DIR$/src/main/resources/mapper/schedule-mapper/t_class_type-mapper.xml" />
-        <option value="$PROJECT_DIR$/src/main/resources/mapper/schedule-mapper/task_list-mapper.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/utils/Constants.java" />
-        <option value="$PROJECT_DIR$/src/main/java/common/dao/CommonDaoImp.java" />
-        <option value="$PROJECT_DIR$/src/main/java/common/dao/ScheduleDaoImp.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/mapper/stock-mapper/stock-mapper.xml" />
         <option value="$PROJECT_DIR$/src/main/java/common/service/StockCommonSerice.java" />
         <option value="$PROJECT_DIR$/src/main/java/stockSystem/stockJobs/SCodesInitJob.java" />
         <option value="$PROJECT_DIR$/src/main/java/stockSystem/stockJobs/SCodesTrainingJob.java" />
         <option value="$PROJECT_DIR$/src/main/java/stockSystem/stockService/StockService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/common/dao/StockDaoImp.java" />
         <option value="$PROJECT_DIR$/src/main/java/stockSystem/stockUtil/StockConstants.java" />
+        <option value="$PROJECT_DIR$/src/main/java/common/dao/ScheduleDaoImp.java" />
+        <option value="$PROJECT_DIR$/src/main/java/common/dao/StockDaoImp.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/mapper/stock-mapper/stock-mapper.xml" />
+        <option value="$PROJECT_DIR$/进度" />
+        <option value="$PROJECT_DIR$/src/main/java/utils/Constants.java" />
+        <option value="$PROJECT_DIR$/src/main/java/utils/CommonUtil.java" />
+        <option value="$PROJECT_DIR$/src/main/java/basisSchedule/scheduleService/ScheduleService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/basisSchedule/scheduleService/ScheduleRepairService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/common/dao/CommonDao.java" />
+        <option value="$PROJECT_DIR$/src/main/java/common/service/CommonService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/common/service/ScheduleCommonService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/common/service/StockCommonService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/basisSchedule/resultModel/Task.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/mapper/schedule-mapper/task-mapper.xml" />
+        <option value="$PROJECT_DIR$/src/main/resources/sql/database.sql" />
+        <option value="$PROJECT_DIR$/src/main/java/basisSchedule/scheduleController/ScheduleController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/basisSchedule/threadService/ThreadPool.java" />
+        <option value="$PROJECT_DIR$/src/main/java/basisSchedule/sqlDao/ScheduleDao.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/mapper/schedule-mapper/t_log-mapper.xml" />
+        <option value="$PROJECT_DIR$/target/classes/mapper/schedule-mapper/task_list-mapper.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/common/dao/CommonDaoImp.java" />
+        <option value="$PROJECT_DIR$/src/main/java/basisSchedule/jobs/Job.java" />
+        <option value="$PROJECT_DIR$/src/main/java/basisSchedule/threadService/JobsPool.java" />
+        <option value="$PROJECT_DIR$/src/main/java/basisSchedule/jobs/InitJob.java" />
+        <option value="$PROJECT_DIR$/src/main/java/basisSchedule/threadService/Schedule_Thread.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/mapper/schedule-mapper/schedule-mapper.xml" />
+        <option value="$PROJECT_DIR$/src/main/resources/mapper/schedule-mapper/task_list-mapper.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/basisSchedule/threadService/JobThread.java" />
+        <option value="$PROJECT_DIR$/src/main/java/stockSystem/stockUtil/StockUtil.java" />
+        <option value="$PROJECT_DIR$/src/main/java/basisSchedule/scheduleService/ScheduleInitSerivce.java" />
+        <option value="$PROJECT_DIR$/src/main/java/basisSchedule/threadService/Monitor_Thread.java" />
       </list>
     </option>
   </component>
@@ -364,8 +295,9 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
       <pane id="Scope" />
+      <pane id="PackagesPane" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -395,6 +327,72 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="target" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="basis_schedule_sys" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="basis_schedule_sys" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="target" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="classes" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="basis_schedule_sys" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="basis_schedule_sys" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="target" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="classes" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mapper" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="basis_schedule_sys" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="basis_schedule_sys" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="target" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="classes" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mapper" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="schedule-mapper" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -478,7 +476,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="properties" />
+              <option name="myItemId" value="sql" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -505,10 +503,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="mapper" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="stock-mapper" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -672,67 +666,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="stockService" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="basis_schedule_sys" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="basis_schedule_sys" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="stockSystem" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="stockController" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="basis_schedule_sys" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="basis_schedule_sys" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="stockSystem" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="resultModel" />
+              <option name="myItemId" value="stockJobs" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -821,6 +755,66 @@
               <option name="myItemId" value="basisSchedule" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="threadService" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="basis_schedule_sys" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="basis_schedule_sys" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="basisSchedule" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sqlDao" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="basis_schedule_sys" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="basis_schedule_sys" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="basisSchedule" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -852,9 +846,68 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="basis_schedule_sys" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="basis_schedule_sys" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="basisSchedule" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="resultModel" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="basis_schedule_sys" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="basis_schedule_sys" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="basisSchedule" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="jobs" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -1589,7 +1642,13 @@
       <workItem from="1500778720619" duration="2119000" />
       <workItem from="1500860890712" duration="3650000" />
       <workItem from="1500864693097" duration="14490000" />
-      <workItem from="1500902299431" duration="1346000" />
+      <workItem from="1500902299431" duration="1905000" />
+      <workItem from="1500949125805" duration="1290000" />
+      <workItem from="1500950890334" duration="3108000" />
+      <workItem from="1501034829767" duration="19718000" />
+      <workItem from="1501120262396" duration="11027000" />
+      <workItem from="1501147519146" duration="5400000" />
+      <workItem from="1501155669617" duration="14000" />
     </task>
     <task id="LOCAL-00001" summary="增加线程调度主入口">
       <created>1478793276167</created>
@@ -1843,13 +1902,20 @@
       <option name="project" value="LOCAL" />
       <updated>1500778888783</updated>
     </task>
-    <option name="localTasksCounter" value="37" />
+    <task id="LOCAL-00037" summary="修改数据库中间件，改为通用中间件，并去除了表操作类，添加通用表操作类">
+      <created>1500903745592</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1500903745592</updated>
+    </task>
+    <option name="localTasksCounter" value="38" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="617757000" />
+    <option name="totallyTimeSpent" value="658873000" />
   </component>
-  <component name="TodoView" selected-index="4">
+  <component name="TodoView">
     <todo-panel id="selected-file">
       <is-autoscroll-to-source value="true" />
     </todo-panel>
@@ -1863,35 +1929,35 @@
     <editor active="false" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3293348" sideWeight="0.49761903" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2519084" sideWeight="0.33722627" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32885906" sideWeight="0.49761903" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.17795275" sideWeight="0.20072992" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39585605" sideWeight="0.20072992" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32913387" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.45583424" sideWeight="0.47619048" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3391494" sideWeight="0.7992701" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23333333" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23960881" sideWeight="0.49423632" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3304253" sideWeight="0.47559524" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.35441658" sideWeight="0.67445254" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.23960881" sideWeight="0.5057637" order="4" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3176734" sideWeight="0.67445254" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25167784" sideWeight="0.33722627" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.21923937" sideWeight="0.7992701" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.4089422" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.26703912" sideWeight="0.47559524" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="UnknownFeatures">
@@ -1909,7 +1975,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="增加信号量，执行任务列表，执行任务相关。但初始化未做" />
     <MESSAGE value="任务列表初始化（考虑到中途加入，重跑），调度系统入口（实际调度未实现）" />
     <MESSAGE value="调度部分已经完成测试，细节部分需要斟酌，但是整体通过。接下来需要添加代价，运行时间等运行信息" />
     <MESSAGE value="去除warning" />
@@ -1934,7 +1999,8 @@
     <MESSAGE value="优化动态加载，修改日志目录和编码，增加文件上传功能" />
     <MESSAGE value="增加注释，想法和错误记录" />
     <MESSAGE value="增加python处理" />
-    <option name="LAST_COMMIT_MESSAGE" value="增加python处理" />
+    <MESSAGE value="修改数据库中间件，改为通用中间件，并去除了表操作类，添加通用表操作类" />
+    <option name="LAST_COMMIT_MESSAGE" value="修改数据库中间件，改为通用中间件，并去除了表操作类，添加通用表操作类" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1959,21 +2025,9 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/basisSchedule/scheduleService/ScheduleService.java</url>
-          <line>58</line>
+          <line>62</line>
           <properties />
           <option name="timeStamp" value="93" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/utils/Constants.java</url>
-          <line>117</line>
-          <properties />
-          <option name="timeStamp" value="94" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/basisSchedule/scheduleController/ScheduleController.java</url>
-          <line>139</line>
-          <properties />
-          <option name="timeStamp" value="96" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/common/dao/ScheduleDaoImp.java</url>
@@ -1981,8 +2035,38 @@
           <properties />
           <option name="timeStamp" value="97" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/basisSchedule/jobs/InitJob.java</url>
+          <line>31</line>
+          <properties />
+          <option name="timeStamp" value="118" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/basisSchedule/threadService/JobThread.java</url>
+          <line>59</line>
+          <properties />
+          <option name="timeStamp" value="119" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/basisSchedule/threadService/Schedule_Thread.java</url>
+          <line>52</line>
+          <properties />
+          <option name="timeStamp" value="120" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/basisSchedule/threadService/Schedule_Thread.java</url>
+          <line>29</line>
+          <properties />
+          <option name="timeStamp" value="121" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/basisSchedule/threadService/Monitor_Thread.java</url>
+          <line>121</line>
+          <properties />
+          <option name="timeStamp" value="122" />
+        </line-breakpoint>
       </breakpoints>
-      <option name="time" value="98" />
+      <option name="time" value="123" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -1991,209 +2075,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/basisSchedule/tablesDao/DepDao.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/basisSchedule/resultModel/T_class_type.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="7" column="49" selection-start-line="7" selection-start-column="49" selection-end-line="7" selection-end-column="49" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/basisSchedule/scheduleService/ScheduleRepairService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/basisSchedule/scheduleService/T_paramService.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/basisSchedule/scheduleUtil/ScheduleUtil.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/basisSchedule/scheduleService/ScheduleInitSerivce.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="24" column="0" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/basisSchedule/resultModel/T_param.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="7" column="44" selection-start-line="7" selection-start-column="44" selection-end-line="7" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/basisSchedule/tablesDao/T_ParamDao.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/basisSchedule/threadService/JobThread.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="232">
-          <caret line="8" column="27" selection-start-line="8" selection-start-column="27" selection-end-line="8" selection-end-column="27" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/basisSchedule/threadService/Monitor_Thread.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1410">
-          <caret line="58" column="52" selection-start-line="58" selection-start-column="52" selection-end-line="58" selection-end-column="52" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/basisSchedule/tablesDao/T_LogDao.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/utils/LogUtil.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/target/basis_schedule_sys/index.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/target/classes/mapper/schedule-mapper/task-mapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/target/classes/mapper/schedule-mapper/task-mapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/config/spring-mybaits.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-900">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/config/stock/stock-mybatis-config.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/config/schedule/schedule-mybatis-config.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/config/stock/stock-mybatis.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-270">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/config/schedule/schedule-mybatis.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="11" column="57" selection-start-line="11" selection-start-column="36" selection-end-line="11" selection-end-column="57" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/schedule-mapper/t_log-mapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <marker date="1479709850000" expanded="true" signature="285:353" ph="SELECT log_t... t_log" />
-            <marker date="1479709850000" expanded="true" signature="445:604" ph="INSERT INTO t_log... " />
-            <marker date="1479709850000" expanded="true" signature="697:755" ph="DELETE FROM " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/schedule-mapper/t_param-mapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1140">
-          <caret line="38" column="31" selection-start-line="38" selection-start-column="31" selection-end-line="38" selection-end-column="31" />
-          <folding>
-            <marker date="1500881951430" expanded="true" signature="278:310" ph="SELECT name,... t_param" />
-            <marker date="1500881951430" expanded="true" signature="400:457" ph="SELECT name,... t_param" />
-            <marker date="1500881951430" expanded="true" signature="622:702" ph="INSERT INTO t_param... " />
-            <marker date="1500881951430" expanded="true" signature="793:832" ph="DELETE FROM " />
-            <marker date="1500881951430" expanded="true" signature="924:1085" ph="UPDATE t_par... " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/utils/CommonUtil.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="192">
-          <caret line="44" column="0" selection-start-line="44" selection-start-column="0" selection-end-line="44" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/schedule-mapper/schedule-mapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1920">
-          <caret line="64" column="26" selection-start-line="64" selection-start-column="26" selection-end-line="64" selection-end-column="26" />
-          <folding>
-            <marker date="1500862891585" expanded="true" signature="319:1037" ph="select task.... t_task_list" />
-            <marker date="1500862891585" expanded="true" signature="1137:1316" ph="insert into t_task_list... " />
-            <marker date="1500862891585" expanded="true" signature="1169:1269" ph="select task_... t_task" />
-            <marker date="1500862891585" expanded="true" signature="1427:1531" ph="select count... t_task_list" />
-            <marker date="1500862891585" expanded="true" signature="1629:1710" ph="select count... t_task_list" />
-            <marker date="1500862891585" expanded="true" signature="1800:1908" ph="UPDATE t_tas... " />
-            <marker date="1500862891585" expanded="true" signature="2004:2118" ph="UPDATE t_tas... " />
-            <marker date="1500862891585" expanded="true" signature="2223:2328" ph="select DISTI... t_task_list" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/schedule-mapper/task-mapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-270">
-          <caret line="6" column="25" selection-start-line="6" selection-start-column="25" selection-end-line="6" selection-end-column="25" />
-          <folding>
-            <marker date="1500887960413" expanded="true" signature="280:376" ph="SELECT task_... t_task" />
-            <marker date="1500887960413" expanded="true" signature="1799:2121" ph="INSERT INTO t_task... " />
-            <marker date="1500887960413" expanded="true" signature="2208:2259" ph="DELETE FROM " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/schedule-mapper/task_list-mapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="6" column="22" selection-start-line="6" selection-start-column="22" selection-end-line="6" selection-end-column="22" />
-          <folding>
-            <marker date="1500890904183" expanded="true" signature="282:344" ph="SELECT task_... t_task_list" />
-            <marker date="1500890904183" expanded="true" signature="436:529" ph="INSERT INTO t_task_list... " />
-            <marker date="1500890904183" expanded="true" signature="1010:1395" ph="UPDATE t_tas... " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/schedule-mapper/t_class_type-mapper.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
@@ -2203,55 +2084,6 @@
             <marker date="1500890822695" expanded="true" signature="446:546" ph="INSERT INTO T_class_type... " />
             <marker date="1500890822695" expanded="true" signature="624:703" ph="DELETE FROM " />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/stockSystem/tablesDao/StockProcessDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="23" column="0" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/common/dao/CommonDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="517">
-          <caret line="52" column="68" selection-start-line="10" selection-start-column="4" selection-end-line="52" selection-end-column="68" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/basisSchedule/scheduleController/ScheduleController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="139" column="0" selection-start-line="139" selection-start-column="0" selection-end-line="139" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/basisSchedule/scheduleService/ScheduleService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="517">
-          <caret line="58" column="0" selection-start-line="58" selection-start-column="0" selection-end-line="58" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/common/service/CommonService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1560">
-          <caret line="53" column="68" selection-start-line="53" selection-start-column="68" selection-end-line="53" selection-end-column="68" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/common/dao/ScheduleDaoImp.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="780">
-          <caret line="26" column="34" selection-start-line="25" selection-start-column="8" selection-end-line="26" selection-end-column="34" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2266,125 +2098,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/stock-mapper/stock-mapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1380">
-          <caret line="46" column="13" selection-start-line="46" selection-start-column="13" selection-end-line="46" selection-end-column="13" />
-          <folding>
-            <marker date="1500900774970" expanded="true" signature="298:350" ph="select stock... t_stock_info" />
-            <marker date="1500900774970" expanded="true" signature="465:605" ph="insert into t_stock_info... " />
-            <marker date="1500900774970" expanded="true" signature="713:961" ph="insert into t_stock_info... " />
-            <marker date="1500900774970" expanded="true" signature="1096:1518" ph="insert into T_STOCK_TRAINNING_INFO... " />
-            <marker date="1500900774970" expanded="true" signature="1634:2163" ph="insert into T_STOCK_TRAINNING_INFO... " />
-            <marker date="1500900774970" expanded="true" signature="2288:2346" ph="SELECT param... t_stock_sys_param" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/common/service/ScheduleCommonService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="14" column="34" selection-start-line="14" selection-start-column="27" selection-end-line="14" selection-end-column="34" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#992#993#0" expanded="true" />
-            <element signature="e#1044#1045#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/common/dao/CommonDaoImp.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="233">
-          <caret line="53" column="35" selection-start-line="53" selection-start-column="11" selection-end-line="53" selection-end-column="35" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/common/service/StockCommonService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-390">
-          <caret line="11" column="25" selection-start-line="11" selection-start-column="25" selection-end-line="11" selection-end-column="25" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#392#393#0" expanded="true" />
-            <element signature="e#437#438#0" expanded="true" />
-            <element signature="e#509#510#0" expanded="true" />
-            <element signature="e#556#557#0" expanded="true" />
-            <element signature="e#628#629#0" expanded="true" />
-            <element signature="e#675#676#0" expanded="true" />
-            <element signature="e#748#749#0" expanded="true" />
-            <element signature="e#792#793#0" expanded="true" />
-            <element signature="e#877#878#0" expanded="true" />
-            <element signature="e#926#927#0" expanded="true" />
-            <element signature="e#991#992#0" expanded="true" />
-            <element signature="e#1040#1041#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/stockSystem/tablesDao/T_stock_infoDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
-          <caret line="25" column="48" selection-start-line="25" selection-start-column="48" selection-end-line="25" selection-end-column="48" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://I:/workspace/resource/maven_lib/org/mybatis/mybatis-spring/1.3.0/mybatis-spring-1.3.0-sources.jar!/org/mybatis/spring/SqlSessionTemplate.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="241">
-          <caret line="269" column="13" selection-start-line="269" selection-start-column="13" selection-end-line="269" selection-end-column="13" />
-          <folding>
-            <element signature="e#8657#8658#0" expanded="true" />
-            <element signature="e#8712#8713#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/basisSchedule/sqlDao/ScheduleDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1680">
-          <caret line="20" column="31" selection-start-line="20" selection-start-column="31" selection-end-line="20" selection-end-column="31" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/stockSystem/stockJobs/SCodesInitJob.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="241">
-          <caret line="53" column="16" selection-start-line="53" selection-start-column="16" selection-end-line="53" selection-end-column="16" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#608#609#0" expanded="true" />
-            <element signature="e#712#713#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/utils/Constants.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="28" column="39" selection-start-line="28" selection-start-column="39" selection-end-line="28" selection-end-column="39" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/stockSystem/tablesDao/T_stock_infoDao.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/stockSystem/stockController/StockController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="241">
+        <state relative-caret-position="270">
           <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/stockSystem/stockJobs/SCodesTrainingJob.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="211">
-          <caret line="11" column="45" selection-start-line="11" selection-start-column="45" selection-end-line="11" selection-end-column="45" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2392,33 +2110,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
           <caret line="2" column="39" selection-start-line="2" selection-start-column="39" selection-end-line="2" selection-end-column="39" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/common/dao/StockDaoImp.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="540">
-          <caret line="36" column="72" selection-start-line="36" selection-start-column="72" selection-end-line="36" selection-end-column="72" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/stockSystem/tablesDao/T_stock_sys_paramDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="840">
-          <caret line="38" column="38" selection-start-line="38" selection-start-column="23" selection-end-line="38" selection-end-column="38" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/stockSystem/tablesDao/T_stock_sys_paramDao.java" />
     <entry file="file://$PROJECT_DIR$/src/main/resources/properties/scheduleDB.properties">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2426,14 +2125,372 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/stockSystem/stockUtil/StockConstants.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+        <state relative-caret-position="510">
+          <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/stock-mapper/stock-mapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="519">
+          <caret line="75" column="34" selection-start-line="75" selection-start-column="34" selection-end-line="75" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/进度">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="1" column="13" selection-start-line="1" selection-start-column="13" selection-end-line="1" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/utils/CommonUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="660">
+          <caret line="132" column="34" selection-start-line="132" selection-start-column="34" selection-end-line="132" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/stockSystem/stockJobs/SCodesInitJob.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="31" column="23" selection-start-line="31" selection-start-column="23" selection-end-line="31" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/basisSchedule/resultModel/T_param.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/common/dao/CommonDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1525">
+          <caret line="52" column="44" selection-start-line="52" selection-start-column="44" selection-end-line="52" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/common/dao/StockDaoImp.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="630">
+          <caret line="30" column="13" selection-start-line="30" selection-start-column="13" selection-end-line="30" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/common/dao/ScheduleDaoImp.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="27" column="27" selection-start-line="27" selection-start-column="27" selection-end-line="27" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/common/service/CommonService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="595">
+          <caret line="53" column="37" selection-start-line="53" selection-start-column="37" selection-end-line="53" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/basisSchedule/scheduleService/ScheduleService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="20" column="13" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="13" />
+          <folding>
+            <element signature="method#insertTask#0;class#ScheduleService#0" expanded="false" />
+            <element signature="method#classFileUpload#0;class#ScheduleService#0" expanded="false" />
+            <element signature="e#2447#2448#0" expanded="false" />
+            <element signature="e#2500#2501#0" expanded="false" />
+            <element signature="e#2561#2562#0" expanded="false" />
+            <element signature="e#2614#2615#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/common/service/StockCommonService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="505">
+          <caret line="40" column="38" selection-start-line="40" selection-start-column="38" selection-end-line="40" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://I:/workspace/resource/maven_lib/org/mybatis/mybatis-spring/1.3.0/mybatis-spring-1.3.0-sources.jar!/org/mybatis/spring/SqlSessionTemplate.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="288">
+          <caret line="221" column="21" selection-start-line="221" selection-start-column="21" selection-end-line="221" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/basisSchedule/jobs/JobInterface.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="7" column="17" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/basisSchedule/scheduleController/ScheduleController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1537">
+          <caret line="113" column="0" selection-start-line="113" selection-start-column="0" selection-end-line="113" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/basisSchedule/threadService/ThreadPool.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="160">
+          <caret line="27" column="13" selection-start-line="27" selection-start-column="13" selection-end-line="27" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/basisSchedule/resultModel/Task_List.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/basisSchedule/resultModel/Task.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="600">
+          <caret line="23" column="16" selection-start-line="23" selection-start-column="16" selection-end-line="23" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/utils/LogUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-976">
+          <caret line="28" column="39" selection-start-line="28" selection-start-column="21" selection-end-line="28" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/schedule-mapper/t_param-mapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="283">
+          <caret line="38" column="18" selection-start-line="38" selection-start-column="18" selection-end-line="38" selection-end-column="18" />
+          <folding>
+            <marker date="1500881951430" expanded="true" signature="278:310" ph="SELECT name,... t_param" />
+            <marker date="1500881951430" expanded="true" signature="400:457" ph="SELECT name,... t_param" />
+            <marker date="1500881951430" expanded="true" signature="622:702" ph="INSERT INTO t_param... " />
+            <marker date="1500881951430" expanded="true" signature="793:832" ph="DELETE FROM " />
+            <marker date="1500881951430" expanded="true" signature="924:1085" ph="UPDATE t_par... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/target/classes/mapper/schedule-mapper/task_list-mapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1260">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1501142082290" expanded="true" signature="282:344" ph="SELECT task_... t_task_list" />
+            <marker date="1501142082290" expanded="true" signature="438:561" ph="SELECT task_... t_task_list" />
+            <marker date="1501142082290" expanded="true" signature="655:748" ph="INSERT INTO t_task_list... " />
+            <marker date="1501142082290" expanded="true" signature="1229:1630" ph="UPDATE t_tas... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/schedule-mapper/task-mapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="450">
+          <caret line="48" column="17" selection-start-line="48" selection-start-column="17" selection-end-line="48" selection-end-column="17" />
+          <folding>
+            <marker date="1501056810823" expanded="true" signature="280:380" ph="SELECT task_... t_task" />
+            <marker date="1501056810823" expanded="true" signature="1803:2149" ph="INSERT INTO t_task... " />
+            <marker date="1501056810823" expanded="true" signature="2236:2287" ph="DELETE FROM " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/schedule-mapper/t_log-mapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-150">
+          <caret line="4" column="35" selection-start-line="4" selection-start-column="35" selection-end-line="4" selection-end-column="35" />
+          <folding>
+            <marker date="1501124219779" expanded="true" signature="280:348" ph="SELECT log_t... t_log" />
+            <marker date="1501124219779" expanded="true" signature="435:594" ph="INSERT INTO t_log... " />
+            <marker date="1501124219779" expanded="true" signature="682:740" ph="DELETE FROM " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/common/service/ScheduleCommonService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="27" column="0" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/common/dao/CommonDaoImp.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="183">
+          <caret line="37" column="12" selection-start-line="37" selection-start-column="12" selection-end-line="37" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/utils/ScheduleUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-478">
+          <caret line="11" column="22" selection-start-line="11" selection-start-column="22" selection-end-line="11" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/basisSchedule/threadService/JobsPool.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="122">
+          <caret line="32" column="13" selection-start-line="32" selection-start-column="13" selection-end-line="32" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/basisSchedule/jobs/Job.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="392">
+          <caret line="18" column="31" selection-start-line="18" selection-start-column="31" selection-end-line="18" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/utils/Constants.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="152">
+          <caret line="46" column="28" selection-start-line="46" selection-start-column="28" selection-end-line="46" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/schedule-mapper/schedule-mapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1035">
+          <caret line="81" column="43" selection-start-line="81" selection-start-column="43" selection-end-line="81" selection-end-column="43" />
+          <folding>
+            <marker date="1501141357378" expanded="true" signature="297:464" ph="insert into t_task_list... " />
+            <marker date="1501141357378" expanded="true" signature="329:417" ph="select task_... t_task" />
+            <marker date="1501141357378" expanded="true" signature="565:733" ph="insert into t_task_list... " />
+            <marker date="1501141357378" expanded="true" signature="597:659" ph="select task_... t_task" />
+            <marker date="1501141357378" expanded="true" signature="597:686" ph="select task_... t_task" />
+            <marker date="1501141357378" expanded="true" signature="850:1388" ph="insert into t_task_list... " />
+            <marker date="1501141357378" expanded="true" signature="882:1312" ph="select task_... t_task" />
+            <marker date="1501141357378" expanded="true" signature="882:1333" ph="select task_... t_task" />
+            <marker date="1501141357378" expanded="true" signature="882:1336" ph="select task_... t_task" />
+            <marker date="1501141357378" expanded="true" signature="882:1341" ph="select task_... t_task" />
+            <marker date="1501141357378" expanded="true" signature="1521:2182" ph="select task.... t_task_list" />
+            <marker date="1501141357378" expanded="true" signature="2144:2182" ph="select task.... t_task_list" />
+            <marker date="1501141357378" expanded="true" signature="2284:2365" ph="select count... t_task_list" />
+            <marker date="1501141357378" expanded="true" signature="2455:2518" ph="UPDATE t_tas... " />
+            <marker date="1501141357378" expanded="true" signature="2455:2534" ph="UPDATE t_tas... " />
+            <marker date="1501141357378" expanded="true" signature="2640:2745" ph="select DISTI... t_task_list" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/schedule-mapper/task_list-mapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="54" column="37" selection-start-line="54" selection-start-column="37" selection-end-line="54" selection-end-column="37" />
+          <folding>
+            <marker date="1501142024647" expanded="true" signature="282:344" ph="SELECT task_... t_task_list" />
+            <marker date="1501142024647" expanded="true" signature="438:561" ph="SELECT task_... t_task_list" />
+            <marker date="1501142024647" expanded="true" signature="655:748" ph="INSERT INTO t_task_list... " />
+            <marker date="1501142024647" expanded="true" signature="1229:1630" ph="UPDATE t_tas... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/stockSystem/tablesDao/StockProcessDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="152">
+          <caret line="24" column="36" selection-start-line="24" selection-start-column="36" selection-end-line="24" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/stockSystem/stockUtil/StockUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2547">
+          <caret line="152" column="32" selection-start-line="152" selection-start-column="32" selection-end-line="152" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/basisSchedule/sqlDao/ScheduleDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="92">
+          <caret line="51" column="18" selection-start-line="51" selection-start-column="18" selection-end-line="51" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/sql/database.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="45" column="71" selection-start-line="45" selection-start-column="71" selection-end-line="45" selection-end-column="71" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/utils/ClassUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="212">
+          <caret line="106" column="0" selection-start-line="106" selection-start-column="0" selection-end-line="106" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/basisSchedule/threadService/JobThread.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1328">
+          <caret line="72" column="0" selection-start-line="72" selection-start-column="0" selection-end-line="72" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/stockSystem/stockJobs/SCodesTrainingJob.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="188">
+          <caret line="56" column="53" selection-start-line="56" selection-start-column="53" selection-end-line="56" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/basisSchedule/scheduleService/ScheduleRepairService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="535">
+          <caret line="37" column="4" selection-start-line="37" selection-start-column="4" selection-end-line="37" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/basisSchedule/threadService/Schedule_Thread.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="630">
+          <caret line="29" column="0" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/basisSchedule/scheduleService/ScheduleInitSerivce.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="660">
+          <caret line="28" column="25" selection-start-line="28" selection-start-column="25" selection-end-line="28" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/basisSchedule/jobs/InitJob.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="630">
+          <caret line="31" column="25" selection-start-line="31" selection-start-column="25" selection-end-line="31" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/basisSchedule/threadService/Monitor_Thread.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="235">
+          <caret line="124" column="30" selection-start-line="124" selection-start-column="30" selection-end-line="124" selection-end-column="30" />
           <folding />
         </state>
       </provider>

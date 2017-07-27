@@ -26,7 +26,6 @@ public class Constants {
      */
     public final static String MAPPER_Schedule="mapperNS.Schedule";
 
-    public final static String MAPPER_STOCK="mapperNS.Stock";
     public final static String MAPPER_StockProcess="mapperNS.Stockprocess";
 
 
@@ -81,11 +80,15 @@ public class Constants {
             +separator;
     private static boolean initflg=true;
     public static String schedule_date=null;
+    public static String finish_date=null;
 
 
     private static int LOGTYPE=-1;
 
-    private static void propertiesInit(){
+    private static ScheduleCommonService scheduleCommonService;
+
+    public static void init(){
+        scheduleCommonService=(ScheduleCommonService)CommonUtil.getBean(ScheduleCommonService.class);
         if(initflg){
             initSystemProperties();
             initPropertiesFromDB();
@@ -93,10 +96,8 @@ public class Constants {
         }
     }
 
-
     //获取当前设置日志等级
     public static int getLogType(){
-        propertiesInit();
         return LOGTYPE;
     }
 
@@ -113,28 +114,29 @@ public class Constants {
     }
 
     private static void initPropertiesFromDB(){
-        ScheduleCommonService scheduleCommonService=(ScheduleCommonService)CommonUtil.getBean(ScheduleCommonService.class);
         List<T_param> params=scheduleCommonService.listAll(T_param.class);
         HashMap<String,String> temps=new HashMap<String,String>();
         for(T_param temp:params){
             temps.put(temp.getName(),temp.getValue());
         }
-        if(temps.containsKey("schedule_date")){
-            schedule_date=temps.get("schedule_date");
+        schedule_date=getProperties(temps,"schedule_date",CommonUtil.date2string8(new Date()));
+        finish_date=getProperties(temps,"finish_date",CommonUtil.date2string8(new Date()));
+    }
+
+    private static String getProperties(HashMap<String,String> temps,String name,String devalue){
+        if(temps.containsKey(name)){
+            return temps.get(name);
         }else{
-            schedule_date=CommonUtil.date2string8(new Date());
-            T_param newDate=new T_param();
-            newDate.setName("schedule_date");
-            newDate.setValue(schedule_date);
-            scheduleCommonService.save(newDate);
+            T_param newParam=new T_param();
+            newParam.setName(name);
+            newParam.setValue(devalue);
+            scheduleCommonService.save(newParam);
+            return devalue;
         }
     }
 
 
 
 
+    }
 
-
-
-
-}

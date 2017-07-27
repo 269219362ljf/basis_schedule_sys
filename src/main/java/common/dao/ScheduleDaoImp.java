@@ -25,6 +25,7 @@ public class ScheduleDaoImp extends CommonDaoImp {
     public ScheduleDaoImp(@Qualifier( "schedulesqlSessionTemplate" )SqlSessionTemplate sqlSessionSchedule){
         this.sqlSessionTemplate=sqlSessionSchedule;
         this.MAPPERNS="mapperNS.";
+        this.MAPPERSUF=".";
     }
 
 }

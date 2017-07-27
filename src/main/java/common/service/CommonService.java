@@ -46,6 +46,15 @@ public interface CommonService {
 
     /**
      *
+     * 通过主键获取一个实体
+     *
+     * @param pojo
+     * @return
+     */
+    public <T extends Serializable> T getOne(T pojo);
+
+    /**
+     *
      * 查询所有实体
      *
      * @param clazz
